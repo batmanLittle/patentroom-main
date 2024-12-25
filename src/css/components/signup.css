@@ -1,0 +1,36 @@
+.signup__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    gap: 5.6rem;
+  }
+}
+
+.form__email-tel {
+  display: flex;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 5.6rem;
+  }
+}
+
+.signup__left {
+  justify-content: space-between;
+}
+
+.signup__form .form__btn-link {
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 4.8rem;
+    align-items: start;
+  }
+}
+
+.signup__form .btn {
+  @media (max-width: 48rem) {
+    width: 100%;
+    order: -1;
+  }
+}

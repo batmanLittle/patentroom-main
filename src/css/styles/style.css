@@ -1,0 +1,248 @@
+.err-form {
+  border-bottom: 2px solid red;
+}
+
+.contact {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  @media (max-width: 48em) {
+    gap: 2.4rem;
+  }
+}
+
+.contact-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  @media (max-width: 48em) {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+}
+
+.contact-text {
+  font-family: "Gilory", sans-serif;
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.button-group {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+
+  @media (max-width: 48em) {
+    gap: 3.2rem;
+  }
+}
+
+.btn {
+  box-sizing: border-box;
+  height: 5.6rem;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  color: #4ebdf5;
+  background-color: transparent;
+  border-radius: 20rem;
+  font-family: "Days One", sans-serif;
+  line-height: 125%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  z-index: 1;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 48em) {
+    height: max-content;
+    gap: 3.2rem;
+    font-size: 2.4rem;
+    line-height: 166.667%;
+  }
+}
+
+.btn::after {
+  top: 0px;
+  left: 0px;
+  content: "";
+  position: absolute;
+  border: 2px solid #4ebdf5;
+  height: 100%;
+  width: 100%;
+  border-radius: 20rem;
+  transition: border 0.3s ease;
+  @media (max-width: 48em) {
+    border: 2px solid #4ebdf5;
+  }
+}
+
+.icon-set {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 100px;
+  background-color: #4ebdf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-right: -2px; */
+
+  @media (max-width: 48rem) {
+    width: 9.2rem;
+    height: 9.2rem;
+  }
+}
+
+/* Стили для неактивной кнопки */
+.button-inactive {
+  background-color: rgba(174, 188, 195, 1);
+  color: white;
+  border-color: rgba(174, 188, 195, 1);
+  pointer-events: auto;
+  transition: none !important;
+}
+
+/* Убираем все ховеры и анимации для неактивной кнопки */
+.button-inactive:hover,
+.button-inactive:hover::before,
+.button-inactive::before,
+.button-inactive:hover .icon-set {
+  background-color: rgba(174, 188, 195, 1) !important;
+  color: white !important;
+  transition: none !important;
+}
+.button-inactive::after,
+.button-inactive:hover::after {
+  border: rgba(174, 188, 195, 1);
+}
+
+.button-inactive.btn-blue {
+  background-color: rgba(174, 188, 195, 1) !important;
+  color: white !important;
+  border-color: rgba(174, 188, 195, 1) !important;
+}
+
+.btn-blue {
+  color: #ffff;
+  background-color: #4ebdf5;
+}
+
+@media (min-width: 48rem) {
+  .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: #9be931;
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  .btn:hover {
+    color: black;
+    border: #9be931;
+    box-shadow: inset 0 0 0 2px #9be931;
+  }
+
+  .btn:hover::after {
+    border: 2px solid #9be931;
+  }
+  .button-inactive:hover::after {
+    border-color: rgba(174, 188, 195, 1);
+  }
+  .btn:hover::before {
+    left: 0;
+    top: 0;
+  }
+
+  .btn:hover .icon-set {
+    background-color: #9be931;
+    transition: background-color 0s ease;
+    box-shadow: 0 0 0 2px #9be931;
+  }
+}
+
+.icon-set-img {
+  width: 2.4rem;
+  height: 2.4rem;
+  @media (max-width: 48rem) {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+}
+
+.btn-primary {
+  padding: 1.9rem 2.4rem 1.7rem 2.4rem;
+
+  @media (max-width: 48em) {
+    padding: 3rem 4rem 2.6rem;
+  }
+}
+
+.btn-secondary {
+  padding-left: 2.4rem;
+  @media (max-width: 48em) {
+    padding-left: 4rem;
+  }
+}
+
+.button-icon {
+  width: 5.6rem;
+  height: 5.6rem;
+
+  @media (max-width: 48em) {
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+}
+.hide-desktop {
+  display: none;
+}
+@media (max-width: 48rem) {
+  .hide-mobile {
+    display: none;
+  }
+  .hide-desktop {
+    display: block;
+  }
+}
+
+.icon-arrow {
+  width: 4.8rem;
+  height: 4.8rem;
+  @media (max-width: 48rem) {
+    width: 9.2rem;
+    height: 9.2rem;
+  }
+}
+
+.text-white {
+  color: #ffff;
+}
+
+.text-green {
+  color: #9be931;
+}
+
+.text-black {
+  color: #15161a;
+}
+.text-center {
+  text-align: center;
+}
+
+.icon-yandex-logo {
+  width: 4rem;
+  height: 4rem;
+  @media (max-width: 48rem) {
+    width: 8rem;
+    height: 8rem;
+  }
+}

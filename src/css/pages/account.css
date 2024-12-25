@@ -1,0 +1,196 @@
+.account-back {
+  background-image: url(../../assets/images/back-acc.png);
+  @media (max-width: 48rem) {
+    background-image: url(../../assets/images/back-acc-mob.png);
+  }
+}
+
+.account {
+  position: relative;
+}
+
+.account__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+}
+
+.account__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 6.4rem;
+    align-items: start;
+  }
+}
+
+.account-form {
+  background-image: url(../../assets/images/back1-acc-data.png);
+  border-radius: 3.2rem;
+  padding: 3.2rem;
+  background-repeat: no-repeat;
+  background-size: 102% 102%;
+  background-position: center;
+  @media (max-width: 48rem) {
+    border-radius: 3.2rem;
+    padding: 2.8rem;
+    position: relative;
+    background-image: url(../../assets/images/acc-form-back-mob.png);
+  }
+}
+
+.account-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+}
+
+.account-form-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+}
+
+.account-form-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+}
+
+.account-form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+  }
+}
+
+.account-form-options {
+  @media (max-width: 48rem) {
+    height: 8.8rem;
+  }
+}
+
+.account-form-options__box {
+  display: flex;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    overflow: auto;
+    gap: 3.2rem;
+    position: absolute;
+    width: calc(100% - 2.8rem);
+    scrollbar-width: none;
+  }
+}
+
+.account-form-options__box::-webkit-scrollbar {
+  display: none;
+}
+
+.account-form-option {
+  border-radius: 100px;
+  height: 4.3rem;
+  padding: 0rem 2.2rem;
+  border: 2px solid rgba(155, 233, 49, 0.4);
+  display: flex;
+  align-items: center;
+  @media (max-width: 48rem) {
+    height: 8.8rem;
+    flex: 0 0 max-content;
+    padding: 0rem 3.6rem;
+  }
+}
+
+.account-form-option.active {
+  background-color: #9be931;
+}
+
+.account-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+  }
+}
+
+.account-form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 5.6rem;
+  }
+}
+
+.account-form-item {
+  display: flex;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 5.6rem;
+  }
+} /* 
+
+
+.account__form .btn {
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}
+
+
+
+
+.account__form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 5.6rem;
+  }
+}
+
+.account__form-item {
+  display: flex;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 5.6rem;
+  }
+}
+
+.account__form-top {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+}
+
+.account__form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+} */

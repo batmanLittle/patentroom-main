@@ -1,0 +1,376 @@
+.reg-stage {
+  margin-top: 4rem;
+
+  @media (max-width: 48rem) {
+    margin-top: 0rem;
+    position: relative;
+  }
+}
+
+.reg-stage__block {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+
+  @media (max-width: 48rem) {
+    gap: 0rem;
+  }
+}
+
+.reg-stage__top {
+  @media (max-width: 48rem) {
+    height: 29.4rem;
+  }
+}
+
+.reg-stage__list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  @media (max-width: 48rem) {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    position: absolute;
+    width: calc(100% - 2.8rem);
+    gap: 4.8rem;
+    border-bottom: 0px;
+    padding-bottom: 6.4rem;
+  }
+}
+
+.reg-stage__list::-webkit-scrollbar {
+  display: none;
+}
+
+.reg-stage__br-mobile {
+  @media (max-width: 48rem) {
+    position: absolute;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    bottom: 6.4rem;
+    width: 323%;
+    left: 0;
+  }
+}
+
+.reg-stage__item {
+  width: 17.3rem;
+  height: 14.1rem;
+  cursor: pointer;
+  margin-bottom: -2px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+  @media (max-width: 48rem) {
+    flex: 0 0 25.2rem;
+    height: 23rem;
+    gap: 1.6rem;
+    margin-bottom: 0px;
+  }
+}
+
+.reg-stage__item .txt16_bold {
+  color: white;
+}
+
+.reg-stage__item .txt40-days {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.reg-stage__item.active {
+  border-bottom: 2px solid #4ebdf5;
+}
+
+.reg-stage__item.active .txt40-days {
+  color: #4ebdf5;
+}
+
+.blur-effect {
+  display: none;
+  width: 100%;
+  position: absolute;
+  height: 15.3rem;
+  left: 0;
+  right: 0;
+  bottom: -87%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/back-rs-item.svg);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  border-radius: 15px;
+  opacity: 0.9;
+  @media (max-width: 48rem) {
+    height: 23.2rem;
+    bottom: -78%;
+  }
+}
+
+.blur-effect.active {
+  display: flex;
+}
+
+.rs-block {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    position: relative;
+    gap: 6.4rem;
+  }
+}
+
+.rs-block-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+}
+
+.rs-box-left {
+  border-radius: 3.2rem;
+  padding: 3.2rem;
+  background-color: white;
+  width: 108.4rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    border-radius: 3.2rem;
+    padding: 2.8rem;
+  }
+}
+
+.rs-block-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    order: -1;
+    gap: 6.4rem;
+  }
+}
+
+.rs-box-right {
+  padding: 2.8rem;
+  width: 52.8rem;
+  border-radius: 3.2rem;
+  background-image: url(../../assets/images/back1-acc-data.png);
+  background-repeat: no-repeat;
+  background-size: 102% 102%;
+  background-position: center;
+  @media (max-width: 48rem) {
+    padding: 2.8rem;
+    width: 100%;
+    border-radius: 3.2rem;
+    background-image: url(../../assets/images/back-rs-app-mob.png);
+  }
+}
+
+.hide-mob {
+  display: flex;
+  @media (max-width: 48rem) {
+    display: none;
+  }
+}
+.hide-desktop {
+  display: none;
+
+  @media (max-width: 48rem) {
+    display: flex;
+  }
+}
+
+.colum-left {
+  display: flex;
+  gap: 1.6rem;
+  @media (max-width: 48rem) {
+    gap: 3.2rem;
+  }
+}
+
+.column-left .txt16-days {
+  color: #343434;
+  order: -1;
+}
+
+.box-sticky-pay {
+  background-color: white;
+  display: none;
+  @media (max-width: 48rem) {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid #4ebdf5;
+    border-top-left-radius: 3.2rem;
+    border-top-right-radius: 3.2rem;
+    padding: 3.2rem 2.8rem;
+    z-index: 10;
+  }
+}
+
+.box-sticky-err {
+  max-width: 32.8rem;
+  top: -3.3rem;
+  right: 0rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  padding: 1.4rem;
+  border-radius: 2.4rem;
+  gap: 1rem;
+  border: 2px solid #4ebdf5;
+  @media (max-width: 48rem) {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    gap: 1.6rem;
+    padding: 8rem 2.8rem 2.8rem;
+    align-items: start;
+    border-radius: 3.2rem 3.2rem 0rem 0rem;
+
+    height: max-content;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.box-sticky-img {
+  top: -3rem;
+  right: 3.8rem;
+  width: max-content;
+
+  position: absolute;
+  @media (max-width: 48rem) {
+    display: none;
+  }
+}
+
+.box-sticky-img img {
+  width: 3.4rem;
+  height: 3.4rem;
+}
+
+.box-sticky-btn {
+  display: none;
+  @media (max-width: 48rem) {
+    display: flex;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+  }
+}
+
+.box-sticky-btn img {
+  @media (max-width: 48rem) {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+}
+
+.box-sticky-pay .btn {
+  @media (max-width: 48rem) {
+    width: max-content;
+  }
+}
+.box-sticky-pay .txt24-days {
+  color: #4ebdf5;
+}
+
+.rs-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border-radius: 3.2rem;
+  background-color: white;
+  padding: 3.2rem;
+  @media (max-width: 48rem) {
+    padding: 2.8rem;
+    border-radius: 3.2rem;
+    gap: 3.2rem;
+  }
+}
+
+.rs-block-cl {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+}
+
+.r3s-app-btm {
+  justify-content: end;
+  @media (max-width: 48rem) {
+    justify-content: start;
+  }
+}
+
+.sticky-pay-block {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  width: 164rem;
+  left: 50%;
+  transform: translateX(-50%);
+  @media (max-width: 48rem) {
+    position: fixed;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+
+    right: 0;
+  }
+}
+
+.rs-review {
+  margin-top: 18rem;
+  display: flex;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    margin-top: 20rem;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1.6rem;
+  }
+}
+
+.rs-review-right {
+  width: 52.8rem;
+  height: 33.4rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    height: 44rem;
+  }
+}
+
+.rs-review-left {
+  background-color: white;
+  border-radius: 6rem;
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  max-width: 108.4rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    border-radius: 4.8rem;
+    padding: 2.8rem;
+    gap: 3.2rem;
+  }
+}

@@ -1,0 +1,2894 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet" />
+    <title>ЛК-ПП (подача заявки на проверку товарного знака)</title>
+  </head>
+  <body class="account-back">
+    <!-- модалка "спасибо за подписку"-->
+    <div class="modal" id="modal-success">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img
+                  class="modal-close-icon"
+                  src="./assets/images/icon-close.svg"
+                  alt="icon-close"
+                />
+              </button>
+              <h2 class="txt36-days">спасибо за подписку!</h2>
+              <a class="btn btn-blue btn-primary" href="./main.html">
+                на главную</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка "подписки на рассылку "(Newsletter)-->
+    <div class="modal" id="modal-nl">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img src="./assets/images/icon-close.svg" alt="icon-close" />
+              </button>
+              <h2 class="txt36-days">подпишитесь на нашу рассылку</h2>
+              <form class="form-nl" id="form-nl" novalidate>
+                <label class="form-label">
+                  <input
+                    id="email"
+                    class="form-input"
+                    type="email"
+                    placeholder="email"
+                    required
+                  />
+                  <span class="error-message" id="email-error"></span>
+                </label>
+                <button
+                  class="btn btn-blue btn-primary"
+                  type="submit"
+                  data-modal="modal-success"
+                >
+                  Подписаться
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <!-- модалка аккаунт-меню -->
+          <div class="modal-acc" id="modal-acc">
+            <div class="modal-acc__block">
+              <ul class="modal-acc__list">
+                <li class="hide-desktop">
+                  <a class="modal-acc__link" href=""
+                    ><p class="txt18-days">Заявки на регистрацию</p>
+                    <button class="header__app-icon"><p>1</p></button></a
+                  >
+                </li>
+                <li class="hide-desktop">
+                  <a class="modal-acc__link" href=""
+                    ><p class="txt18-days">Заявки на проверку</p>
+                    <button class="header__app-icon"><p>1</p></button></a
+                  >
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days active">Мои данные</p></a>
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days">Договор</p></a>
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days">Партнерская программа</p></a>
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days">Выйти из профиля</p></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__block_left">
+            <p class="header__logo">PatentRum</p>
+            <div class="header__links">
+              <a class="header__link" href="#">
+                <p class="txt20 hide-mobile">Заявки на регистрацию</p>
+                <button class="header__app-icon"><p>1</p></button></a
+              >
+              <a class="header__link" href="#">
+                <p class="txt20 hide-mobile">Заявки на проверку</p>
+                <button class="header__app-icon"><p>2</p></button></a
+              >
+            </div>
+          </div>
+
+          <div class="header__block_right">
+            <div class="button-group">
+              <button
+                class="btn btn-secondary header__btn hide-mobile"
+                data-modal="modal-acc"
+              >
+                <span class="hide-mobile">Иван Иванов</span>
+                <div class="icon-set">
+                  <img
+                    class="icon-set-img"
+                    src="./assets/images/user.svg"
+                    alt="иконка-меню"
+                  />
+                </div>
+              </button>
+
+              <button
+                class="btn btn-secondary header__btn hide-desktop"
+                data-modal="modal-acc"
+              >
+                <span class="hide-mobile">меню</span>
+                <div class="icon-set">
+                  <img
+                    id="menu-acc"
+                    class="icon-set-img visible"
+                    src="./assets/images/icon-menu.svg"
+                    alt="иконка-меню"
+                  />
+
+                  <img
+                    id="close-acc"
+                    class="icon-close-menu hidden"
+                    src="./assets/images/icon-close-wh.svg"
+                    alt="icon-close"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="account reg-stage reg-stage-pp">
+        <div class="container">
+          <div class="account__content">
+            <div class="account__top">
+              <h1 class="text-white">Заявка №1234565</h1>
+            </div>
+            <div class="reg-stage__block">
+              <div class="reg-stage__top">
+                <ul class="reg-stage__list">
+                  <li class="reg-stage__item active" data-modal="r1s-pp">
+                    <p class="txt40-days">01</p>
+                    <p class="txt16_bold">Подготовка перечня классов</p>
+
+                    <div class="blur-effect active"></div>
+                  </li>
+                  <li class="reg-stage__item" data-modal="r2s-pp">
+                    <p class="txt40-days">02</p>
+                    <p class="txt16_bold">Проверка Заявки</p>
+                    <div class="blur-effect"></div>
+                  </li>
+                  <li class="reg-stage__item" data-modal="r3s-pp">
+                    <p class="txt40-days">03</p>
+                    <p class="txt16_bold">Формальная экспертиза</p>
+                    <div class="blur-effect"></div>
+                  </li>
+                  <li class="reg-stage__item" data-modal="r4s-pp">
+                    <p class="txt40-days">04</p>
+                    <p class="txt16_bold">Экспертиза по существу</p>
+                    <div class="blur-effect"></div>
+                  </li>
+                  <li class="reg-stage__item" data-modal="r5s-pp">
+                    <p class="txt40-days">05</p>
+                    <p class="txt16_bold">Решение о регистрации</p>
+                    <div class="blur-effect"></div>
+                  </li>
+                  <li class="reg-stage__item" data-modal="r6s-pp">
+                    <p class="txt40-days">06</p>
+                    <p class="txt16_bold">Результат регистрации</p>
+                    <div class="blur-effect"></div>
+                  </li>
+
+                  <li class="reg-stage__br-mobile hide-desktop"></li>
+                </ul>
+              </div>
+
+              <div class="rs-pp__block r1s-pp" id="r1s-pp">
+                <!-- ЛК ПП_ 1 этап для перечня классов ИП -->
+                <div class="rs-pp__box">
+                  <div class="rs-pp-app">
+                    <div class="rs-pp-app__left">
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Заявитель</p>
+                        <p class="txt22">
+                          Индивидуальный предприниматель Иванов Иван Иванович
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Номер телефона</p>
+                          <p class="txt22">+7 (000)-000-00-00</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Почта</p>
+                          <p class="txt22">forexample@mail.ru</p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Товары и услуги</p>
+                        <p class="txt22">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Описание</p>
+                        <p class="txt22 rs-pp-app__info-desc">
+                          Продукты косметические и туалетные немедицинские;
+                          средства для чистки зубов немедицинские; продукты
+                          парфюмерные, масла эфирные; препараты для отбеливания
+                          и вещества прочие для стирки; препараты для чистки,
+                          полирования, обезжиривания и абразивной обработки.
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">ОГРНИП</p>
+                        <p class="txt22">1234567890123456</p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">индекс</p>
+                          <p class="txt22">198198</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Адрес</p>
+                          <p class="txt22">
+                            г. Москва, Рязанский проспект 75 кор.4 этаж 12
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rs-pp-app__right">
+                      <div class="rs-pp-app__right-top">
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__right-btm">
+                        <div class="rs-pp-app__right-clue">
+                          <img
+                            src="./assets/images/icon-clue.svg"
+                            alt="icon-clue"
+                          />
+                        </div>
+                        <p class="txt16">
+                          У клиента оплачена услуга ”Ускоренная подача заявки
+                          (за 24 часа)”
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ЛК ПП_ 1 этап для перечня классов Иностранная компания -->
+                <div class="rs-pp__box">
+                  <div class="rs-pp-app">
+                    <div class="rs-pp-app__left">
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">
+                          Наименование заявителя (как в учредительных
+                          документах)
+                        </p>
+                        <p class="txt22">Request Design</p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">
+                          Транслитерация наименования заявителя:
+                        </p>
+                        <p class="txt22">Request Design</p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Номер телефона</p>
+                          <p class="txt22">+7 (000)-000-00-00</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Почта</p>
+                          <p class="txt22">forexample@mail.ru</p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Товары и услуги</p>
+                        <p class="txt22">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__info rs-pp-app__info-desc">
+                        <p class="txt24-days">Описание</p>
+                        <p class="txt22 rs-pp-app__info-desc">
+                          Продукты косметические и туалетные немедицинские;
+                          средства для чистки зубов немедицинские; продукты
+                          парфюмерные, масла эфирные; препараты для отбеливания
+                          и вещества прочие для стирки; препараты для чистки,
+                          полирования, обезжиривания и абразивной обработки.
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Страна</p>
+                          <p class="txt22">Казахстан</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Адрес заявителя</p>
+                          <p class="txt22">
+                            г. Москва, Рязанский проспект 75 кор.4 этаж 12
+                          </p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">
+                          Транслитерация адреса заявителя
+                        </p>
+                        <p class="txt22">
+                          г. Москва, Рязанский проспект 75 кор.4 этаж 12
+                        </p>
+                      </div>
+                    </div>
+                    <div class="rs-pp-app__right">
+                      <div class="rs-pp-app__right-top">
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__right-btm">
+                        <div class="rs-pp-app__right-clue">
+                          <img
+                            src="./assets/images/icon-clue.svg"
+                            alt="icon-clue"
+                          />
+                        </div>
+                        <p class="txt16">
+                          У клиента оплачена услуга ”Ускоренная подача заявки
+                          (за 24 часа)”
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ЛК ПП_ 1 этап для перечня классов Физическое лицо -->
+                <div class="rs-pp__box">
+                  <div class="rs-pp-app">
+                    <div class="rs-pp-app__left">
+                      <div class="rs-pp-app__row rs-pp-app__full-name">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Фамилия</p>
+                          <p class="txt22">Иванов</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Имя</p>
+                          <p class="txt22">Ивван</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Отчество</p>
+                          <p class="txt22">Иванович</p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Номер телефона</p>
+                          <p class="txt22">+7 (000)-000-00-00</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Почта</p>
+                          <p class="txt22">forexample@mail.ru</p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Товары и услуги</p>
+                        <p class="txt22">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Описание</p>
+                        <p class="txt22 rs-pp-app__info-desc">
+                          Продукты косметические и туалетные немедицинские;
+                          средства для чистки зубов немедицинские; продукты
+                          парфюмерные, масла эфирные; препараты для отбеливания
+                          и вещества прочие для стирки; препараты для чистки,
+                          полирования, обезжиривания и абразивной обработки.
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">ИНН</p>
+                          <p class="txt22">1234567890123456</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">СНИЛС</p>
+                          <p class="txt22">1234567890123456</p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Адрес регистрации</p>
+                        <p class="txt22">
+                          г. Москва, Рязанский проспект 75 кор.4 этаж 12
+                        </p>
+                      </div>
+                    </div>
+                    <div class="rs-pp-app__right">
+                      <div class="rs-pp-app__right-top">
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__right-btm">
+                        <div class="rs-pp-app__right-clue">
+                          <img
+                            src="./assets/images/icon-clue.svg"
+                            alt="icon-clue"
+                          />
+                        </div>
+                        <p class="txt16">
+                          У клиента оплачена услуга ”Ускоренная подача заявки
+                          (за 24 часа)”
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- ЛК ПП_ 1 этап для перечня классов Российская компания -->
+                <div class="rs-pp__box">
+                  <div class="rs-pp-app">
+                    <div class="rs-pp-app__left">
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Название компании</p>
+                        <p class="txt22">Request Design</p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Номер телефона</p>
+                          <p class="txt22">+7 (000)-000-00-00</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Почта</p>
+                          <p class="txt22">forexample@mail.ru</p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Товары и услуги</p>
+                        <p class="txt22">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Описание</p>
+                        <p class="txt22 rs-pp-app__info-desc">
+                          Продукты косметические и туалетные немедицинские;
+                          средства для чистки зубов немедицинские; продукты
+                          парфюмерные, масла эфирные; препараты для отбеливания
+                          и вещества прочие для стирки; препараты для чистки,
+                          полирования, обезжиривания и абразивной обработки.
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">ОГРН</p>
+                        <p class="txt22">1234567890123456</p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Юридический адрес</p>
+                        <p class="txt22">
+                          г. Москва, Рязанский проспект 75 кор.4 этаж 12
+                        </p>
+                      </div>
+                    </div>
+                    <div class="rs-pp-app__right">
+                      <div class="rs-pp-app__right-top">
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__right-btm">
+                        <div class="rs-pp-app__right-clue">
+                          <img
+                            src="./assets/images/icon-clue.svg"
+                            alt="icon-clue"
+                          />
+                        </div>
+                        <p class="txt16">
+                          У клиента оплачена услуга ”Ускоренная подача заявки
+                          (за 24 часа)”
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rs-pp__box">
+                  <div class="rs-pp-classes">
+                    <div class="rs-pp-classes__top">
+                      <p class="txt24-days">Подобрать классы</p>
+                      <button class="btn btn-blue btn-primary">
+                        подобрать
+                      </button>
+                    </div>
+                    <ul class="rs-pp-classes__list">
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 1</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">Химические продукты</p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Продукты химические, предназначенные для
+                              использования в промышленных, научных целях, в
+                              фотографии, сельском хозяйстве, садоводстве и
+                              лесоводстве;</span
+                            >
+                            смолы необработанные синтетические, материалы
+                            необработанные пластические; составы для тушения
+                            огня и предотвращения пожаров; препараты для закалки
+                            и пайки металлов; вещества для дубления кожи и шкур
+                            животных; вещества клеящие для промышленных целей;
+                            мастики и другие наполнители пастообразные;
+                            компосты, удобрения, навоз; препараты биологические
+                            для промышленных и научных целей.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 2</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">Краски, олифы, лаки</p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 3</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">
+                                Немедицинская косметика и парфюмерия
+                              </p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 4</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">Масла, смазки, топлива</p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 5</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">
+                                Фармацевтические медицинские препараты
+                              </p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 6</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">
+                                Обычные металлы и их сплавы
+                              </p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 7</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">
+                                Машины, оборудование, станки, двигатели
+                              </p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 8</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">
+                                Ручные орудия и инструменты
+                              </p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 9</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">Краски, олифы, лаки</p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 10</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">Краски, олифы, лаки</p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 11</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">Краски, олифы, лаки</p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 12</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">Краски, олифы, лаки</p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 13</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">Краски, олифы, лаки</p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 14</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">Краски, олифы, лаки</p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-pp-classes__item">
+                        <div class="rs-pp-classes__item-top">
+                          <div class="rs-pp-classes__item-left">
+                            <div class="rs-pp-classes__item-num">
+                              <p class="txt18-days">Класс 15</p>
+                            </div>
+                            <div class="rs-pp-classes__item-title">
+                              <p class="txt18-days">Краски, олифы, лаки</p>
+                            </div>
+                          </div>
+                          <button class="rs-pp-classes__item-icon">
+                            <img
+                              src="./assets/images/icon-plus-bl.svg"
+                              alt=""
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/icon-minus.svg"
+                              alt=""
+                            />
+                          </button>
+                        </div>
+                        <div class="rs-pp-classes__item-desc">
+                          <p class="txt18">
+                            <span
+                              >Краски, политуры, лаки; средства защитные,
+                              предохраняющие металлы от коррозии и древесину от
+                              разрушения;</span
+                            >
+                            вещества красящие; чернила типографские, чернила для
+                            маркировки и для гравюр; смолы необработанные
+                            природные; металлы листовые и порошкообразные,
+                            используемые для художественно-декоративных целей и
+                            художественной печати.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="rs-pp__block r2s-pp" id="r2s-pp">
+                <!-- ЛК ПП_ 1 этап для перечня классов ИП -->
+                <div class="rs-pp__box">
+                  <div class="rs-pp-app">
+                    <div class="rs-pp-app__left">
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Заявитель</p>
+                        <p class="txt22">
+                          Индивидуальный предприниматель Иванов Иван Иванович
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Номер телефона</p>
+                          <p class="txt22">+7 (000)-000-00-00</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Почта</p>
+                          <p class="txt22">forexample@mail.ru</p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Товары и услуги</p>
+                        <p class="txt22">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Описание</p>
+                        <p class="txt22 rs-pp-app__info-desc">
+                          Продукты косметические и туалетные немедицинские;
+                          средства для чистки зубов немедицинские; продукты
+                          парфюмерные, масла эфирные; препараты для отбеливания
+                          и вещества прочие для стирки; препараты для чистки,
+                          полирования, обезжиривания и абразивной обработки.
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">ОГРНИП</p>
+                        <p class="txt22">1234567890123456</p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">индекс</p>
+                          <p class="txt22">198198</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Адрес</p>
+                          <p class="txt22">
+                            г. Москва, Рязанский проспект 75 кор.4 этаж 12
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rs-pp-app__right">
+                      <div class="rs-pp-app__right-top">
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__right-btm">
+                        <div class="rs-pp-app__right-clue">
+                          <img
+                            src="./assets/images/icon-clue.svg"
+                            alt="icon-clue"
+                          />
+                        </div>
+                        <p class="txt16">
+                          У клиента оплачена услуга ”Ускоренная подача заявки
+                          (за 24 часа)”
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rs-pp__box">
+                  <div class="rs-classes">
+                    <div class="rs-classes-top">
+                      <div class="rs-classes__title">
+                        <p class="txt24-days">Классы</p>
+                      </div>
+                      <div class="rs-classes__btns">
+                        <button class="btn btn-blue btn-primary">
+                          Отправить на подписание
+                        </button>
+                      </div>
+                    </div>
+                    <ul class="rs-classes__list">
+                      <li class="rs-classes__item">
+                        <div class="rs-classes__item-visible">
+                          <div class="rs-classes__item-left">
+                            <div class="rs-classes__item-num">
+                              <p class="txt18-days">Класс 1</p>
+                            </div>
+                            <p class="txt18-days">Химические продукты</p>
+                          </div>
+
+                          <button class="rs-classes__item-btn">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 11L15 21L25 11"
+                                stroke="#4EBDF5"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                            <svg
+                              style="display: none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M25 20L15 10L5 20"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="rs-classes__item-hidden"
+                          style="display: none"
+                        >
+                          <p class="txt18">
+                            Продукты химические, предназначенные для
+                            использования в промышленных, научных целях, в
+                            фотографии, сельском хозяйстве, садоводстве и
+                            лесоводстве;
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-classes__item">
+                        <div class="rs-classes__item-visible">
+                          <div class="rs-classes__item-left">
+                            <div class="rs-classes__item-num">
+                              <p class="txt18-days">Класс 3</p>
+                            </div>
+                            <p class="txt18-days">
+                              Реклама и управление бизнесом
+                            </p>
+                          </div>
+
+                          <button class="rs-classes__item-btn">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 11L15 21L25 11"
+                                stroke="#4EBDF5"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                            <svg
+                              style="display: none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M25 20L15 10L5 20"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="rs-classes__item-hidden"
+                          style="display: none"
+                        >
+                          <p class="txt18">
+                            Продукты косметические и туалетные немедицинские;
+                            средства для чистки зубов немедицинские; продукты
+                            парфюмерные, масла эфирные; препараты для
+                            отбеливания и вещества прочие для стирки; препараты
+                            для чистки, полирования, обезжиривания и абразивной
+                            обработки.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" id="form-reg-number" novalidate>
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">регистрационный номер</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Отправить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__doc">
+                        <label class="form-label">
+                          <input
+                            id="regNumber"
+                            class="form-input"
+                            type="text"
+                            placeholder="Введите номер"
+                            required
+                          />
+                          <span
+                            class="error-message"
+                            id="regNumber-error"
+                          ></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="rs-pp__block r3s-pp" id="r3s-pp">
+                <!-- ЛК ПП_ 1 этап для перечня классов ИП -->
+                <div class="rs-pp__box">
+                  <div class="rs-pp-app">
+                    <div class="rs-pp-app__left">
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Заявитель</p>
+                        <p class="txt22">
+                          Индивидуальный предприниматель Иванов Иван Иванович
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Номер телефона</p>
+                          <p class="txt22">+7 (000)-000-00-00</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Почта</p>
+                          <p class="txt22">forexample@mail.ru</p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Товары и услуги</p>
+                        <p class="txt22">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Описание</p>
+                        <p class="txt22 rs-pp-app__info-desc">
+                          Продукты косметические и туалетные немедицинские;
+                          средства для чистки зубов немедицинские; продукты
+                          парфюмерные, масла эфирные; препараты для отбеливания
+                          и вещества прочие для стирки; препараты для чистки,
+                          полирования, обезжиривания и абразивной обработки.
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">ОГРНИП</p>
+                        <p class="txt22">1234567890123456</p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">индекс</p>
+                          <p class="txt22">198198</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Адрес</p>
+                          <p class="txt22">
+                            г. Москва, Рязанский проспект 75 кор.4 этаж 12
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rs-pp-app__right">
+                      <div class="rs-pp-app__right-top">
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__right-btm">
+                        <div class="rs-pp-app__right-clue">
+                          <img
+                            src="./assets/images/icon-clue.svg"
+                            alt="icon-clue"
+                          />
+                        </div>
+                        <p class="txt16">
+                          У клиента оплачена услуга ”Ускоренная подача заявки
+                          (за 24 часа)”
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rs-pp__box">
+                  <div class="rs-classes">
+                    <div class="rs-classes-top">
+                      <div class="rs-classes__title">
+                        <p class="txt24-days">Классы</p>
+                      </div>
+                    </div>
+                    <ul class="rs-classes__list">
+                      <li class="rs-classes__item">
+                        <div class="rs-classes__item-visible">
+                          <div class="rs-classes__item-left">
+                            <div class="rs-classes__item-num">
+                              <p class="txt18-days">Класс 1</p>
+                            </div>
+                            <p class="txt18-days">Химические продукты</p>
+                          </div>
+
+                          <button class="rs-classes__item-btn">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 11L15 21L25 11"
+                                stroke="#4EBDF5"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                            <svg
+                              style="display: none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M25 20L15 10L5 20"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="rs-classes__item-hidden"
+                          style="display: none"
+                        >
+                          <p class="txt18">
+                            Продукты химические, предназначенные для
+                            использования в промышленных, научных целях, в
+                            фотографии, сельском хозяйстве, садоводстве и
+                            лесоводстве;
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-classes__item">
+                        <div class="rs-classes__item-visible">
+                          <div class="rs-classes__item-left">
+                            <div class="rs-classes__item-num">
+                              <p class="txt18-days">Класс 3</p>
+                            </div>
+                            <p class="txt18-days">
+                              Реклама и управление бизнесом
+                            </p>
+                          </div>
+
+                          <button class="rs-classes__item-btn">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 11L15 21L25 11"
+                                stroke="#4EBDF5"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                            <svg
+                              style="display: none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M25 20L15 10L5 20"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="rs-classes__item-hidden"
+                          style="display: none"
+                        >
+                          <p class="txt18">
+                            Продукты косметические и туалетные немедицинские;
+                            средства для чистки зубов немедицинские; продукты
+                            парфюмерные, масла эфирные; препараты для
+                            отбеливания и вещества прочие для стирки; препараты
+                            для чистки, полирования, обезжиривания и абразивной
+                            обработки.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" novalidate>
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">Документы и уведомления</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Отправить документ заявителю
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__doc">
+                        <label class="form-label">
+                          <input
+                            class="form-input"
+                            type="text"
+                            placeholder="Название документа"
+                            required=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <label class="btn btn-secondary">
+                          <span>загрузить</span>
+                          <div class="icon-set">
+                            <img
+                              class="icon-set-img"
+                              src="./assets/images/icon-clip.svg"
+                              alt="иконка-меню"
+                            />
+                          </div>
+                          <input
+                            type="file"
+                            id="fileUpload"
+                            class="file-input"
+                            style="display: none"
+                          />
+                          <span class="error-message" id=""></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- 3 этап, после загрузки документа -->
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" novalidate>
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">Документы и уведомления</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Отправить документ заявителю
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__notif">
+                        <label class="form-label">
+                          <input
+                            class="form-input"
+                            type="text"
+                            placeholder="Название документа"
+                            required=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <div class="rs-pp-form__notif-info">
+                          <div class="rs-pp-form__notif-box">
+                            <p class="txt22_bold">
+                              Уведомление о поступлении.pdf
+                            </p>
+                            <p class="txt18 txt-grey">12МБ</p>
+                          </div>
+                          <p class="txt22_bold txt-grey">11.10.024</p>
+                        </div>
+                        <button type="button" class="block-edit edit-btn">
+                          <img
+                            src="./assets/images/icon-delete-blue.svg"
+                            alt="icon-edit"
+                          />
+                          <p class="txt16-days">удалить</p>
+                        </button>
+                      </div>
+                      <div class="rs-pp-form__doc">
+                        <label class="form-label">
+                          <input
+                            class="form-input"
+                            type="text"
+                            placeholder="Название документа"
+                            required=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <label class="btn btn-secondary">
+                          <span>загрузить</span>
+                          <div class="icon-set">
+                            <img
+                              class="icon-set-img"
+                              src="./assets/images/icon-clip.svg"
+                              alt="иконка-меню"
+                            />
+                          </div>
+                          <input
+                            type="file"
+                            id="fileUpload"
+                            class="file-input"
+                            style="display: none"
+                          />
+                          <span class="error-message" id=""></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" id="form-reg-number-2" novalidate>
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">регистрационный номер</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Отправить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__doc">
+                        <label class="form-label">
+                          <input
+                            id="regNumber"
+                            class="form-input"
+                            type="text"
+                            placeholder="Введите номер"
+                            required
+                          />
+                          <span
+                            class="error-message"
+                            id="regNumber-error"
+                          ></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="rs-pp__block r4s-pp" id="r4s-pp">
+                <div class="rs-pp__box">
+                  <div class="rs-pp__box-clue">
+                    <div class="rs-pp__box-clue_img">
+                      <img
+                        src="./assets/images/icon-emph.svg"
+                        alt="icon-emph"
+                      />
+                    </div>
+                    <div class="rs-pp__box-clue_txt">
+                      <p class="txt24-days">
+                        необходимо подготовить ответ на уведомление о
+                        препятствии для ответа на запрос экпертизы
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ЛК ПП_ 1 этап для перечня классов ИП -->
+                <div class="rs-pp__box">
+                  <div class="rs-pp-app">
+                    <div class="rs-pp-app__left">
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Заявитель</p>
+                        <p class="txt22">
+                          Индивидуальный предприниматель Иванов Иван Иванович
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Номер телефона</p>
+                          <p class="txt22">+7 (000)-000-00-00</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Почта</p>
+                          <p class="txt22">forexample@mail.ru</p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Товары и услуги</p>
+                        <p class="txt22">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Описание</p>
+                        <p class="txt22 rs-pp-app__info-desc">
+                          Продукты косметические и туалетные немедицинские;
+                          средства для чистки зубов немедицинские; продукты
+                          парфюмерные, масла эфирные; препараты для отбеливания
+                          и вещества прочие для стирки; препараты для чистки,
+                          полирования, обезжиривания и абразивной обработки.
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">ОГРНИП</p>
+                        <p class="txt22">1234567890123456</p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">индекс</p>
+                          <p class="txt22">198198</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Адрес</p>
+                          <p class="txt22">
+                            г. Москва, Рязанский проспект 75 кор.4 этаж 12
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rs-pp-app__right">
+                      <div class="rs-pp-app__right-top">
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__right-btm">
+                        <div class="rs-pp-app__right-clue">
+                          <img
+                            src="./assets/images/icon-clue.svg"
+                            alt="icon-clue"
+                          />
+                        </div>
+                        <p class="txt16">
+                          У клиента оплачена услуга ”Ускоренная подача заявки
+                          (за 24 часа)”
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rs-pp__box">
+                  <div class="rs-classes">
+                    <div class="rs-classes-top">
+                      <div class="rs-classes__title">
+                        <p class="txt24-days">Классы</p>
+                      </div>
+                    </div>
+                    <ul class="rs-classes__list">
+                      <li class="rs-classes__item">
+                        <div class="rs-classes__item-visible">
+                          <div class="rs-classes__item-left">
+                            <div class="rs-classes__item-num">
+                              <p class="txt18-days">Класс 1</p>
+                            </div>
+                            <p class="txt18-days">Химические продукты</p>
+                          </div>
+
+                          <button class="rs-classes__item-btn">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 11L15 21L25 11"
+                                stroke="#4EBDF5"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                            <svg
+                              style="display: none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M25 20L15 10L5 20"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="rs-classes__item-hidden"
+                          style="display: none"
+                        >
+                          <p class="txt18">
+                            Продукты химические, предназначенные для
+                            использования в промышленных, научных целях, в
+                            фотографии, сельском хозяйстве, садоводстве и
+                            лесоводстве;
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-classes__item">
+                        <div class="rs-classes__item-visible">
+                          <div class="rs-classes__item-left">
+                            <div class="rs-classes__item-num">
+                              <p class="txt18-days">Класс 3</p>
+                            </div>
+                            <p class="txt18-days">
+                              Реклама и управление бизнесом
+                            </p>
+                          </div>
+
+                          <button class="rs-classes__item-btn">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 11L15 21L25 11"
+                                stroke="#4EBDF5"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                            <svg
+                              style="display: none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M25 20L15 10L5 20"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="rs-classes__item-hidden"
+                          style="display: none"
+                        >
+                          <p class="txt18">
+                            Продукты косметические и туалетные немедицинские;
+                            средства для чистки зубов немедицинские; продукты
+                            парфюмерные, масла эфирные; препараты для
+                            отбеливания и вещества прочие для стирки; препараты
+                            для чистки, полирования, обезжиривания и абразивной
+                            обработки.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" novalidate>
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">Документы и уведомления</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Отправить документ заявителю
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__notif">
+                        <label class="form-label">
+                          <input
+                            value="Уведомление о поступлении"
+                            class="form-input"
+                            type="text"
+                            placeholder="Уведомление о поступлении"
+                            required=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <div class="rs-pp-form__notif-info">
+                          <div class="rs-pp-form__notif-box">
+                            <p class="txt22_bold">
+                              Уведомление о поступлении.pdf
+                            </p>
+                            <p class="txt18 txt-grey">12МБ</p>
+                          </div>
+                          <p class="txt22_bold txt-grey">11.10.024</p>
+                        </div>
+                        <button type="button" class="block-edit edit-btn">
+                          <img
+                            src="./assets/images/icon-delete-blue.svg"
+                            alt="icon-edit"
+                          />
+                          <p class="txt16-days">удалить</p>
+                        </button>
+                      </div>
+                      <div class="rs-pp-form__doc">
+                        <label class="form-label">
+                          <input
+                            class="form-input"
+                            type="text"
+                            placeholder="Название документа"
+                            required=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <label class="btn btn-secondary">
+                          <span>загрузить</span>
+                          <div class="icon-set">
+                            <img
+                              class="icon-set-img"
+                              src="./assets/images/icon-clip.svg"
+                              alt="иконка-меню"
+                            />
+                          </div>
+                          <input
+                            type="file"
+                            id="fileUpload"
+                            class="file-input"
+                            style="display: none"
+                          />
+                          <span class="error-message" id=""></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" id="form-reg-number-3" novalidate>
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">регистрационный номер</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Отправить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__doc">
+                        <label class="form-label">
+                          <input
+                            id="regNumber"
+                            class="form-input"
+                            type="text"
+                            placeholder="Введите номер"
+                            required
+                          />
+                          <span
+                            class="error-message"
+                            id="regNumber-error"
+                          ></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="rs-pp__block r5s-pp" id="r5s-pp">
+                <!-- ЛК ПП_ 1 этап для перечня классов ИП -->
+                <div class="rs-pp__box">
+                  <div class="rs-pp-app">
+                    <div class="rs-pp-app__left">
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Заявитель</p>
+                        <p class="txt22">
+                          Индивидуальный предприниматель Иванов Иван Иванович
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Номер телефона</p>
+                          <p class="txt22">+7 (000)-000-00-00</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Почта</p>
+                          <p class="txt22">forexample@mail.ru</p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Товары и услуги</p>
+                        <p class="txt22">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Описание</p>
+                        <p class="txt22 rs-pp-app__info-desc">
+                          Продукты косметические и туалетные немедицинские;
+                          средства для чистки зубов немедицинские; продукты
+                          парфюмерные, масла эфирные; препараты для отбеливания
+                          и вещества прочие для стирки; препараты для чистки,
+                          полирования, обезжиривания и абразивной обработки.
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">ОГРНИП</p>
+                        <p class="txt22">1234567890123456</p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">индекс</p>
+                          <p class="txt22">198198</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Адрес</p>
+                          <p class="txt22">
+                            г. Москва, Рязанский проспект 75 кор.4 этаж 12
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rs-pp-app__right">
+                      <div class="rs-pp-app__right-top">
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__right-btm">
+                        <div class="rs-pp-app__right-clue">
+                          <img
+                            src="./assets/images/icon-clue.svg"
+                            alt="icon-clue"
+                          />
+                        </div>
+                        <p class="txt16">
+                          У клиента оплачена услуга ”Ускоренная подача заявки
+                          (за 24 часа)”
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="rs-pp__box">
+                  <div class="rs-classes">
+                    <div class="rs-classes-top">
+                      <div class="rs-classes__title">
+                        <p class="txt24-days">Классы</p>
+                      </div>
+                    </div>
+                    <ul class="rs-classes__list">
+                      <li class="rs-classes__item">
+                        <div class="rs-classes__item-visible">
+                          <div class="rs-classes__item-left">
+                            <div class="rs-classes__item-num">
+                              <p class="txt18-days">Класс 1</p>
+                            </div>
+                            <p class="txt18-days">Химические продукты</p>
+                          </div>
+
+                          <button class="rs-classes__item-btn">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 11L15 21L25 11"
+                                stroke="#4EBDF5"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                            <svg
+                              style="display: none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M25 20L15 10L5 20"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="rs-classes__item-hidden"
+                          style="display: none"
+                        >
+                          <p class="txt18">
+                            Продукты химические, предназначенные для
+                            использования в промышленных, научных целях, в
+                            фотографии, сельском хозяйстве, садоводстве и
+                            лесоводстве;
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-classes__item">
+                        <div class="rs-classes__item-visible">
+                          <div class="rs-classes__item-left">
+                            <div class="rs-classes__item-num">
+                              <p class="txt18-days">Класс 3</p>
+                            </div>
+                            <p class="txt18-days">
+                              Реклама и управление бизнесом
+                            </p>
+                          </div>
+
+                          <button class="rs-classes__item-btn">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 11L15 21L25 11"
+                                stroke="#4EBDF5"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                            <svg
+                              style="display: none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M25 20L15 10L5 20"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="rs-classes__item-hidden"
+                          style="display: none"
+                        >
+                          <p class="txt18">
+                            Продукты косметические и туалетные немедицинские;
+                            средства для чистки зубов немедицинские; продукты
+                            парфюмерные, масла эфирные; препараты для
+                            отбеливания и вещества прочие для стирки; препараты
+                            для чистки, полирования, обезжиривания и абразивной
+                            обработки.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form r5s-pp-form" novalidate>
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">Документы и уведомления</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Уведомить об отказе
+                        </button>
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Уведомить о регистрации
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__notif">
+                        <label class="form-label">
+                          <input
+                            value="Уведомление о поступлении"
+                            class="form-input"
+                            type="text"
+                            placeholder="Уведомление о поступлении"
+                            required=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <div class="rs-pp-form__notif-info">
+                          <div class="rs-pp-form__notif-box">
+                            <p class="txt22_bold">
+                              Уведомление о поступлении.pdf
+                            </p>
+                            <p class="txt18 txt-grey">12МБ</p>
+                          </div>
+                          <p class="txt22_bold txt-grey">11.10.024</p>
+                        </div>
+                        <button type="button" class="block-edit edit-btn">
+                          <img
+                            src="./assets/images/icon-delete-blue.svg"
+                            alt="icon-edit"
+                          />
+                          <p class="txt16-days">удалить</p>
+                        </button>
+                      </div>
+                      <div class="rs-pp-form__doc">
+                        <label class="form-label">
+                          <input
+                            class="form-input"
+                            type="text"
+                            placeholder="Название документа"
+                            required=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <label class="btn btn-secondary">
+                          <span>загрузить</span>
+                          <div class="icon-set">
+                            <img
+                              class="icon-set-img"
+                              src="./assets/images/icon-clip.svg"
+                              alt="иконка-меню"
+                            />
+                          </div>
+                          <input
+                            type="file"
+                            id="fileUpload"
+                            class="file-input"
+                            style="display: none"
+                          />
+                          <span class="error-message" id=""></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- 5 этап, после нажатия на кнопку уведомить об отрицательном решении -->
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" novalidate>
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">Документы и уведомления</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          перенести в завершенные
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__notif">
+                        <label class="form-label">
+                          <input
+                            value="Уведомление об отрицательном решении"
+                            class="form-input"
+                            type="text"
+                            placeholder="Уведомление об отрицательном решении"
+                            required=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <div class="rs-pp-form__notif-info">
+                          <div class="rs-pp-form__notif-box">
+                            <p class="txt22_bold">
+                              Уведомление об отрицательном решении.pdf
+                            </p>
+                            <p class="txt18 txt-grey">12МБ</p>
+                          </div>
+                          <p class="txt22_bold txt-grey">11.10.024</p>
+                        </div>
+                        <button type="button" class="block-edit edit-btn">
+                          <img
+                            src="./assets/images/icon-delete-blue.svg"
+                            alt="icon-edit"
+                          />
+                          <p class="txt16-days">удалить</p>
+                        </button>
+                      </div>
+                      <div class="rs-pp-form__notif">
+                        <label class="form-label">
+                          <input
+                            value="Уведомление о поступлении"
+                            class="form-input"
+                            type="text"
+                            placeholder="Уведомление о поступлении"
+                            required=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <div class="rs-pp-form__notif-info">
+                          <div class="rs-pp-form__notif-box">
+                            <p class="txt22_bold">
+                              Уведомление о поступлении.pdf
+                            </p>
+                            <p class="txt18 txt-grey">12МБ</p>
+                          </div>
+                          <p class="txt22_bold txt-grey">11.10.024</p>
+                        </div>
+                        <button type="button" class="block-edit edit-btn">
+                          <img
+                            src="./assets/images/icon-delete-blue.svg"
+                            alt="icon-edit"
+                          />
+                          <p class="txt16-days">удалить</p>
+                        </button>
+                      </div>
+                      <div class="rs-pp-form__doc">
+                        <label class="form-label">
+                          <input
+                            class="form-input"
+                            type="text"
+                            placeholder="Название документа"
+                            required=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <label class="btn btn-secondary">
+                          <span>загрузить</span>
+                          <div class="icon-set">
+                            <img
+                              class="icon-set-img"
+                              src="./assets/images/icon-clip.svg"
+                              alt="иконка-меню"
+                            />
+                          </div>
+                          <input
+                            type="file"
+                            id="fileUpload"
+                            class="file-input"
+                            style="display: none"
+                          />
+                          <span class="error-message" id=""></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" id="form-reg-number-3" novalidate>
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">регистрационный номер</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Отправить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__doc" id="rs-pp-num">
+                        <label class="form-label">
+                          <input
+                            value="123456789"
+                            class="form-input"
+                            type="text"
+                            placeholder="123456789"
+                            required=""
+                            disabled=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <button type="button" class="block-edit edit-btn">
+                          <p class="txt16-days">редактировать</p>
+                          <img
+                            src="./assets/images/icon-edit.svg"
+                            alt="icon-edit"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="rs-pp__block r6s-pp" id="r6s-pp">
+                <div class="rs-pp__box">
+                  <div class="rs-pp__box-clue">
+                    <div class="rs-pp__box-clue_img">
+                      <img
+                        src="./assets/images/icon-emph.svg"
+                        alt="icon-emph"
+                      />
+                    </div>
+                    <div class="rs-pp__box-clue_txt">
+                      <p class="txt24-days">Клиент оплатил пошлину</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" novalidate="">
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">Свидетельство</p>
+                      <div class="rs-pp-form__opts rs-pp-form__opts-certif">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          отправить свидетельство клиенту
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__doc">
+                        <label class="form-label hide-mobile">
+                          <input
+                            class="form-input"
+                            type="text"
+                            placeholder="Введите номер свидетельства"
+                            required=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <label class="btn btn-secondary">
+                          <span>загрузить</span>
+                          <div class="icon-set">
+                            <img
+                              class="icon-set-img"
+                              src="./assets/images/icon-clip.svg"
+                              alt="иконка-меню"
+                            />
+                          </div>
+                          <input
+                            type="file"
+                            id="fileUpload"
+                            class="file-input"
+                            style="display: none"
+                          />
+                          <span class="error-message" id=""></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- 6 этап, после нажатия на кнопку отправить свидетельство клиенту  -->
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" novalidate="">
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">Свидетельство</p>
+                      <div class="rs-pp-form__opts rs-pp-form__opts-certif">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          отправить свидетельство клиенту
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__notif">
+                        <div class="rs-pp-form__notif-info">
+                          <div class="rs-pp-form__notif-box">
+                            <p class="txt22_bold">Свидетельство.pdf</p>
+                            <p class="txt18 txt-grey">12МБ</p>
+                          </div>
+                          <p class="txt22_bold txt-grey">11.10.024</p>
+                        </div>
+                        <button type="button" class="block-edit edit-btn">
+                          <img
+                            src="./assets/images/icon-delete-blue.svg"
+                            alt="icon-edit"
+                          />
+                          <p class="txt16-days">удалить</p>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- ЛК ПП_ 1 этап для перечня классов ИП -->
+                <div class="rs-pp__box">
+                  <div class="rs-pp-app">
+                    <div class="rs-pp-app__left">
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Заявитель</p>
+                        <p class="txt22">
+                          Индивидуальный предприниматель Иванов Иван Иванович
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Номер телефона</p>
+                          <p class="txt22">+7 (000)-000-00-00</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Почта</p>
+                          <p class="txt22">forexample@mail.ru</p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Товары и услуги</p>
+                        <p class="txt22">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Описание</p>
+                        <p class="txt22 rs-pp-app__info-desc">
+                          Продукты косметические и туалетные немедицинские;
+                          средства для чистки зубов немедицинские; продукты
+                          парфюмерные, масла эфирные; препараты для отбеливания
+                          и вещества прочие для стирки; препараты для чистки,
+                          полирования, обезжиривания и абразивной обработки.
+                        </p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">ОГРНИП</p>
+                        <p class="txt22">1234567890123456</p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">индекс</p>
+                          <p class="txt22">198198</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Адрес</p>
+                          <p class="txt22">
+                            г. Москва, Рязанский проспект 75 кор.4 этаж 12
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rs-pp-app__right">
+                      <div class="rs-pp-app__right-top">
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__right-btm">
+                        <div class="rs-pp-app__right-clue">
+                          <img
+                            src="./assets/images/icon-clue.svg"
+                            alt="icon-clue"
+                          />
+                        </div>
+                        <p class="txt16">
+                          У клиента оплачена услуга ”Ускоренная подача заявки
+                          (за 24 часа)”
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rs-pp__box">
+                  <div class="rs-classes">
+                    <div class="rs-classes-top">
+                      <div class="rs-classes__title">
+                        <p class="txt24-days">Классы</p>
+                      </div>
+                    </div>
+                    <ul class="rs-classes__list">
+                      <li class="rs-classes__item">
+                        <div class="rs-classes__item-visible">
+                          <div class="rs-classes__item-left">
+                            <div class="rs-classes__item-num">
+                              <p class="txt18-days">Класс 1</p>
+                            </div>
+                            <p class="txt18-days">Химические продукты</p>
+                          </div>
+
+                          <button class="rs-classes__item-btn">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 11L15 21L25 11"
+                                stroke="#4EBDF5"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                            <svg
+                              style="display: none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M25 20L15 10L5 20"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="rs-classes__item-hidden"
+                          style="display: none"
+                        >
+                          <p class="txt18">
+                            Продукты химические, предназначенные для
+                            использования в промышленных, научных целях, в
+                            фотографии, сельском хозяйстве, садоводстве и
+                            лесоводстве;
+                          </p>
+                        </div>
+                      </li>
+                      <li class="rs-classes__item">
+                        <div class="rs-classes__item-visible">
+                          <div class="rs-classes__item-left">
+                            <div class="rs-classes__item-num">
+                              <p class="txt18-days">Класс 3</p>
+                            </div>
+                            <p class="txt18-days">
+                              Реклама и управление бизнесом
+                            </p>
+                          </div>
+
+                          <button class="rs-classes__item-btn">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M5 11L15 21L25 11"
+                                stroke="#4EBDF5"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                            <svg
+                              style="display: none"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="29"
+                              height="29"
+                              viewBox="0 0 29 29"
+                              fill="none"
+                            >
+                              <path
+                                d="M25 20L15 10L5 20"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                              ></path>
+                            </svg>
+                          </button>
+                        </div>
+                        <div
+                          class="rs-classes__item-hidden"
+                          style="display: none"
+                        >
+                          <p class="txt18">
+                            Продукты косметические и туалетные немедицинские;
+                            средства для чистки зубов немедицинские; продукты
+                            парфюмерные, масла эфирные; препараты для
+                            отбеливания и вещества прочие для стирки; препараты
+                            для чистки, полирования, обезжиривания и абразивной
+                            обработки.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form r5s-pp-form" novalidate>
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">Документы и уведомления</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Уведомить об отказе
+                        </button>
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Уведомить о регистрации
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__notif">
+                        <label class="form-label">
+                          <input
+                            value="Уведомление о поступлении"
+                            class="form-input"
+                            type="text"
+                            placeholder="Уведомление о поступлении"
+                            required=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <div class="rs-pp-form__notif-info">
+                          <div class="rs-pp-form__notif-box">
+                            <p class="txt22_bold">
+                              Уведомление о поступлении.pdf
+                            </p>
+                            <p class="txt18 txt-grey">12МБ</p>
+                          </div>
+                          <p class="txt22_bold txt-grey">11.10.024</p>
+                        </div>
+                        <button type="button" class="block-edit edit-btn">
+                          <img
+                            src="./assets/images/icon-delete-blue.svg"
+                            alt="icon-edit"
+                          />
+                          <p class="txt16-days">удалить</p>
+                        </button>
+                      </div>
+                      <div class="rs-pp-form__doc">
+                        <label class="form-label">
+                          <input
+                            class="form-input"
+                            type="text"
+                            placeholder="Название документа"
+                            required=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <label class="btn btn-secondary">
+                          <span>загрузить</span>
+                          <div class="icon-set">
+                            <img
+                              class="icon-set-img"
+                              src="./assets/images/icon-clip.svg"
+                              alt="иконка-меню"
+                            />
+                          </div>
+                          <input
+                            type="file"
+                            id="fileUpload"
+                            class="file-input"
+                            style="display: none"
+                          />
+                          <span class="error-message" id=""></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" id="form-reg-number-3" novalidate>
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">регистрационный номер</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Отправить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__doc" id="rs-pp-num">
+                        <label class="form-label">
+                          <input
+                            value="123456789"
+                            class="form-input"
+                            type="text"
+                            placeholder="123456789"
+                            required=""
+                            disabled=""
+                          />
+                          <span class="error-message"></span>
+                        </label>
+                        <button type="button" class="block-edit edit-btn">
+                          <p class="txt16-days">редактировать</p>
+                          <img
+                            src="./assets/images/icon-edit.svg"
+                            alt="icon-edit"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <div class="footer__content">
+        <div class="footer__left">
+          <div class="footer__logo-registr">
+            <p class="footer__logo">PatentRum</p>
+            <a class="footer__registr">Регистрация товарного знака онлайн</a>
+          </div>
+          <div class="footer__mobile-absolute">
+            <div class="footer__data-consen">
+              <a class="footer__data-consen_link" href="#"
+                >Политика конфиденциальности</a
+              >
+              <a class="footer__data-consen_link" href="#">Оферта</a>
+              <a class="footer__data-consen_link" href="#"
+                >Обработка персональных данных</a
+              >
+            </div>
+            <div class="footer__set-cards">
+              <img
+                class="footer__card"
+                src="./assets/images/world-card.svg"
+                alt="world-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/visa-card.svg"
+                alt="visa-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/master-card.svg"
+                alt="world-card"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__columns">
+          <div class="footer__column">
+            <p class="footer__column_title">Защитить сейчас</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Товарный знак</a>
+              <a class="footer__item" href="#">Программа для ЭВМ</a>
+              <a class="footer__item" href="#">Изобретение</a>
+              <a class="footer__item" href="#">Дизайн изделия</a>
+              <a class="footer__item" href="#">База данных</a>
+              <a class="footer__item" href="#">Полезная модель</a>
+            </div>
+          </div>
+
+          <div class="footer__column">
+            <p class="footer__column_title">Узнать больше</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Услуги и цены</a>
+              <a class="footer__item" href="#">О нас</a>
+              <a class="footer__item" href="#">Блог</a>
+              <a class="footer__item" href="#">Контакты</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <div class="contact">
+            <img
+              src="./assets/images/icon-phone.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >+7 000 000 0000</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/sms.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >forexample@mail.ru</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/icon-location.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >г. Москва, Рязанский проспект 75 кор.4 этаж 12
+            </span>
+          </div>
+
+          <div class="footer__social">
+            <a href="#"
+              ><img src="./assets/images/icon-vk.svg" alt="icon-vk"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-telegram.svg" alt="icon-telegram"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-v.svg" alt="icon-v"
+            /></a>
+          </div>
+          <button class="btn btn-blue btn-primary" data-modal="modal-nl">
+            Подписаться на рассылку
+          </button>
+        </div>
+        <div class="footer__right">
+          <a class="footer__right_link" href="#">
+            Написать нам в WhatsApp<img
+              class="footer__right_icon"
+              src="./assets/images/icon-whatsapp.svg"
+              alt="icon-whatsapp"
+          /></a>
+          <a class="footer__right_link" href="#">
+            Написать нам в Telegram<img
+              class="footer__right_icon"
+              src="./assets/images/icon-telegram-blue.svg"
+              alt="icon-whatsapp"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="./js/reg-stage.js" defer></script>
+    <script src="./js/reg-stage-pp.js" defer></script>
+    <script src="./index.js" defer></script>
+
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/validateForm.js" defer></script>
+  </body>
+</html>

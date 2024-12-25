@@ -1,0 +1,43 @@
+.nav-container {
+  @media (max-width: 48rem) {
+    height: 4rem;
+  }
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  @media (max-width: 48rem) {
+    gap: 1.6rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: absolute;
+    width: calc(100% - 2.8rem);
+  }
+}
+
+.nav-list .txt18 {
+  line-height: 140%;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+.nav-dot {
+  min-width: 4px;
+  min-height: 4px;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.nav-list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

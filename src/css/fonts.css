@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Days One";
+  font-weight: 400;
+  src: url("../assets/fonts/DaysOne-Regular.woff") format("woff"),
+    url("../assets/fonts/DaysOne-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gilory";
+  font-weight: 600;
+  src: url("../assets/fonts/Gilroy-SemiBold.woff") format("woff"),
+    url("../assets/fonts/Gilroy-SemiBold.woff2") format("woff2");
+}

@@ -1,0 +1,187 @@
+.account-data__form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 6.4rem;
+  }
+}
+
+.account-data__form-box {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3.2rem;
+  border-radius: 3.2rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 48rem) {
+    border-radius: 3.2rem;
+    flex-direction: column;
+    padding: 2.8rem;
+    align-items: start;
+  }
+}
+
+.account-data__prf {
+  height: max-content;
+  row-gap: 3.2rem;
+  width: 108.4rem;
+  background-image: url(../../assets/images/back1-acc-data.png);
+  @media (max-width: 48rem) {
+    width: 100%;
+    gap: 4.8rem;
+    background-image: url(../../assets/images/com-back-mob.png);
+  }
+}
+
+.account-data__form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  width: 100%;
+  @media (max-width: 48rem) {
+    gap: 5.6rem;
+  }
+}
+
+.account-data__form-item {
+  display: flex;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 5.6rem;
+  }
+}
+
+.account-data .form-input {
+  background-color: white;
+}
+
+.account-data__block .txt16-days {
+  color: #4ebdf5;
+}
+
+.block-edit {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  @media (max-width: 48rem) {
+    gap: 3.2rem;
+  }
+}
+
+.block-edit img {
+  width: 4rem;
+  height: 4rem;
+  @media (max-width: 48rem) {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.account-data__password {
+  row-gap: 3.2rem;
+  width: 52.6rem;
+  background-image: url(../../assets/images/back2-acc-data.png);
+  align-content: flex-start;
+  min-height: 36.8rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    gap: 4.8rem;
+    background-image: url(../../assets/images/back2-acc-data-mob.png);
+  }
+}
+
+.column-right {
+  height: max-content;
+  @media (max-width: 48rem) {
+    order: 1;
+  }
+}
+
+.column-lf {
+  height: max-content;
+}
+
+.account-data__btm {
+  align-items: start;
+  width: 100%;
+  background-image: url(../../assets/images/back3-acc-data.png);
+  display: flex;
+  @media (max-width: 48rem) {
+    background-image: url(../../assets/images/back3-acc-data-mob.png);
+    gap: 4.8rem;
+  }
+}
+
+.account-data__btm .form-label {
+  width: 49.8rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}
+
+.account-data__btm-txt {
+  max-width: 67.7rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+/* 
+
+
+
+.account-data__form-box {
+  padding: 3.2rem;
+  border-radius: 3.2rem;
+  background-size: cover;
+  @media (max-width: 48rem) {
+    width: 100%;
+    border-radius: 3.2rem;
+    padding: 2.8rem;
+  }
+}
+
+.account-data__prf {
+  background-image: url(../../assets/images/back1-acc-data.png);
+  display: grid;
+  width: 108.4rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.8rem;
+  row-gap: 3.5rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    background-image: url(../../assets/images/com-back-mob.png);
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+    row-gap: 3.5rem;
+  }
+}
+
+
+
+.column-right {
+  display: flex;
+  justify-content: end;
+  @media (max-width: 48rem) {
+    justify-content: start;
+    order: 1;
+  }
+}
+
+.account-data__prf li {
+  display: flex;
+}
+
+.account-data__password {
+} */

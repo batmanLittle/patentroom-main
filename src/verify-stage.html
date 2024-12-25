@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet" />
+    <title>ЛК (Предварительная проверка товарного знака)</title>
+  </head>
+  <body class="account-back">
+    <!-- модалка "спасибо за подписку"-->
+    <div class="modal" id="modal-success">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img
+                  class="modal-close-icon"
+                  src="./assets/images/icon-close.svg"
+                  alt="icon-close"
+                />
+              </button>
+              <h2 class="txt36-days">спасибо за подписку!</h2>
+              <a class="btn btn-blue btn-primary" href="./main.html">
+                на главную</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка "подписки на рассылку "(Newsletter)-->
+    <div class="modal" id="modal-nl">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img src="./assets/images/icon-close.svg" alt="icon-close" />
+              </button>
+              <h2 class="txt36-days">подпишитесь на нашу рассылку</h2>
+              <form class="form-nl" id="form-nl" novalidate>
+                <label class="form-label">
+                  <input
+                    id="email"
+                    class="form-input"
+                    type="email"
+                    placeholder="email"
+                    required
+                  />
+                  <span class="error-message" id="email-error"></span>
+                </label>
+                <button
+                  class="btn btn-blue btn-primary"
+                  type="submit"
+                  data-modal="modal-success"
+                >
+                  Подписаться
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <!-- модалка аккаунт-меню -->
+          <div class="modal-acc" id="modal-acc">
+            <div class="modal-acc__block">
+              <ul class="modal-acc__list">
+                <li class="hide-desktop">
+                  <a class="modal-acc__link" href=""
+                    ><p class="txt18-days">Заявки на регистрацию</p>
+                    <button class="header__app-icon"><p>1</p></button></a
+                  >
+                </li>
+                <li class="hide-desktop">
+                  <a class="modal-acc__link" href=""
+                    ><p class="txt18-days">Заявки на проверку</p>
+                    <button class="header__app-icon"><p>1</p></button></a
+                  >
+                </li>
+                <li class="hide-desktop">
+                  <a class="moddal-acc__link" href=""
+                    ><p class="txt18-days">Поиск по товарным знакам</p></a
+                  >
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days active">Мои данные</p></a>
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days">Договор</p></a>
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days">Партнерская программа</p></a>
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days">Выйти из профиля</p></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__block_left">
+            <p class="header__logo">PatentRum</p>
+            <div class="header__links">
+              <a class="header__link" href="#">
+                <p class="txt20 hide-mobile">Заявки на регистрацию</p>
+                <button class="header__app-icon"><p>1</p></button></a
+              >
+              <a class="header__link" href="#">
+                <p class="txt20 hide-mobile">Заявки на проверку</p>
+                <button class="header__app-icon"><p>2</p></button></a
+              >
+              <a class="header__link" href="#">
+                <p class="txt20 hide-mobile">Поиск по товарным знакам</p></a
+              >
+            </div>
+          </div>
+
+          <div class="header__block_right">
+            <div class="button-group">
+              <button
+                class="btn btn-secondary header__btn hide-mobile"
+                data-modal="modal-acc"
+              >
+                <span class="hide-mobile">Иван Иванов</span>
+                <div class="icon-set">
+                  <img
+                    class="icon-set-img"
+                    src="./assets/images/user.svg"
+                    alt="иконка-меню"
+                  />
+                </div>
+              </button>
+
+              <button
+                class="btn btn-secondary header__btn hide-desktop"
+                data-modal="modal-acc"
+              >
+                <span class="hide-mobile">меню</span>
+                <div class="icon-set">
+                  <img
+                    id="menu-acc"
+                    class="icon-set-img visible"
+                    src="./assets/images/icon-menu.svg"
+                    alt="иконка-меню"
+                  />
+
+                  <img
+                    id="close-acc"
+                    class="icon-close-menu hidden"
+                    src="./assets/images/icon-close-wh.svg"
+                    alt="icon-close"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="account reg-stage verify-stage">
+        <div class="container">
+          <div class="account__content">
+            <div class="account__top">
+              <h1 class="text-white">
+                Предварительная проверка товарного знака
+              </h1>
+            </div>
+            <div class="reg-stage__block verify-stage__block">
+              <div class="reg-stage__top verify-stage__top">
+                <ul class="reg-stage__list">
+                  <li class="reg-stage__item active" data-modal="v1s">
+                    <p class="txt40-days">01</p>
+                    <p class="txt16_bold">Подача заявки</p>
+
+                    <div class="blur-effect active"></div>
+                  </li>
+                  <li class="reg-stage__item" data-modal="v2s">
+                    <p class="txt40-days">02</p>
+                    <p class="txt16_bold">Оплата услуги</p>
+                    <div class="blur-effect"></div>
+                  </li>
+                  <li class="reg-stage__item" data-modal="v3s">
+                    <p class="txt40-days">03</p>
+                    <p class="txt16_bold">Поиск возможных препятствий</p>
+                    <div class="blur-effect"></div>
+                  </li>
+                  <li class="reg-stage__item" data-modal="v4s">
+                    <p class="txt40-days">04</p>
+                    <p class="txt16_bold">Результаты проверки</p>
+                    <div class="blur-effect"></div>
+                  </li>
+                  <li class="reg-stage__br-mobile hide-desktop"></li>
+                </ul>
+              </div>
+
+              <div class="reg-stage__box v1s" id="v1s">
+                <form class="r1s-block" novalidate id="form-reg-stage">
+                  <!-- левый блок -->
+                  <div class="r1s__left r1s__box">
+                    <div class="r1s__left-box">
+                      <div class="r1s__left-top">
+                        <p class="txt24-days">
+                          Выберите, что вы хотите запатентовать
+                        </p>
+                      </div>
+                      <div class="r1s__left-center">
+                        <button class="r1s__left-btn active" data-target="name">
+                          <div class="r1s__btn-img">
+                            <img
+                              src="./assets/images/r1s-name.svg"
+                              alt="logo-name"
+                            />
+                            <img
+                              style="display: none"
+                              src="./assets/images/r1s-name-in.svg"
+                              alt="logo-name"
+                            />
+                          </div>
+                          <p class="txt22_bold">Название</p>
+                        </button>
+                        <button class="r1s__left-btn" data-target="logo">
+                          <div class="r1s__btn-img">
+                            <img
+                              style="display: none"
+                              src="./assets/images/r1s-logo.svg"
+                              alt="logo-name"
+                            />
+                            <img
+                              src="./assets/images/r1s-logo-in.svg"
+                              alt="logo-name"
+                            />
+                          </div>
+                          <p class="txt22_bold">Логотип</p>
+                        </button>
+                        <button class="r1s__left-btn" data-target="name-logo">
+                          <div class="r1s__btn-img">
+                            <img
+                              style="display: none"
+                              src="./assets/images/r1s-nl.svg"
+                              alt="logo-name"
+                            />
+                            <img
+                              src="./assets/images/r1s-nl-in.svg"
+                              alt="logo-name"
+                            />
+                          </div>
+                          <p class="txt22_bold">Название и логотип</p>
+                        </button>
+                      </div>
+                      <div class="r1s__left-btm">
+                        <div class="r1s__left-form" id="name">
+                          <label class="form-label">
+                            <textarea
+                              class="form-input"
+                              placeholder="Введите название"
+                              required=""
+                              id="trademarkName"
+                            ></textarea>
+                            <span
+                              class="error-message"
+                              id="trademarkName-error"
+                            ></span>
+                          </label>
+                        </div>
+                        <div
+                          class="r1s__left-form"
+                          id="logo"
+                          style="display: none"
+                        >
+                          <label
+                            class="form-label upload-label"
+                            for="imageUpload"
+                          >
+                            <p class="txt16">
+                              Перетащите изображение сюда (JPEG или PNG до 10Мб)
+                            </p>
+                            <input
+                              id="imageUpload"
+                              class="file-input r1s-file-input"
+                              type="file"
+                              accept="image/jpeg, image/png"
+                              required
+                            />
+                            <span
+                              class="error-message"
+                              id="imageUpload-error"
+                            ></span>
+                          </label>
+                        </div>
+                        <div
+                          class="r1s__left-form"
+                          id="name-logo"
+                          style="display: none"
+                        >
+                          <label class="form-label">
+                            <textarea
+                              class="form-input"
+                              placeholder="Введите название"
+                              required=""
+                              id="trademarkName2"
+                            ></textarea>
+                            <span
+                              class="error-message"
+                              id="trademarkName2-error"
+                            ></span>
+                          </label>
+                          <label class="form-label upload-label">
+                            <p class="txt16">
+                              Перетащите изображение сюда (JPEG или PNG до 10Мб)
+                            </p>
+                            <input
+                              id="imageUpload2"
+                              class="file-input r1s-file-input"
+                              type="file"
+                              accept="image/jpeg, image/png"
+                              required
+                            />
+                            <span
+                              class="error-message"
+                              id="imageUpload2-error"
+                            ></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- правый блок -->
+                  <div class="account-form r1s__right">
+                    <div class="account-form-content">
+                      <div class="account-form-top">
+                        <p class="txt24-days">
+                          Расскажите о ваших товарах (услугах)
+                        </p>
+                      </div>
+                      <div class="account-form-block">
+                        <div class="account-form-section">
+                          <ul class="account-form-list">
+                            <li class="account-form-item">
+                              <label class="form-label">
+                                <textarea
+                                  id="servRus"
+                                  class="form-input r1s-form-text"
+                                  placeholder="Расскажите о ваших товарах (услугах)"
+                                  required=""
+                                ></textarea>
+                                <span
+                                  class="error-message"
+                                  id="servRus-error"
+                                ></span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <button
+                        class="btn btn-blue btn-primary button-inactive"
+                        type="submit"
+                      >
+                        Создать заявку
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div class="reg-stage__box v2s" id="v2s">
+                <div class="rs-block r2s-block">
+                  <div class="rs-block-left">
+                    <div class="rs-box-left">
+                      <div class="rs-serv">
+                        <div class="rs-serv-top">
+                          <p class="txt24-days">Услуги</p>
+                        </div>
+                        <ul class="rs-serv-list">
+                          <li class="rs-serv-item rs-serv-item-dark">
+                            <div class="rs-serv-item_left">
+                              <div class="rs-serv-item_info">
+                                <p class="txt18-days">
+                                  Подготовка и подача заявки
+                                </p>
+                                <img
+                                  src="./assets/images/question-icon.svg"
+                                  alt="question-icon"
+                                />
+                              </div>
+                            </div>
+                            <div class="rs-serv-item_right">
+                              <p class="txt24-days">13 490 ₽</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rs-block-right">
+                    <div class="rs-box-right">
+                      <div class="rs-app">
+                        <div class="rs-app-box">
+                          <div class="rs-app-main">
+                            <div class="rs-app-main_row">
+                              <div class="rs-app-main_cl">
+                                <div class="rs-app-main_title">
+                                  <p class="txt24-days">Ваша заявка</p>
+                                </div>
+                                <div class="rs-app-main_info">
+                                  <p class="txt22_bold">Номер заявки</p>
+                                  <p class="txt22">123456</p>
+                                </div>
+                              </div>
+                              <div class="rs-app-main_right">
+                                <p class="txt18">Ковер</p>
+                              </div>
+                            </div>
+                            <div class="rs-app-main_cl">
+                              <div class="rs-app-main_info">
+                                <p class="txt22_bold">Товары и услуги</p>
+                                <p class="txt22">Ковер</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="rs-app-btm">
+                            <div class="column-left">
+                              <button type="button" class="block-edit edit-btn">
+                                <img
+                                  src="./assets/images/icon-delete-bl.svg"
+                                  alt="icon-edit"
+                                />
+                                <p class="txt16-days">удалить</p>
+                              </button>
+                            </div>
+                            <div class="column-right rs-app-right_btn">
+                              <button type="button" class="block-edit edit-btn">
+                                <p class="txt16-days">редактировать</p>
+                                <img
+                                  src="./assets/images/icon-edit.svg"
+                                  alt="icon-edit"
+                                />
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rs-box-right hide-mobile">
+                      <div class="rs-invoice">
+                        <div class="rs-invoice-top">
+                          <p class="txt24-days">Счёт №123017 на оплату услуг</p>
+                        </div>
+                        <div class="rs-invoice-opts">
+                          <div class="rs-invoice-opt active">
+                            <p class="txt16_bold">Оплатить онлайн</p>
+                          </div>
+                          <div class="rs-invoice-opt">
+                            <p class="txt16_bold">Выставить счёт</p>
+                          </div>
+                        </div>
+                        <div class="rs-invoice-info">
+                          <p class="txt22_bold">Детали платежа</p>
+                          <p class="txt18">
+                            Предварительная проверка товарного знака
+                          </p>
+                        </div>
+                        <div class="rs-invoice-btm">
+                          <p class="txt24-days">13 490 ₽</p>
+                          <button class="btn btn-blue btn-primary">
+                            Оплатить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rs-box-right hide-desktop">
+                    <div class="rs-invoice">
+                      <div class="rs-invoice-top">
+                        <p class="txt24-days">Счёт №123017 на оплату услуг</p>
+                      </div>
+                      <div class="rs-invoice-opts">
+                        <div class="rs-invoice-opt active">
+                          <p class="txt16_bold">Оплатить онлайн</p>
+                        </div>
+                        <div class="rs-invoice-opt">
+                          <p class="txt16_bold">Выставить счёт</p>
+                        </div>
+                      </div>
+                      <div class="rs-invoice-info">
+                        <p class="txt22_bold">Детали платежа</p>
+                        <p class="txt18">
+                          Предварительная проверка товарного знака
+                        </p>
+                      </div>
+                      <div class="rs-invoice-btm">
+                        <p class="txt24-days">13 490 ₽</p>
+                        <button class="btn btn-blue btn-primary">
+                          Оплатить
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- закрепленное окно с ошибкой об оплате -->
+                <div class="sticky-pay-block">
+                  <div class="box-sticky-pay box-sticky-err">
+                    <button class="box-sticky-img">
+                      <img
+                        src="./assets/images/icon-triangle.svg"
+                        alt="icon-close"
+                      />
+                    </button>
+                    <button class="box-sticky-btn">
+                      <img
+                        src="./assets/images/icon-close.svg"
+                        alt="icon-close"
+                      />
+                    </button>
+                    <p class="txt16_bold">Ошибка оплаты</p>
+                    <p class="txt16">Попробуйте оплатить ещё раз</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="reg-stage__box v3s" id="v3s">
+                <div class="rs-block-cl">
+                  <div class="rs-top">
+                    <p class="txt24-days">начали работу</p>
+                    <p class="txt22">
+                      Ведём поиск возможных препятствий для регистрации знака в
+                      Роспатент. Срок сбора информации от 3 до 5 рабочих дней.
+                    </p>
+                  </div>
+                  <div class="rs-block">
+                    <div class="rs-block-left">
+                      <div class="rs-box-left">
+                        <div class="rs-serv">
+                          <div class="rs-serv-top">
+                            <p class="txt24-days">Услуги</p>
+                          </div>
+                          <ul class="rs-serv-list">
+                            <li class="rs-serv-item rs-serv-item-dark">
+                              <div class="rs-serv-item_left">
+                                <div class="rs-serv-item_info">
+                                  <p class="txt18-days">
+                                    Подготовка и подача заявки
+                                  </p>
+                                  <img
+                                    src="./assets/images/question-icon.svg"
+                                    alt="question-icon"
+                                  />
+                                </div>
+                              </div>
+                              <div class="rs-serv-item_right">
+                                <p class="txt24-days">13 490 ₽</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="rs-block-right">
+                      <div class="rs-box-right">
+                        <div class="rs-app">
+                          <div class="rs-app-box">
+                            <div class="rs-app-main">
+                              <div class="rs-app-main_row">
+                                <div class="rs-app-main_cl">
+                                  <div class="rs-app-main_title">
+                                    <p class="txt24-days">Ваша заявка</p>
+                                  </div>
+                                  <div class="rs-app-main_info">
+                                    <p class="txt22_bold">Номер заявки</p>
+                                    <p class="txt22">123456</p>
+                                  </div>
+                                </div>
+                                <div class="rs-app-main_right">
+                                  <p class="txt18">Ковер</p>
+                                </div>
+                              </div>
+                              <div class="rs-app-main_cl">
+                                <div class="rs-app-main_info">
+                                  <p class="txt22_bold">Товары и услуги</p>
+                                  <p class="txt22">Ковер</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- закрепленное окно с успешнйо оплатой об оплате -->
+                <div class="sticky-pay-block">
+                  <div class="box-sticky-pay box-sticky-err">
+                    <button class="box-sticky-img">
+                      <img
+                        src="./assets/images/icon-triangle.svg"
+                        alt="icon-close"
+                      />
+                    </button>
+                    <button class="box-sticky-btn">
+                      <img
+                        src="./assets/images/icon-close.svg"
+                        alt="icon-close"
+                      />
+                    </button>
+                    <p class="txt16_bold">Успешная оплата!</p>
+                    <p class="txt16">
+                      Счёт “Предварительная проверка товарного знака ” успешно
+                      оплачен
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="reg-stage__box v4s" id="v4s">
+                <div class="rs-block-cl">
+                  <div class="rs-top">
+                    <div class="rs-doc">
+                      <div class="rs-doc-top">
+                        <p class="txt24-days">Документы и уведомления</p>
+                      </div>
+                      <div class="rs-doc-info">
+                        <div class="rs-doc-info_top">
+                          <p class="txt22">
+                            Здесь вы можете посмотреть результаты проверки
+                            товарного знака
+                          </p>
+                        </div>
+                        <div class="rs-doc-opts">
+                          <button
+                            data-modal="modal-calc"
+                            class="btn btn-secondary rs-doc-opt"
+                          >
+                            <span>скачать</span>
+                            <div class="icon-set">
+                              <img
+                                class="icon-set-img"
+                                src="./assets/images/icon-down.svg"
+                                alt="иконка-меню"
+                              />
+                            </div>
+                          </button>
+                          <button
+                            data-modal="modal-calc"
+                            class="btn btn-secondary rs-doc-opt"
+                          >
+                            <span>распечатать</span>
+                            <div class="icon-set">
+                              <img
+                                class="icon-set-img"
+                                src="./assets/images/icon-print.svg"
+                                alt="иконка-меню"
+                              />
+                            </div>
+                          </button>
+                          <button class="btn btn-blue btn-primary">
+                            Посмотреть
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rs-block">
+                    <div class="rs-block-left">
+                      <div class="rs-box-left">
+                        <div class="rs-recoms">
+                          <div class="rs-recoms-top">
+                            <p class="txt24-days">к регистрации</p>
+                          </div>
+                          <ul class="rs-recoms-list">
+                            <li class="rs-recoms-item">
+                              <div class="rs-recoms-item_top">
+                                <p class="txt18_bold">
+                                  Подберем МКТУ и рассчитаем пошлины
+                                </p>
+                              </div>
+                              <p class="txt18">
+                                Регистрация товарного знака онлайн на сайте
+                                PatentRum
+                              </p>
+                            </li>
+                            <li class="rs-recoms-item">
+                              <div class="rs-recoms-item_top">
+                                <p class="txt18_bold">Полное сопровождение</p>
+                              </div>
+                              <p class="txt18">
+                                Регистрация товарного знака онлайн на сайте
+                                PatentRum
+                              </p>
+                            </li>
+                            <li class="rs-recoms-item">
+                              <div class="rs-recoms-item_top">
+                                <p class="txt18_bold">
+                                  Ускоренная подача заявки
+                                </p>
+                              </div>
+                              <p class="txt18">
+                                Регистрация товарного знака онлайн на сайте
+                                PatentRum
+                              </p>
+                            </li>
+                            <li class="rs-recoms-item">
+                              <div class="rs-recoms-item_top">
+                                <p class="txt18_bold">
+                                  Ускоренная подача заявки
+                                </p>
+                              </div>
+                              <p class="txt18">
+                                Регистрация товарного знака онлайн на сайте
+                                PatentRum
+                              </p>
+                            </li>
+                            <li class="rs-recoms-item">
+                              <div class="rs-recoms-item_top">
+                                <p class="txt18_bold">
+                                  Ускоренная подача заявки
+                                </p>
+                              </div>
+                              <p class="txt18">
+                                Регистрация товарного знака онлайн на сайте
+                                PatentRum
+                              </p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="rs-box-left">
+                        <div class="rs-serv">
+                          <div class="rs-serv-top">
+                            <p class="txt24-days">Услуги</p>
+                          </div>
+                          <ul class="rs-serv-list">
+                            <li class="rs-serv-item rs-serv-item-dark">
+                              <div class="rs-serv-item_left">
+                                <div class="rs-serv-item_info">
+                                  <p class="txt18-days">
+                                    Подготовка и подача заявки
+                                  </p>
+                                  <img
+                                    src="./assets/images/question-icon.svg"
+                                    alt="question-icon"
+                                  />
+                                </div>
+                              </div>
+                              <div class="rs-serv-item_right">
+                                <p class="txt24-days">13 490 ₽</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="rs-box-left rs-reg">
+                        <div class="rs-reg-top">
+                          <p class="txt24-days">
+                            перейти к регистрации вашего товарного знака
+                          </p>
+                        </div>
+                        <div class="rs-reg-info">
+                          <p class="txt22">
+                            Патентный поверенный персонально сопроводит вас до
+                            получения решения Роспатента
+                          </p>
+                          <button class="btn btn-blue btn-primary">
+                            зарегистрировать
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="rs-block-right">
+                      <div class="rs-box-right">
+                        <div class="rs-app">
+                          <div class="rs-app-box">
+                            <div class="rs-app-main">
+                              <div class="rs-app-main_row">
+                                <div class="rs-app-main_cl">
+                                  <div class="rs-app-main_title">
+                                    <p class="txt24-days">Ваша заявка</p>
+                                  </div>
+                                  <div class="rs-app-main_info">
+                                    <p class="txt22_bold">Номер заявки</p>
+                                    <p class="txt22">123456</p>
+                                  </div>
+                                </div>
+                                <div class="rs-app-main_right">
+                                  <p class="txt18">Ковер</p>
+                                </div>
+                              </div>
+                              <div class="rs-app-main_cl">
+                                <div class="rs-app-main_info">
+                                  <p class="txt22_bold">Товары и услуги</p>
+                                  <p class="txt22">Ковер</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- закрепленное окно с успешнйо оплатой об оплате -->
+                <div class="sticky-pay-block">
+                  <div class="box-sticky-pay box-sticky-err">
+                    <button class="box-sticky-img">
+                      <img
+                        src="./assets/images/icon-triangle.svg"
+                        alt="icon-close"
+                      />
+                    </button>
+                    <button class="box-sticky-btn">
+                      <img
+                        src="./assets/images/icon-close.svg"
+                        alt="icon-close"
+                      />
+                    </button>
+                    <p class="txt16_bold">Результаты получены!</p>
+                    <p class="txt16">
+                      Результаты проверку уже доступны для просмотра
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <div class="footer__content">
+        <div class="footer__left">
+          <div class="footer__logo-registr">
+            <p class="footer__logo">PatentRum</p>
+            <a class="footer__registr">Регистрация товарного знака онлайн</a>
+          </div>
+          <div class="footer__mobile-absolute">
+            <div class="footer__data-consen">
+              <a class="footer__data-consen_link" href="#"
+                >Политика конфиденциальности</a
+              >
+              <a class="footer__data-consen_link" href="#">Оферта</a>
+              <a class="footer__data-consen_link" href="#"
+                >Обработка персональных данных</a
+              >
+            </div>
+            <div class="footer__set-cards">
+              <img
+                class="footer__card"
+                src="./assets/images/world-card.svg"
+                alt="world-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/visa-card.svg"
+                alt="visa-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/master-card.svg"
+                alt="world-card"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__columns">
+          <div class="footer__column">
+            <p class="footer__column_title">Защитить сейчас</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Товарный знак</a>
+              <a class="footer__item" href="#">Программа для ЭВМ</a>
+              <a class="footer__item" href="#">Изобретение</a>
+              <a class="footer__item" href="#">Дизайн изделия</a>
+              <a class="footer__item" href="#">База данных</a>
+              <a class="footer__item" href="#">Полезная модель</a>
+            </div>
+          </div>
+
+          <div class="footer__column">
+            <p class="footer__column_title">Узнать больше</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Услуги и цены</a>
+              <a class="footer__item" href="#">О нас</a>
+              <a class="footer__item" href="#">Блог</a>
+              <a class="footer__item" href="#">Контакты</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <div class="contact">
+            <img
+              src="./assets/images/icon-phone.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >+7 000 000 0000</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/sms.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >forexample@mail.ru</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/icon-location.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >г. Москва, Рязанский проспект 75 кор.4 этаж 12
+            </span>
+          </div>
+
+          <div class="footer__social">
+            <a href="#"
+              ><img src="./assets/images/icon-vk.svg" alt="icon-vk"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-telegram.svg" alt="icon-telegram"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-v.svg" alt="icon-v"
+            /></a>
+          </div>
+          <button class="btn btn-blue btn-primary" data-modal="modal-nl">
+            Подписаться на рассылку
+          </button>
+        </div>
+        <div class="footer__right">
+          <a class="footer__right_link" href="#">
+            Написать нам в WhatsApp<img
+              class="footer__right_icon"
+              src="./assets/images/icon-whatsapp.svg"
+              alt="icon-whatsapp"
+          /></a>
+          <a class="footer__right_link" href="#">
+            Написать нам в Telegram<img
+              class="footer__right_icon"
+              src="./assets/images/icon-telegram-blue.svg"
+              alt="icon-whatsapp"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="./js/reg-stage.js" defer></script>
+    <script src="./index.js" defer></script>
+
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/validateForm.js" defer></script>
+  </body>
+</html>

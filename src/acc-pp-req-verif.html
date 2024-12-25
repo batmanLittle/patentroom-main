@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet" />
+    <title>ЛК-ПП (Заявки на проверку)</title>
+  </head>
+  <body class="account-back">
+    <!-- модалка "спасибо за подписку"-->
+    <div class="modal" id="modal-success">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img
+                  class="modal-close-icon"
+                  src="./assets/images/icon-close.svg"
+                  alt="icon-close"
+                />
+              </button>
+              <h2 class="txt36-days">спасибо за подписку!</h2>
+              <a class="btn btn-blue btn-primary" href="./main.html">
+                на главную</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка "подписки на рассылку "(Newsletter)-->
+    <div class="modal" id="modal-nl">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img src="./assets/images/icon-close.svg" alt="icon-close" />
+              </button>
+              <h2 class="txt36-days">подпишитесь на нашу рассылку</h2>
+              <form class="form-nl" id="form-nl" novalidate>
+                <label class="form-label">
+                  <input
+                    id="email"
+                    class="form-input"
+                    type="email"
+                    placeholder="email"
+                    required
+                  />
+                  <span class="error-message" id="email-error"></span>
+                </label>
+                <button
+                  class="btn btn-blue btn-primary"
+                  type="submit"
+                  data-modal="modal-success"
+                >
+                  Подписаться
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <!-- модалка аккаунт-меню -->
+          <div class="modal-acc" id="modal-acc">
+            <div class="modal-acc__block">
+              <ul class="modal-acc__list">
+                <li class="hide-desktop">
+                  <a class="modal-acc__link" href=""
+                    ><p class="txt18-days">Заявки на регистрацию</p>
+                    <button class="header__app-icon"><p>1</p></button></a
+                  >
+                </li>
+                <li class="hide-desktop">
+                  <a class="modal-acc__link" href=""
+                    ><p class="txt18-days">Заявки на проверку</p>
+                    <button class="header__app-icon"><p>1</p></button></a
+                  >
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days active">Мои данные</p></a>
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days">Договор</p></a>
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days">Партнерская программа</p></a>
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days">Выйти из профиля</p></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__block_left">
+            <p class="header__logo">PatentRum</p>
+            <div class="header__links">
+              <a class="header__link" href="#">
+                <p class="txt20 hide-mobile">Заявки на регистрацию</p>
+                <button class="header__app-icon"><p>1</p></button></a
+              >
+              <a class="header__link" href="#">
+                <p class="txt20 hide-mobile">Заявки на проверку</p>
+                <button class="header__app-icon"><p>2</p></button></a
+              >
+            </div>
+          </div>
+
+          <div class="header__block_right">
+            <div class="button-group">
+              <button
+                class="btn btn-secondary header__btn hide-mobile"
+                data-modal="modal-acc"
+              >
+                <span class="hide-mobile">Иван Иванов</span>
+                <div class="icon-set">
+                  <img
+                    class="icon-set-img"
+                    src="./assets/images/user.svg"
+                    alt="иконка-меню"
+                  />
+                </div>
+              </button>
+
+              <button
+                class="btn btn-secondary header__btn hide-desktop"
+                data-modal="modal-acc"
+              >
+                <span class="hide-mobile">меню</span>
+                <div class="icon-set">
+                  <img
+                    id="menu-acc"
+                    class="icon-set-img visible"
+                    src="./assets/images/icon-menu.svg"
+                    alt="иконка-меню"
+                  />
+
+                  <img
+                    id="close-acc"
+                    class="icon-close-menu hidden"
+                    src="./assets/images/icon-close-wh.svg"
+                    alt="icon-close"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="account account-req acc-pp-req-verif">
+        <div class="container">
+          <div class="account__content">
+            <div class="account__top">
+              <h1 class="text-white">Заявки на проверку</h1>
+              <div class="account-req__top-right">
+                <div class="account-req__top-btns">
+                  <button class="account-req__top-btn" data-target="new-order">
+                    <p class="txt22_bold">Новые</p>
+                  </button>
+                  <button
+                    class="account-req__top-btn"
+                    data-target="completed-order"
+                  >
+                    <p class="txt22_bold">Завершённые</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="acc-search__block-search">
+              <div class="search-result__block-search">
+                <input
+                  class="search-result__input txt18-gilory"
+                  placeholder="Поиск по заявкам"
+                  type="text"
+                />
+                <img
+                  class="icon-set"
+                  src="./assets/images/icon-search.svg"
+                  alt="icon-search"
+                />
+              </div>
+            </div>
+            <div class="account-req__block" id="new-order">
+              <div class="account-req__box">
+                <ul class="account-req__list">
+                  <li class="account-req__item">
+                    <div class="account-req__item-box">
+                      <div class="item-stage">
+                        <div class="item-stage-part1 item-stage-part">
+                          <p class="txt14">1/2</p>
+                        </div>
+                        <p class="txt14">Поиск возможных препятствий</p>
+                      </div>
+                      <div class="account-req__item-row">
+                        <div class="account-req__item-lf">
+                          <p class="txt18">Ковер</p>
+                        </div>
+                        <div class="account-req__item-rgh">
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Номер заявки</p>
+                            <p class="txt18">123456</p>
+                          </div>
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Дата подачи заявки</p>
+                            <p class="txt18">09.10.2024</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="account-req__item-info">
+                        <p class="txt16_bold">Товары и услуги</p>
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="account-req__item-btm">
+                        <button class="btn btn-blue btn-primary btn-width">
+                          Подробнее
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="account-req__item">
+                    <div class="account-req__item-box">
+                      <div class="item-stage">
+                        <div class="item-stage-part1 item-stage-part">
+                          <p class="txt14">1/2</p>
+                        </div>
+                        <p class="txt14">Поиск возможных препятствий</p>
+                      </div>
+                      <div class="account-req__item-row">
+                        <div class="account-req__item-lf">
+                          <p class="txt18">Ковер</p>
+                        </div>
+                        <div class="account-req__item-rgh">
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Номер заявки</p>
+                            <p class="txt18">123456</p>
+                          </div>
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Дата подачи заявки</p>
+                            <p class="txt18">09.10.2024</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="account-req__item-info">
+                        <p class="txt16_bold">Товары и услуги</p>
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="account-req__item-btm">
+                        <button class="btn btn-blue btn-primary btn-width">
+                          Подробнее
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="account-req__block"
+              id="completed-order"
+              style="display: none"
+            >
+              <div class="account-req__box">
+                <!-- завершенные -->
+                <ul class="account-req__list">
+                  <li class="account-req__item">
+                    <div class="account-req__item-box">
+                      <div class="item-stage">
+                        <div class="item-stage-part2 item-stage-part">
+                          <p class="txt14">2/2</p>
+                        </div>
+                        <p class="txt14">Результаты проверки</p>
+                      </div>
+                      <div class="account-req__item-row">
+                        <div class="account-req__item-lf">
+                          <p class="txt18">Ковер</p>
+                        </div>
+                        <div class="account-req__item-rgh">
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Номер заявки</p>
+                            <p class="txt18">123456</p>
+                          </div>
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Дата подачи заявки</p>
+                            <p class="txt18">09.10.2024</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="account-req__item-info">
+                        <p class="txt16_bold">Товары и услуги</p>
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="account-req__item-btm">
+                        <button class="btn btn-blue btn-primary btn-width">
+                          Подробнее
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="account-req__item">
+                    <div class="account-req__item-box">
+                      <div class="item-stage">
+                        <div class="item-stage-part2 item-stage-part">
+                          <p class="txt14">2/2</p>
+                        </div>
+                        <p class="txt14">Результаты проверки</p>
+                      </div>
+                      <div class="account-req__item-row">
+                        <div class="account-req__item-lf">
+                          <p class="txt18">Ковер</p>
+                        </div>
+                        <div class="account-req__item-rgh">
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Номер заявки</p>
+                            <p class="txt18">123456</p>
+                          </div>
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Дата подачи заявки</p>
+                            <p class="txt18">09.10.2024</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="account-req__item-info">
+                        <p class="txt16_bold">Товары и услуги</p>
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="account-req__item-btm">
+                        <button class="btn btn-blue btn-primary btn-width">
+                          Подробнее
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="account-req__item">
+                    <div class="account-req__item-box">
+                      <div class="item-stage">
+                        <div class="item-stage-part2 item-stage-part">
+                          <p class="txt14">2/2</p>
+                        </div>
+                        <p class="txt14">Результаты проверки</p>
+                      </div>
+                      <div class="account-req__item-row">
+                        <div class="account-req__item-lf">
+                          <p class="txt18">Ковер</p>
+                        </div>
+                        <div class="account-req__item-rgh">
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Номер заявки</p>
+                            <p class="txt18">123456</p>
+                          </div>
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Дата подачи заявки</p>
+                            <p class="txt18">09.10.2024</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="account-req__item-info">
+                        <p class="txt16_bold">Товары и услуги</p>
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="account-req__item-btm">
+                        <button class="btn btn-blue btn-primary btn-width">
+                          Подробнее
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="account-req__item">
+                    <div class="account-req__item-box">
+                      <div class="item-stage">
+                        <div class="item-stage-part2 item-stage-part">
+                          <p class="txt14">2/2</p>
+                        </div>
+                        <p class="txt14">Результаты проверки</p>
+                      </div>
+                      <div class="account-req__item-row">
+                        <div class="account-req__item-lf">
+                          <p class="txt18">Ковер</p>
+                        </div>
+                        <div class="account-req__item-rgh">
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Номер заявки</p>
+                            <p class="txt18">123456</p>
+                          </div>
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Дата подачи заявки</p>
+                            <p class="txt18">09.10.2024</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="account-req__item-info">
+                        <p class="txt16_bold">Товары и услуги</p>
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="account-req__item-btm">
+                        <button class="btn btn-blue btn-primary btn-width">
+                          Подробнее
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="account-req__item">
+                    <div class="account-req__item-box">
+                      <div class="item-stage">
+                        <div class="item-stage-part2 item-stage-part">
+                          <p class="txt14">2/2</p>
+                        </div>
+                        <p class="txt14">Результаты проверки</p>
+                      </div>
+                      <div class="account-req__item-row">
+                        <div class="account-req__item-lf">
+                          <p class="txt18">Ковер</p>
+                        </div>
+                        <div class="account-req__item-rgh">
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Номер заявки</p>
+                            <p class="txt18">123456</p>
+                          </div>
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Дата подачи заявки</p>
+                            <p class="txt18">09.10.2024</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="account-req__item-info">
+                        <p class="txt16_bold">Товары и услуги</p>
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="account-req__item-btm">
+                        <button class="btn btn-blue btn-primary btn-width">
+                          Подробнее
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="account-req__item">
+                    <div class="account-req__item-box">
+                      <div class="item-stage">
+                        <div class="item-stage-part2 item-stage-part">
+                          <p class="txt14">2/2</p>
+                        </div>
+                        <p class="txt14">Результаты проверки</p>
+                      </div>
+                      <div class="account-req__item-row">
+                        <div class="account-req__item-lf">
+                          <p class="txt18">Ковер</p>
+                        </div>
+                        <div class="account-req__item-rgh">
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Номер заявки</p>
+                            <p class="txt18">123456</p>
+                          </div>
+                          <div class="account-req__item-info">
+                            <p class="txt16_bold">Дата подачи заявки</p>
+                            <p class="txt18">09.10.2024</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="account-req__item-info">
+                        <p class="txt16_bold">Товары и услуги</p>
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="account-req__item-btm">
+                        <button class="btn btn-blue btn-primary btn-width">
+                          Подробнее
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <div class="footer__content">
+        <div class="footer__left">
+          <div class="footer__logo-registr">
+            <p class="footer__logo">PatentRum</p>
+            <a class="footer__registr">Регистрация товарного знака онлайн</a>
+          </div>
+          <div class="footer__mobile-absolute">
+            <div class="footer__data-consen">
+              <a class="footer__data-consen_link" href="#"
+                >Политика конфиденциальности</a
+              >
+              <a class="footer__data-consen_link" href="#">Оферта</a>
+              <a class="footer__data-consen_link" href="#"
+                >Обработка персональных данных</a
+              >
+            </div>
+            <div class="footer__set-cards">
+              <img
+                class="footer__card"
+                src="./assets/images/world-card.svg"
+                alt="world-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/visa-card.svg"
+                alt="visa-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/master-card.svg"
+                alt="world-card"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__columns">
+          <div class="footer__column">
+            <p class="footer__column_title">Защитить сейчас</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Товарный знак</a>
+              <a class="footer__item" href="#">Программа для ЭВМ</a>
+              <a class="footer__item" href="#">Изобретение</a>
+              <a class="footer__item" href="#">Дизайн изделия</a>
+              <a class="footer__item" href="#">База данных</a>
+              <a class="footer__item" href="#">Полезная модель</a>
+            </div>
+          </div>
+
+          <div class="footer__column">
+            <p class="footer__column_title">Узнать больше</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Услуги и цены</a>
+              <a class="footer__item" href="#">О нас</a>
+              <a class="footer__item" href="#">Блог</a>
+              <a class="footer__item" href="#">Контакты</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <div class="contact">
+            <img
+              src="./assets/images/icon-phone.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >+7 000 000 0000</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/sms.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >forexample@mail.ru</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/icon-location.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >г. Москва, Рязанский проспект 75 кор.4 этаж 12
+            </span>
+          </div>
+
+          <div class="footer__social">
+            <a href="#"
+              ><img src="./assets/images/icon-vk.svg" alt="icon-vk"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-telegram.svg" alt="icon-telegram"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-v.svg" alt="icon-v"
+            /></a>
+          </div>
+          <button class="btn btn-blue btn-primary" data-modal="modal-nl">
+            Подписаться на рассылку
+          </button>
+        </div>
+        <div class="footer__right">
+          <a class="footer__right_link" href="#">
+            Написать нам в WhatsApp<img
+              class="footer__right_icon"
+              src="./assets/images/icon-whatsapp.svg"
+              alt="icon-whatsapp"
+          /></a>
+          <a class="footer__right_link" href="#">
+            Написать нам в Telegram<img
+              class="footer__right_icon"
+              src="./assets/images/icon-telegram-blue.svg"
+              alt="icon-whatsapp"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="./index.js" defer></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/account-req.js" defer></script>
+    <script src="./js/validateForm.js" defer></script>
+  </body>
+</html>

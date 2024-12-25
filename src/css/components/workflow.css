@@ -1,0 +1,183 @@
+.workflow-box {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 6rem;
+  padding-top: 18rem;
+  padding-bottom: 18rem;
+  display: flex;
+  flex-direction: column;
+  gap: 18rem;
+
+  @media (max-width: 48em) {
+    border-radius: 4.8rem;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    gap: 20rem;
+  }
+}
+
+.workflow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8.4rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 6.4rem;
+    position: relative;
+  }
+}
+
+.workflow__block {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  max-width: 88.4rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+    width: 100%;
+  }
+}
+
+.workflow__info {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  @media (max-width: 48rem) {
+  }
+}
+
+.workflow__info-top {
+  @media (max-width: 48rem) {
+    height: 26.2rem;
+  }
+}
+
+.workflow__list {
+  display: flex;
+  gap: 3.6rem;
+  border-bottom: 2px solid rgba(29, 29, 29, 0.2);
+  width: 100%;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+    overflow: scroll;
+    padding-bottom: 7.2rem;
+    scrollbar-width: none;
+    border-bottom: 0px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+  }
+}
+
+.br-mobile {
+  display: none;
+  @media (max-width: 48rem) {
+    position: absolute;
+    height: 2px;
+    background-color: rgba(29, 29, 29, 0.2);
+    width: 194%;
+    left: 0;
+    bottom: 7.2rem;
+    display: flex;
+  }
+}
+
+.workflow__list::-webkit-scrollbar {
+  display: none;
+}
+
+.workflow__item {
+  height: 12.2rem;
+  width: 14.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-bottom: 1.4rem;
+  position: relative;
+  margin-bottom: -2px;
+
+  @media (max-width: 48rem) {
+    height: 19rem;
+    flex: 0 0 25.2rem;
+    width: 100%;
+    padding-bottom: 3.2rem;
+    gap: 1.6rem;
+    margin-bottom: 0px;
+    padding-left: 4px;
+  }
+}
+
+.workflow__item-active {
+  border-bottom: 2px solid #9be931;
+}
+
+.workflow__item-active::after {
+  will-change: filter;
+  content: "";
+  position: absolute;
+  bottom: -18%;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #9be931;
+  filter: blur(15px);
+}
+
+@media (max-width: 48rem) {
+  .workflow__item-active::after {
+    bottom: -15%;
+  }
+}
+
+.workflow__item-number {
+  color: #9be931;
+  font-family: "Days One";
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+  @media (max-width: 48rem) {
+    font-size: 4.4rem;
+  }
+}
+
+.workflow__item-subtitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  @media (max-width: 48rem) {
+    font-size: 2.8rem;
+    line-height: 140%;
+  }
+}
+
+.workflow__description {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 144.444%;
+  @media (max-width: 48rem) {
+    font-size: 2.8rem;
+    line-height: 140%;
+  }
+}
+
+.workflow__img-box {
+  width: 67.2rem;
+  height: 44.5rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    height: 46.4rem;
+  }
+}
+
+.workflow__img.active {
+  display: block;
+}
+
+.workflow__img {
+  display: none;
+  width: 100%;
+  height: auto;
+}

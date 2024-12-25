@@ -1,0 +1,93 @@
+.header {
+  width: 100%;
+  padding: 3.8rem 0rem 3rem;
+  @media (max-width: 48em) {
+    padding: 3.2rem 0rem 6.4rem;
+  }
+}
+
+.header__container {
+  height: 9.2rem;
+  background-color: #ffff;
+  border-radius: 100px;
+  padding: 0px 1.8rem 0rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  @media (max-width: 48em) {
+    height: 13.6rem;
+  }
+  @media (max-width: 48em) {
+    padding: 0rem 2rem 0rem 2.8rem;
+  }
+}
+
+.header__block_left {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+}
+
+.header__logo {
+  font-family: "Days One";
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  @media (max-width: 48em) {
+    font-size: 3.6rem;
+  }
+}
+
+.header__links {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.header__link {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 5.6rem;
+  padding: 0rem 2.4rem;
+  border: 2px solid transparent;
+  border-radius: 10rem;
+  transition: border 1s ease;
+  @media (max-width: 48em) {
+    display: none;
+  }
+}
+
+.header__app-icon {
+  font-size: 1.6rem;
+  font-weight: 500;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #9be931;
+  @media (max-width: 48em) {
+    font-size: 3.2rem;
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .header__link:hover {
+    border-color: #4ebdf5;
+  }
+}
+
+.header__block_right {
+  display: flex;
+  gap: 4rem;
+}
+
+.header__btn {
+  @media (max-width: 48em) {
+    padding: 0rem;
+  }
+}

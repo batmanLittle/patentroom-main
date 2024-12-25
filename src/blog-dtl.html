@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./index.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js " defer></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <title>Детальная статьи</title>
+  </head>
+  <body class="dtl-srvcs-back">
+    <!-- модалка меню -->
+    <div class="modal modal-2 modal-menu" id="modal-menu">
+      <div class="modal-2-container">
+        <header class="header">
+          <div class="header__container">
+            <div class="header__block_left">
+              <p class="header__logo">PatentRum</p>
+              <a class="header__link" href="./blog-pg.html">
+                <p class="txt20 hide-mobile">Блог</p></a
+              >
+            </div>
+
+            <div class="header__block_right">
+              <div class="contact hide-mobile">
+                <img
+                  src="./assets/images/icon-phone.svg"
+                  class="contact-icon"
+                  alt="icon-phone"
+                />
+                <span class="contact-text">+7 000 000 0000</span>
+              </div>
+
+              <div class="button-group">
+                <a href="./signin.html" class="btn btn-primary hide-mobile"
+                  >Войти</a
+                >
+                <button class="btn btn-secondary header__btn modal-close-menu">
+                  <span class="hide-mobile">меню</span>
+                  <div class="icon-set">
+                    <img
+                      class="icon-close-menu"
+                      src="./assets/images/icon-close-wh.svg"
+                      alt="icon-close"
+                    />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="modal-menu-wrapper">
+          <div class="modal-menu__left">
+            <div class="modal-menu__left-list">
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Регистрация товарного знака</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Проверка знака</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Регистрация лицензионного договора</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Регистрация договора отчуждения</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Регистрация лицензионного договора</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Подбор классов МКТУ</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="modal-menu__right">
+            <div class="footer__columns">
+              <div class="footer__column">
+                <p class="footer__column_title">Защитить сейчас</p>
+                <div class="footer__list">
+                  <a class="footer__item" href="#">Товарный знак</a>
+                  <a class="footer__item" href="#">Программа для ЭВМ</a>
+                  <a class="footer__item" href="#">Изобретение</a>
+                  <a class="footer__item" href="#">Дизайн изделия</a>
+                  <a class="footer__item" href="#">База данных</a>
+                  <a class="footer__item" href="#">Полезная модель</a>
+                </div>
+              </div>
+
+              <div class="footer__column">
+                <p class="footer__column_title">Узнать больше</p>
+                <div class="footer__list">
+                  <a class="footer__item" href="#">Услуги и цены</a>
+                  <a class="footer__item" href="#">О нас</a>
+                  <a class="footer__item" href="#">Блог</a>
+                  <a class="footer__item" href="#">Контакты</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="contact">
+                <img
+                  src="./assets/images/icon-phone.svg"
+                  class="contact-icon"
+                  alt="icon-phone"
+                />
+                <span class="contact-text text-white footer__contact-text"
+                  >+7 000 000 0000</span
+                >
+              </div>
+
+              <div class="contact">
+                <img
+                  src="./assets/images/sms.svg"
+                  class="contact-icon"
+                  alt="icon-phone"
+                />
+                <span class="contact-text text-white footer__contact-text"
+                  >forexample@mail.ru</span
+                >
+              </div>
+
+              <div class="contact">
+                <img
+                  src="./assets/images/icon-location.svg"
+                  class="contact-icon"
+                  alt="icon-phone"
+                />
+                <span class="contact-text text-white footer__contact-text"
+                  >г. Москва, Рязанский проспект 75 кор.4 этаж 12
+                </span>
+              </div>
+
+              <div class="footer__social">
+                <a href="#"
+                  ><img src="./assets/images/icon-vk.svg" alt="icon-vk"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="./assets/images/icon-telegram.svg"
+                    alt="icon-telegram"
+                /></a>
+                <a href="#"
+                  ><img src="./assets/images/icon-v.svg" alt="icon-v"
+                /></a>
+              </div>
+            </div>
+            <div class="footer__right">
+              <a class="footer__right_link" href="#">
+                Написать нам в WhatsApp<img
+                  class="footer__right_icon"
+                  src="./assets/images/icon-whatsapp.svg"
+                  alt="icon-whatsapp"
+              /></a>
+              <a class="footer__right_link" href="#">
+                Написать нам в Telegram<img
+                  class="footer__right_icon"
+                  src="./assets/images/icon-telegram-blue.svg"
+                  alt="icon-whatsapp"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка "спасибо за подписку"-->
+    <div class="modal" id="modal-success">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img
+                  class="modal-close-icon"
+                  src="./assets/images/icon-close.svg"
+                  alt="icon-close"
+                />
+              </button>
+              <h2 class="txt36-days">спасибо за подписку!</h2>
+              <a class="btn btn-blue btn-primary" href="./main.html">
+                на главную</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка "подписки на рассылку "(Newsletter)-->
+    <div class="modal" id="modal-nl">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img src="./assets/images/icon-close.svg" alt="icon-close" />
+              </button>
+              <h2 class="txt36-days">подпишитесь на нашу рассылку</h2>
+              <form class="form-nl" id="form-nl" novalidate>
+                <label class="form-label">
+                  <input
+                    id="email"
+                    class="form-input"
+                    type="email"
+                    placeholder="email"
+                    required
+                  />
+                  <span class="error-message" id="email-error"></span>
+                </label>
+                <button
+                  class="btn btn-blue btn-primary"
+                  type="submit"
+                  data-modal="modal-success"
+                >
+                  Подписаться
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <div class="header__block_left">
+            <p class="header__logo">PatentRum</p>
+            <a class="header__link" href="./blog-pg.html">
+              <p class="txt20 hide-mobile">Блог</p></a
+            >
+          </div>
+
+          <div class="header__block_right">
+            <div class="contact hide-mobile">
+              <img
+                src="./assets/images/icon-phone.svg"
+                class="contact-icon"
+                alt="icon-phone"
+              />
+              <span class="contact-text">+7 000 000 0000</span>
+            </div>
+
+            <div class="button-group">
+              <a class="btn btn-primary hide-mobile" href="./signin.html">
+                Войти
+              </a>
+
+              <button
+                class="btn btn-secondary header__btn"
+                data-modal="modal-menu"
+              >
+                <span class="hide-mobile">меню</span>
+                <div class="icon-set">
+                  <img
+                    class="icon-set-img"
+                    src="./assets/images/icon-menu.svg"
+                    alt="иконка-меню"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="nav-container container">
+      <div class="nav-list">
+        <a class="nav-link txt18" href="./main.html">Главная</a>
+        <div class="nav-dot"></div>
+        <a class="nav-link txt18" href="#">Блог</a>
+        <div class="nav-dot"></div>
+        <a class="nav-link txt18 active" href="#"
+          >Регистрация товарного знака</a
+        >
+      </div>
+    </nav>
+    <main class="blog-dtl">
+      <section class="article container">
+        <div class="article__box">
+          <div class="article__content">
+            <div class="article__block-cl">
+              <div class="article__title">
+                <p class="txt36-days">Регистрация товарного знака онлайн</p>
+                <a class="btn btn-blue btn-primary" href="./signup.html">
+                  Зарегистрироваться
+                </a>
+              </div>
+              <div class="article__block-date">
+                <p class="txt16 blog__slide-info_top-text">Новость</p>
+                <p class="txt16">24.09.2024</p>
+              </div>
+            </div>
+
+            <div class="article__block-imgs">
+              <div class="article__block-img">
+                <img src="./assets/images/article-img.png" alt="sculpture" />
+              </div>
+              <img
+                class="icon-dots"
+                src="./assets/images/dots.svg"
+                alt="dots"
+              />
+            </div>
+
+            <div class="article__block-text">
+              <p class="txt22">
+                <span class="txt22_bold">Регистрация товарного знака</span> –
+                это процесс, который позволяет защитить уникальный знак или
+                символ, используемый компанией для идентификации своих товаров
+                или услуг. Товарный знак может включать в себя логотипы,
+                названия, слоганы и другие элементы, которые помогают отличать
+                продукцию одной компании от другой.
+              </p>
+            </div>
+
+            <div class="article__block-cl">
+              <p class="txt24-days">Что нужно для подачи?</p>
+              <ul class="article__list">
+                <li class="article__item">
+                  <p class="txt22">
+                    Для регистрации товарного знака необходимо подать заявку в
+                    Федеральную службу по интеллектуальной собственности
+                    (Роспатент).
+                  </p>
+                </li>
+                <li class="article__item">
+                  <p class="txt22">
+                    В заявке нужно указать информацию о заявителе, описать сам
+                    товарный знак и перечислить классы Международной
+                    классификации товаров и услуг (МКТУ), к которым относится
+                    товар или услуга.
+                  </p>
+                </li>
+                <li class="article__item">
+                  <p class="txt22">
+                    Также потребуется оплатить государственную пошлину.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="article__block-row">
+              <div class="article__block-imgs">
+                <div class="article__block-img">
+                  <img src="./assets/images/article-img.png" alt="sculpture" />
+                </div>
+                <img
+                  class="icon-dots"
+                  src="./assets/images/dots.svg"
+                  alt="dots"
+                />
+              </div>
+              <div class="article__block-cl">
+                <p class="txt24-days">Что нужно для подачи?</p>
+                <div class="article__block-text">
+                  <p class="txt22">
+                    Регистрация товарного знака предоставляет владельцу
+                    исключительное право на использование этого знака в
+                    коммерческой деятельности. Это значит, что никто другой не
+                    может использовать такой же или сходный товарный знак без
+                    разрешения владельца. В случае нарушения прав на товарный
+                    знак владелец может обратиться в суд для защиты своих
+                    интересов.
+                  </p>
+                  <p class="txt22">
+                    Таким образом, регистрация товарного знака является важным
+                    шагом для защиты бренда и инвестиций компании. Этот процесс
+                    помогает создать узнаваемый образ компании и защищает ее
+                    права на использование уникальных символов и названий.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="article__block-border article__table-box">
+              <div class="article__table-scroll">
+                <ul class="article__table-list">
+                  <li class="article__table-item">
+                    <p class="txt22_bold">Заголовок 1</p>
+                  </li>
+                  <li class="article__table-item">
+                    <p class="txt22_bold">Заголовок 1</p>
+                  </li>
+                  <li class="article__table-item">
+                    <p class="txt22_bold">Заголовок 1</p>
+                  </li>
+
+                  <li class="article__table-item">
+                    <p class="txt22">Какой-то текст</p>
+                  </li>
+                  <li class="article__table-item">
+                    <p class="txt22">Какой-то текст</p>
+                  </li>
+                  <li class="article__table-item">
+                    <p class="txt22">Какой-то текст</p>
+                  </li>
+
+                  <li class="article__table-item">
+                    <p class="txt22">Какой-то текст</p>
+                  </li>
+                  <li class="article__table-item">
+                    <p class="txt22">Какой-то текст</p>
+                  </li>
+                  <li class="article__table-item">
+                    <p class="txt22">
+                      Какой-то текст Какой-то текст Какой-то текст
+                    </p>
+                  </li>
+                  <li class="article__table-item">
+                    <p class="txt22">Какой-то текст</p>
+                  </li>
+                  <li class="article__table-item">
+                    <p class="txt22">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Optio sed facere earum quasi nemo. In porro earum illum
+                      accusantium est voluptatem, sequi voluptatum impedit,
+                      velit pariatur fugiat, itaque blanditiis deleniti.
+                    </p>
+                  </li>
+                  <li class="article__table-item">
+                    <p class="txt22">Какой-то текст</p>
+                  </li>
+                  <li class="article__table-item">
+                    <p class="txt22">Какой-то текст</p>
+                  </li>
+                  <li class="article__table-item">
+                    <p class="txt22">Какой-то текст</p>
+                  </li>
+                  <li class="article__table-item">
+                    <p class="txt22">
+                      Какой-то текст Какой-то текст Какой-то текст
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="article__block-cl">
+              <p class="txt24-days">Что дальше?</p>
+              <ol class="article__num-list txt22">
+                <li>
+                  <p class="txt22">
+                    После подачи заявки Роспатент проводит экспертизу на предмет
+                    отсутствия схожих товарных знаков и других препятствий для
+                    регистрации.
+                  </p>
+                </li>
+                <li>
+                  <p class="txt22">
+                    Если все условия соблюдены, товарный знак регистрируется и
+                    выдается свидетельство о регистрации.
+                  </p>
+                </li>
+              </ol>
+              <div class="article__block-border article__block-pdd">
+                <p class="txt22">
+                  Срок действия свидетельства составляет 10 лет с возможностью
+                  продления каждые последующие 10 лет.
+                </p>
+              </div>
+
+              <div class="article__block-text">
+                <p class="txt22">
+                  Регистрация товарного знака предоставляет владельцу
+                  исключительное право на использование этого знака в
+                  коммерческой деятельности. Это значит, что никто другой не
+                  может использовать такой же или сходный товарный знак без
+                  разрешения владельца. В случае нарушения прав на товарный знак
+                  владелец может обратиться в суд для защиты своих интересов.
+                </p>
+                <p class="txt22">
+                  Таким образом, регистрация товарного знака является важным
+                  шагом для защиты бренда и инвестиций компании. Этот процесс
+                  помогает создать узнаваемый образ компании и защищает ее права
+                  на использование уникальных символов и названий.
+                </p>
+              </div>
+
+              <div class="article__block-back">
+                <img src="./assets/images/art-2line.svg" alt="icon-line" />
+                <p class="txt22">
+                  Срок действия свидетельства составляет 10 лет с возможностью
+                  продления каждые последующие 10 лет.
+                </p>
+              </div>
+            </div>
+
+            <div class="article__block-row">
+              <div class="article__block-cl">
+                <p class="txt24-days">Что нужно для подачи?</p>
+                <div class="article__block-text">
+                  <p class="txt22">
+                    Регистрация товарного знака предоставляет владельцу
+                    исключительное право на использование этого знака в
+                    коммерческой деятельности. Это значит, что никто другой не
+                    может использовать такой же или сходный товарный знак без
+                    разрешения владельца. В случае нарушения прав на товарный
+                    знак владелец может обратиться в суд для защиты своих
+                    интересов.
+                  </p>
+                  <p class="txt22">
+                    Таким образом, регистрация товарного знака является важным
+                    шагом для защиты бренда и инвестиций компании.
+                    <span>
+                      <a
+                        href=" https://my.onlinepatent.ru/client/partner/referees"
+                        >https://my.onlinepatent.ru/client/partner/referees</a
+                      ></span
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="article__block-imgs">
+                <div class="article__block-img">
+                  <img src="./assets/images/article-img.png" alt="sculpture" />
+                </div>
+              </div>
+            </div>
+
+            <div class="tm-reg article-tm-reg">
+              <div class="tm-reg__content">
+                <div
+                  class="tm-reg__box-img article-tm-reg__box-img hide-mobile"
+                >
+                  <img src="./assets/images/art-tm-img.png" alt="sculpture" />
+                </div>
+                <div class="tm-reg__box-img hide-desktop">
+                  <img src="./assets/images/tm-reg-img.png" alt="sculpture" />
+                </div>
+                <div class="tm-reg__right">
+                  <div class="tm-reg__right-top">
+                    <p class="txt36-days">
+                      Регистрация товарного знака под ключ
+                    </p>
+                    <div class="tm-reg__right-box">
+                      <p class="txt22">
+                        Патентный поверенный персонально сопроводит вас до
+                        получения решения Роспатента
+                      </p>
+                      <button class="btn btn-blue btn-primary hide-mobile">
+                        Зарегистрироваться
+                      </button>
+                    </div>
+                  </div>
+                  <div class="tm-reg__right-btm">
+                    <div class="tm-reg__list">
+                      <div class="tm-reg__item tm-reg__item-end">
+                        <div class="tm-reg__item-txt">
+                          <p class="txt24-days">Удобно</p>
+                          <p class="txt18">
+                            Не нужно приезжать в офис, всё оформление онлайн
+                          </p>
+                        </div>
+                        <div class="tm-reg__item-icon">
+                          <img
+                            src="./assets/images/icon-tv.svg"
+                            alt="icon-tv"
+                          />
+                        </div>
+                      </div>
+                      <div class="tm-reg__item tm-reg__item-end">
+                        <div class="tm-reg__item-txt">
+                          <p class="txt24-days">Качественно</p>
+                          <p class="txt18">
+                            Квалифицированная поддержка специалистов
+                          </p>
+                        </div>
+                        <div class="tm-reg__item-icon">
+                          <img
+                            src="./assets/images/icon-shield.png"
+                            alt="icon-shield"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tm-reg__item tm-reg__item-w">
+                      <div class="tm-reg__item-txt">
+                        <p class="txt24-days">24 990 ₽</p>
+                        <p class="txt18">Цена за полный пакет услуг</p>
+                      </div>
+                      <div class="tm-reg__item-icon">
+                        <img
+                          src="./assets/images/coins.svg"
+                          alt="icon-shield"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="article__block-cl">
+              <p class="txt24-days">Поделиться</p>
+              <div class="article__social">
+                <a href="#"
+                  ><img src="./assets/images/VK-blue.svg" alt="icon-vk"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="./assets/images/icon-whatsapp.svg"
+                    alt="icon-whatsapp"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="./assets/images/icon-telegram-blue.svg"
+                    alt="icon-telegram"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tm-reg container">
+        <div class="tm-reg__content">
+          <div class="tm-reg__box-img">
+            <img src="./assets/images/tm-reg-img.png" alt="sculpture" />
+          </div>
+          <div class="tm-reg__right">
+            <div class="tm-reg__right-top">
+              <p class="txt36-days">Регистрация товарного знака под ключ</p>
+              <div class="tm-reg__right-box">
+                <p class="txt22">
+                  Патентный поверенный персонально сопроводит вас до получения
+                  решения Роспатента
+                </p>
+                <a
+                  href="./signup.html"
+                  class="btn btn-blue btn-primary hide-mobile"
+                >
+                  Зарегистрироваться
+                </a>
+              </div>
+            </div>
+            <div class="tm-reg__right-btm">
+              <ul class="tm-reg__list">
+                <li class="tm-reg__item tm-reg__item-end">
+                  <div class="tm-reg__item-txt">
+                    <p class="txt24-days">Удобно</p>
+                    <p class="txt18">
+                      Не нужно приезжать в офис, всё оформление онлайн
+                    </p>
+                  </div>
+                  <div class="tm-reg__item-icon">
+                    <img src="./assets/images/icon-tv.svg" alt="icon-tv" />
+                  </div>
+                </li>
+                <li class="tm-reg__item tm-reg__item-end">
+                  <div class="tm-reg__item-txt">
+                    <p class="txt24-days">Качественно</p>
+                    <p class="txt18">
+                      Квалифицированная поддержка специалистов
+                    </p>
+                  </div>
+                  <div class="tm-reg__item-icon">
+                    <img
+                      src="./assets/images/icon-shield.png"
+                      alt="icon-shield"
+                    />
+                  </div>
+                </li>
+                <li class="tm-reg__item">
+                  <div class="tm-reg__item-txt">
+                    <p class="txt24-days">24 990 ₽</p>
+                    <p class="txt18">Цена за полный пакет услуг</p>
+                  </div>
+                  <div class="tm-reg__item-icon">
+                    <img
+                      src="./assets/images/icon-shield.png"
+                      alt="icon-shield"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- для незарегистрированных пользователей -->
+      <section class="new-com container">
+        <div class="new-com__content">
+          <form class="new-com__form">
+            <div class="new-com__top">
+              <p class="txt36-days">Оставьте комментарий</p>
+              <label class="form-label" for="comment">
+                <textarea
+                  id="comment"
+                  class="form-input new-com-form-text"
+                  placeholder="Напишите свой комментарий"
+                  required
+                ></textarea>
+                <span class="error-message" id="comment-error"></span>
+              </label>
+            </div>
+            <div class="new-com__btm">
+              <div class="new-com__box-cl">
+                <p class="txt24-days">Войти с помощью:</p>
+                <div class="new-com__social">
+                  <a href="#">
+                    <img
+                      src="./assets/images/icon-chrome.svg"
+                      alt="icon-chrome"
+                  /></a>
+
+                  <a href="#">
+                    <img
+                      src="./assets/images/yandex-logo.svg"
+                      alt="yandex-logo"
+                  /></a>
+                  <a href="#">
+                    <img src="./assets/images/VK-blue.svg" alt="icon-vk"
+                  /></a>
+
+                  <a href="#">
+                    <img
+                      src="./assets/images/icon-telegram-blue.svg"
+                      alt="icon-telegram"
+                  /></a>
+                  <a href="#">
+                    <img src="./assets/images/icon-email.svg" alt="icon-emai"
+                  /></a>
+                  <a href="#">
+                    <img
+                      src="./assets/images/ icon-classmt.svg"
+                      alt="icon-emai"
+                  /></a>
+                </div>
+              </div>
+              <div class="new-com__box-cl">
+                <p class="txt24-days">или как гость</p>
+                <div class="new-com__box-row">
+                  <div class="new-com__inputs">
+                    <label class="form-label">
+                      <input
+                        id="name"
+                        class="form-input"
+                        type="text"
+                        placeholder="Имя"
+                        required
+                      />
+                      <span class="error-message" id="name-error"></span>
+                    </label>
+                    <label class="form-label">
+                      <input
+                        id="email"
+                        class="form-input"
+                        type="email"
+                        placeholder="E-mail"
+                        required
+                      />
+                      <span class="error-message" id="email-error"></span>
+                    </label>
+                  </div>
+                  <button
+                    class="btn btn-blue btn-primary button-inactive"
+                    type="submit"
+                    id="submitBtn"
+                  >
+                    Отправить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- для зарегестрированных пользователей -->
+      <section class="reg-com container">
+        <div class="new-com__content">
+          <form class="new-com__form">
+            <div class="new-com__top">
+              <p class="txt36-days">Оставьте комментарий</p>
+              <label class="form-label" for="comment">
+                <textarea
+                  id="comment"
+                  class="form-input new-com-form-text"
+                  placeholder="Напишите свой комментарий"
+                  required
+                ></textarea>
+                <span class="error-message" id="comment-error"></span>
+              </label>
+            </div>
+            <div class="new-com__btm">
+              <button
+                class="btn btn-blue btn-primary button-inactive"
+                type="submit"
+                id="submitBtn"
+              >
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="all-com container">
+        <div class="all-com__content">
+          <div class="all-com__block">
+            <div class="all-com__box">
+              <div class="all-com__top">
+                <div class="all-com__top-img">
+                  <img
+                    src="./assets/images/icon-user-green.svg"
+                    alt="icon-user"
+                  />
+                </div>
+                <div class="all-com__user-date">
+                  <p class="txt18-days">Иван</p>
+                  <p class="txt18">24.09.2024</p>
+                </div>
+              </div>
+              <div class="all-com__center">
+                <div class="all-com__text">
+                  <p class="txt22">
+                    Автор также упоминает о преимуществах онлайн-сервисов,
+                    которые позволяют упростить и ускорить процесс регистрации.
+                    В целом, статья будет полезна тем, кто планирует
+                    регистрировать свой товарный знак и хочет узнать больше о
+                    данной процедуре.
+                  </p>
+                </div>
+                <div class="all-com__tools">
+                  <button class="reply-button">
+                    <p class="txt16-days">ответить</p>
+                  </button>
+                  <div class="all-com__tools-right">
+                    <div class="all-com__likes">
+                      <div class="all-com__like">
+                        <button>
+                          <img
+                            src="./assets/images/icon-like.svg"
+                            alt="icon-like"
+                          />
+                        </button>
+                        <p class="txt22">10</p>
+                      </div>
+                      <div class="all-com__like">
+                        <button>
+                          <img
+                            src="./assets/images/icon-dislike.svg"
+                            alt="icon-dislike"
+                          />
+                        </button>
+                        <p class="txt22">0</p>
+                      </div>
+                    </div>
+
+                    <button>
+                      <img src="./assets/images/icon-com.svg" alt="icon-com" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="all-com__nested">
+              <div class="all-com__box all-com__box-nested">
+                <div class="all-com__top">
+                  <div class="all-com__top-img">
+                    <img
+                      src="./assets/images/icon-user-green.svg"
+                      alt="icon-user"
+                    />
+                  </div>
+                  <div class="all-com__user-date">
+                    <p class="txt18-days">Иван</p>
+                    <p class="txt18">24.09.2024</p>
+                  </div>
+                </div>
+                <div class="all-com__center">
+                  <div class="all-com__text">
+                    <p class="txt22">
+                      Отличная статья! Статья содержит полезную информацию о
+                      том, как происходит регистрация товарного знака.
+                    </p>
+                  </div>
+                  <div class="all-com__tools">
+                    <button><p class="txt16-days">ответить</p></button>
+                    <div class="all-com__tools-right">
+                      <div class="all-com__likes">
+                        <div class="all-com__like">
+                          <button>
+                            <img
+                              src="./assets/images/icon-like.svg"
+                              alt="icon-like"
+                            />
+                          </button>
+                          <p class="txt22">10</p>
+                        </div>
+                        <div class="all-com__like">
+                          <button>
+                            <img
+                              src="./assets/images/icon-dislike.svg"
+                              alt="icon-dislike"
+                            />
+                          </button>
+                          <p class="txt22">0</p>
+                        </div>
+                      </div>
+
+                      <button>
+                        <img
+                          src="./assets/images/icon-com.svg"
+                          alt="icon-com"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="all-com__box all-com__box-nested">
+                <div class="all-com__top">
+                  <div class="all-com__top-img">
+                    <img
+                      src="./assets/images/icon-user-green.svg"
+                      alt="icon-user"
+                    />
+                  </div>
+                  <div class="all-com__user-date">
+                    <p class="txt18-days">Иван</p>
+                    <p class="txt18">24.09.2024</p>
+                  </div>
+                </div>
+                <div class="all-com__center">
+                  <div class="all-com__text">
+                    <p class="txt22">
+                      Отличная статья! Статья содержит полезную информацию о
+                      том, как происходит регистрация товарного знака.
+                    </p>
+                  </div>
+                  <div class="all-com__tools">
+                    <button><p class="txt16-days">ответить</p></button>
+                    <div class="all-com__tools-right">
+                      <div class="all-com__likes">
+                        <div class="all-com__like">
+                          <button>
+                            <img
+                              src="./assets/images/icon-like.svg"
+                              alt="icon-like"
+                            />
+                          </button>
+                          <p class="txt22">10</p>
+                        </div>
+                        <div class="all-com__like">
+                          <button>
+                            <img
+                              src="./assets/images/icon-dislike.svg"
+                              alt="icon-dislike"
+                            />
+                          </button>
+                          <p class="txt22">0</p>
+                        </div>
+                      </div>
+
+                      <button>
+                        <img
+                          src="./assets/images/icon-com.svg"
+                          alt="icon-com"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="all-com__reply">
+              <p class="txt16-days">показать ещё 2 ответа</p>
+            </button>
+            <section class="new-com hidden">
+              <div class="new-com__content">
+                <form class="new-com__form">
+                  <div class="new-com__top">
+                    <p class="txt24-days">Оставьте комментарий</p>
+                    <label class="form-label" for="comment">
+                      <textarea
+                        id="comment"
+                        class="form-input new-com-form-text"
+                        placeholder="Напишите свой комментарий"
+                        required
+                      ></textarea>
+                      <span class="error-message" id="comment-error"></span>
+                    </label>
+                  </div>
+                  <div class="new-com__btm">
+                    <div class="new-com__box-cl">
+                      <p class="txt24-days">Войти с помощью:</p>
+                      <div class="new-com__social">
+                        <a href="#">
+                          <img
+                            src="./assets/images/icon-chrome.svg"
+                            alt="icon-chrome"
+                        /></a>
+
+                        <a href="#">
+                          <img
+                            src="./assets/images/yandex-logo.svg"
+                            alt="yandex-logo"
+                        /></a>
+                        <a href="#">
+                          <img src="./assets/images/VK-blue.svg" alt="icon-vk"
+                        /></a>
+
+                        <a href="#">
+                          <img
+                            src="./assets/images/icon-telegram-blue.svg"
+                            alt="icon-telegram"
+                        /></a>
+                        <a href="#">
+                          <img
+                            src="./assets/images/icon-email.svg"
+                            alt="icon-emai"
+                        /></a>
+                        <a href="#">
+                          <img
+                            src="./assets/images/ icon-classmt.svg"
+                            alt="icon-emai"
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="new-com__box-cl">
+                      <p class="txt24-days">или как гость</p>
+                      <div class="new-com__box-row">
+                        <div class="new-com__inputs">
+                          <label class="form-label">
+                            <input
+                              id="name"
+                              class="form-input"
+                              type="text"
+                              placeholder="Имя"
+                              required
+                            />
+                            <span class="error-message" id="name-error"></span>
+                          </label>
+                          <label class="form-label">
+                            <input
+                              id="email"
+                              class="form-input"
+                              type="email"
+                              placeholder="E-mail"
+                              required
+                            />
+                            <span class="error-message" id="email-error"></span>
+                          </label>
+                        </div>
+                        <button
+                          class="btn btn-blue btn-primary button-inactive"
+                          type="submit"
+                          id="submitBtn"
+                        >
+                          Отправить
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+            <!-- для зарегестрированных пользователей -->
+            <!-- <section class="reg-com">
+              <div class="new-com__content">
+                <form class="new-com__form">
+                  <div class="new-com__top">
+                    <p class="txt24-days">Оставьте комментарий</p>
+                    <label class="form-label" for="comment">
+                      <textarea
+                        id="comment"
+                        class="form-input new-com-form-text"
+                        placeholder="Напишите свой комментарий"
+                        required
+                      ></textarea>
+                      <span class="error-message" id="comment-error"></span>
+                    </label>
+                  </div>
+                  <div class="new-com__btm">
+                    <div class="new-com__box-cl">
+                      <div class="new-com__box-row">
+                        <button
+                          class="btn btn-blue btn-primary button-inactive"
+                          type="submit"
+                          id="submitBtn"
+                        >
+                          Отправить
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section> -->
+          </div>
+          <div class="all-com__block">
+            <div class="all-com__box">
+              <div class="all-com__top">
+                <div class="all-com__top-img">
+                  <img
+                    src="./assets/images/icon-user-green.svg"
+                    alt="icon-user"
+                  />
+                </div>
+                <div class="all-com__user-date">
+                  <p class="txt18-days">Иван</p>
+                  <p class="txt18">24.09.2024</p>
+                </div>
+              </div>
+              <div class="all-com__center">
+                <div class="all-com__text">
+                  <p class="txt22">
+                    Отличная статья! Статья содержит полезную информацию о том,
+                    как происходит регистрация товарного знака. Она подробно
+                    описывает процесс подачи заявки, подготовку необходимых
+                    документов и возможные проблемы, которые могут возникнуть в
+                    ходе регистрации. Автор также упоминает о преимуществах
+                    онлайн-сервисов, которые позволяют упростить и ускорить
+                    процесс регистрации. В целом, статья будет полезна тем, кто
+                    планирует регистрировать свой товарный знак и хочет узнать
+                    больше о данной процедуре.
+                  </p>
+                </div>
+                <div class="all-com__tools">
+                  <button><p class="txt16-days">ответить</p></button>
+                  <div class="all-com__tools-right">
+                    <div class="all-com__likes">
+                      <div class="all-com__like">
+                        <button>
+                          <img
+                            src="./assets/images/icon-like.svg"
+                            alt="icon-like"
+                          />
+                        </button>
+                        <p class="txt22">10</p>
+                      </div>
+                      <div class="all-com__like">
+                        <button>
+                          <img
+                            src="./assets/images/icon-dislike.svg"
+                            alt="icon-dislike"
+                          />
+                        </button>
+                        <p class="txt22">0</p>
+                      </div>
+                    </div>
+
+                    <button>
+                      <img src="./assets/images/icon-com.svg" alt="icon-com" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="all-com__nested">
+              <div class="all-com__box all-com__box-nested">
+                <div class="all-com__top">
+                  <div class="all-com__top-img">
+                    <img
+                      src="./assets/images/icon-user-green.svg"
+                      alt="icon-user"
+                    />
+                  </div>
+                  <div class="all-com__user-date">
+                    <p class="txt18-days">Иван</p>
+                    <p class="txt18">24.09.2024</p>
+                  </div>
+                </div>
+                <div class="all-com__center">
+                  <div class="all-com__text">
+                    <p class="txt22">
+                      Отличная статья! Статья содержит полезную информацию о
+                      том, как происходит регистрация товарного знака.
+                    </p>
+                  </div>
+                  <div class="all-com__tools">
+                    <button><p class="txt16-days">ответить</p></button>
+                    <div class="all-com__tools-right">
+                      <div class="all-com__likes">
+                        <div class="all-com__like">
+                          <button>
+                            <img
+                              src="./assets/images/icon-like.svg"
+                              alt="icon-like"
+                            />
+                          </button>
+                          <p class="txt22">10</p>
+                        </div>
+                        <div class="all-com__like">
+                          <button>
+                            <img
+                              src="./assets/images/icon-dislike.svg"
+                              alt="icon-dislike"
+                            />
+                          </button>
+                          <p class="txt22">0</p>
+                        </div>
+                      </div>
+
+                      <button>
+                        <img
+                          src="./assets/images/icon-com.svg"
+                          alt="icon-com"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="all-com__box all-com__box-nested">
+                <div class="all-com__top">
+                  <div class="all-com__top-img">
+                    <img
+                      src="./assets/images/icon-user-green.svg"
+                      alt="icon-user"
+                    />
+                  </div>
+                  <div class="all-com__user-date">
+                    <p class="txt18-days">Иван</p>
+                    <p class="txt18">24.09.2024</p>
+                  </div>
+                </div>
+                <div class="all-com__center">
+                  <div class="all-com__text">
+                    <p class="txt22">
+                      Отличная статья! Статья содержит полезную информацию о
+                      том, как происходит регистрация товарного знака.
+                    </p>
+                  </div>
+                  <div class="all-com__tools">
+                    <button><p class="txt16-days">ответить</p></button>
+                    <div class="all-com__tools-right">
+                      <div class="all-com__likes">
+                        <div class="all-com__like">
+                          <button>
+                            <img
+                              src="./assets/images/icon-like.svg"
+                              alt="icon-like"
+                            />
+                          </button>
+                          <p class="txt22">10</p>
+                        </div>
+                        <div class="all-com__like">
+                          <button>
+                            <img
+                              src="./assets/images/icon-dislike.svg"
+                              alt="icon-dislike"
+                            />
+                          </button>
+                          <p class="txt22">0</p>
+                        </div>
+                      </div>
+
+                      <button>
+                        <img
+                          src="./assets/images/icon-com.svg"
+                          alt="icon-com"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="all-com__reply">
+              <p class="txt16-days">показать ещё 2 ответа</p>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <div class="footer__content">
+        <div class="footer__left">
+          <div class="footer__logo-registr">
+            <p class="footer__logo">PatentRum</p>
+            <a class="footer__registr">Регистрация товарного знака онлайн</a>
+          </div>
+          <div class="footer__mobile-absolute">
+            <div class="footer__data-consen">
+              <a class="footer__data-consen_link" href="#"
+                >Политика конфиденциальности</a
+              >
+              <a class="footer__data-consen_link" href="#">Оферта</a>
+              <a class="footer__data-consen_link" href="#"
+                >Обработка персональных данных</a
+              >
+            </div>
+            <div class="footer__set-cards">
+              <img
+                class="footer__card"
+                src="./assets/images/world-card.svg"
+                alt="world-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/visa-card.svg"
+                alt="visa-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/master-card.svg"
+                alt="world-card"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__columns">
+          <div class="footer__column">
+            <p class="footer__column_title">Защитить сейчас</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Товарный знак</a>
+              <a class="footer__item" href="#">Программа для ЭВМ</a>
+              <a class="footer__item" href="#">Изобретение</a>
+              <a class="footer__item" href="#">Дизайн изделия</a>
+              <a class="footer__item" href="#">База данных</a>
+              <a class="footer__item" href="#">Полезная модель</a>
+            </div>
+          </div>
+
+          <div class="footer__column">
+            <p class="footer__column_title">Узнать больше</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Услуги и цены</a>
+              <a class="footer__item" href="#">О нас</a>
+              <a class="footer__item" href="#">Блог</a>
+              <a class="footer__item" href="#">Контакты</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <div class="contact">
+            <img
+              src="./assets/images/icon-phone.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >+7 000 000 0000</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/sms.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >forexample@mail.ru</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/icon-location.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >г. Москва, Рязанский проспект 75 кор.4 этаж 12
+            </span>
+          </div>
+
+          <div class="footer__social">
+            <a href="#"
+              ><img src="./assets/images/icon-vk.svg" alt="icon-vk"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-telegram.svg" alt="icon-telegram"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-v.svg" alt="icon-v"
+            /></a>
+          </div>
+          <button class="btn btn-blue btn-primary" data-modal="modal-nl">
+            Подписаться на рассылку
+          </button>
+        </div>
+        <div class="footer__right">
+          <a class="footer__right_link" href="#">
+            Написать нам в WhatsApp<img
+              class="footer__right_icon"
+              src="./assets/images/icon-whatsapp.svg"
+              alt="icon-whatsapp"
+          /></a>
+          <a class="footer__right_link" href="#">
+            Написать нам в Telegram<img
+              class="footer__right_icon"
+              src="./assets/images/icon-telegram-blue.svg"
+              alt="icon-whatsapp"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="./index.js" defer></script>
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="./js/validateForm.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="./js/slider.js" defer></script>
+    <script src="./js/comment.js" defer></script>
+    <script src="./js/marquee.js" defer></script>
+    <script src="./js/blog.js" defer></script>
+    <script src="./js/workflow.js" defer></script>
+  </body>
+</html>

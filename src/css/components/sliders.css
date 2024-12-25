@@ -1,0 +1,92 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  width: 100%;
+  position: relative;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+    padding-bottom: 16rem;
+  }
+}
+
+.slider__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 48rem) {
+    justify-content: center;
+  }
+}
+
+.slider-button {
+  width: 6rem;
+  height: 6rem;
+  @media (max-width: 48rem) {
+    width: 9.6rem;
+    height: 9.6rem;
+  }
+}
+
+.slider-buttons {
+  display: flex;
+  gap: 1.6rem;
+  @media (max-width: 48rem) {
+    gap: 3.2rem;
+    position: absolute;
+    bottom: 0px;
+  }
+}
+
+.slider__container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -5;
+  border-radius: 3.2rem;
+}
+
+/* По умолчанию показываем стандартное изображение */
+.slider-button img {
+  display: none; /* Скрываем все изображения по умолчанию */
+}
+
+.slider-button img.prev,
+.slider-button img.next {
+  display: inline; /* Показываем стандартное изображение */
+}
+
+/* Ховер состояние для кнопок */
+.slider-button:hover img.prev,
+.slider-button:hover img.next {
+  display: none; /* Скрываем стандартное изображение при ховере */
+}
+
+.slider-button:hover img.prev-hover,
+.slider-button:hover img.next-hover {
+  display: inline; /* Показываем изображение при ховере */
+}
+
+/* Неактивное состояние (inactive) */
+.slider-button.inactive img.prev,
+.slider-button.inactive img.next {
+  display: none; /* Скрываем стандартное изображение */
+}
+
+.slider-button.inactive img.prev-inactive,
+.slider-button.inactive img.next-inactive {
+  display: inline; /* Показываем неактивное изображение */
+}
+
+/* Отключаем ховер для неактивных кнопок */
+.slider-button.inactive:hover img.prev-hover,
+.slider-button.inactive:hover img.next-hover {
+  display: none; /* Не показываем ховер изображение, если кнопка неактивна */
+}

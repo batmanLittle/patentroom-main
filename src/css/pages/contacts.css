@@ -1,0 +1,153 @@
+.contacts-back {
+  background-image: url(../../assets/images/contacts-back.png);
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+}
+
+.contacts__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  @media (max-width: 48rem) {
+    gap: 20rem;
+  }
+}
+
+.contacts__top {
+  display: flex;
+  gap: 7.3rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 6.4rem;
+  }
+}
+
+.contacts__info {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  width: 66.7rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    gap: 4.8rem;
+  }
+}
+
+.contacts__info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    gap: 3.2rem;
+  }
+}
+
+.contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 4.8rem;
+    margin-top: 3.2rem;
+  }
+}
+
+.contacts__list .txt22 {
+  color: white;
+}
+
+.contacts__list li:nth-of-type(1) {
+  width: 33.2rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}
+
+.contacts__list li:nth-of-type(3) {
+  width: 33.2rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}
+
+.contacts__info-box .txt24-days {
+  color: white;
+}
+
+.contacts__social img {
+  width: 5.6rem;
+  height: 5.6rem;
+  @media (max-width: 48rem) {
+    width: 8.8rem;
+    height: 8.8rem;
+  }
+}
+
+.contacts__info-btm {
+  flex-direction: row;
+  @media (max-width: 48rem) {
+    gap: 1.6rem;
+    justify-content: space-between;
+  }
+}
+
+.contacts__support {
+  width: 86rem;
+  padding: 7.1rem 6rem;
+  border-radius: 6rem;
+  border: 2px solid #4ebdf5;
+  @media (max-width: 48rem) {
+    width: 100%;
+    border-radius: 4.8rem;
+    padding: 2.4rem;
+  }
+}
+
+.contacts__support .form__txt {
+  color: white;
+}
+
+.contacts__support .form-input {
+  background-color: white;
+}
+
+.contacts__support .form__data-consent {
+  color: white;
+}
+
+.contacts__support .form-checkbox {
+  background-color: transparent;
+}
+
+.contacts-map {
+  height: 100%;
+  width: 100%;
+}
+
+.contacts__btm {
+  overflow: hidden;
+  height: 50rem;
+  width: 100%;
+  border-radius: 6rem;
+  @media (max-width: 48rem) {
+    height: 70rem;
+    border-radius: 4.8rem;
+  }
+}
+
+.custom-svg {
+  height: 8rem;
+  width: 8rem;
+  @media (max-width: 48rem) {
+    height: 6rem;
+    width: 6rem;
+  }
+}

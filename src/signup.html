@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet" />
+    <title>Логин (Войти)</title>
+  </head>
+  <body class="background-signin">
+    <!-- модалка меню -->
+    <div class="modal modal-2 modal-menu" id="modal-menu">
+      <div class="modal-2-container">
+        <header class="header">
+          <div class="header__container">
+            <div class="header__block_left">
+              <p class="header__logo">PatentRum</p>
+              <a class="header__link" href="./blog-pg.html">
+                <p class="txt20 hide-mobile">Блог</p></a
+              >
+            </div>
+
+            <div class="header__block_right">
+              <div class="contact hide-mobile">
+                <img
+                  src="./assets/images/icon-phone.svg"
+                  class="contact-icon"
+                  alt="icon-phone"
+                />
+                <span class="contact-text">+7 000 000 0000</span>
+              </div>
+
+              <div class="button-group">
+                <a href="./signin.html" class="btn btn-primary hide-mobile"
+                  >Войти</a
+                >
+                <button class="btn btn-secondary header__btn modal-close-menu">
+                  <span class="hide-mobile">меню</span>
+                  <div class="icon-set">
+                    <img
+                      class="icon-close-menu"
+                      src="./assets/images/icon-close-wh.svg"
+                      alt="icon-close"
+                    />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="modal-menu-wrapper">
+          <div class="modal-menu__left">
+            <div class="modal-menu__left-list">
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Регистрация товарного знака</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Проверка знака</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Регистрация лицензионного договора</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Регистрация договора отчуждения</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Регистрация лицензионного договора</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Подбор классов МКТУ</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="modal-menu__right">
+            <div class="footer__columns">
+              <div class="footer__column">
+                <p class="footer__column_title">Защитить сейчас</p>
+                <div class="footer__list">
+                  <a class="footer__item" href="#">Товарный знак</a>
+                  <a class="footer__item" href="#">Программа для ЭВМ</a>
+                  <a class="footer__item" href="#">Изобретение</a>
+                  <a class="footer__item" href="#">Дизайн изделия</a>
+                  <a class="footer__item" href="#">База данных</a>
+                  <a class="footer__item" href="#">Полезная модель</a>
+                </div>
+              </div>
+
+              <div class="footer__column">
+                <p class="footer__column_title">Узнать больше</p>
+                <div class="footer__list">
+                  <a class="footer__item" href="#">Услуги и цены</a>
+                  <a class="footer__item" href="#">О нас</a>
+                  <a class="footer__item" href="#">Блог</a>
+                  <a class="footer__item" href="#">Контакты</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="contact">
+                <img
+                  src="./assets/images/icon-phone.svg"
+                  class="contact-icon"
+                  alt="icon-phone"
+                />
+                <span class="contact-text text-white footer__contact-text"
+                  >+7 000 000 0000</span
+                >
+              </div>
+
+              <div class="contact">
+                <img
+                  src="./assets/images/sms.svg"
+                  class="contact-icon"
+                  alt="icon-phone"
+                />
+                <span class="contact-text text-white footer__contact-text"
+                  >forexample@mail.ru</span
+                >
+              </div>
+
+              <div class="contact">
+                <img
+                  src="./assets/images/icon-location.svg"
+                  class="contact-icon"
+                  alt="icon-phone"
+                />
+                <span class="contact-text text-white footer__contact-text"
+                  >г. Москва, Рязанский проспект 75 кор.4 этаж 12
+                </span>
+              </div>
+
+              <div class="footer__social">
+                <a href="#"
+                  ><img src="./assets/images/icon-vk.svg" alt="icon-vk"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="./assets/images/icon-telegram.svg"
+                    alt="icon-telegram"
+                /></a>
+                <a href="#"
+                  ><img src="./assets/images/icon-v.svg" alt="icon-v"
+                /></a>
+              </div>
+            </div>
+            <div class="footer__right">
+              <a class="footer__right_link" href="#">
+                Написать нам в WhatsApp<img
+                  class="footer__right_icon"
+                  src="./assets/images/icon-whatsapp.svg"
+                  alt="icon-whatsapp"
+              /></a>
+              <a class="footer__right_link" href="#">
+                Написать нам в Telegram<img
+                  class="footer__right_icon"
+                  src="./assets/images/icon-telegram-blue.svg"
+                  alt="icon-whatsapp"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка "спасибо за подписку"-->
+    <div class="modal" id="modal-success">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img
+                  class="modal-close-icon"
+                  src="./assets/images/icon-close.svg"
+                  alt="icon-close"
+                />
+              </button>
+              <h2 class="txt36-days">спасибо за подписку!</h2>
+              <a class="btn btn-blue btn-primary" href="./main.html">
+                на главную</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка "подписки на рассылку "(Newsletter)-->
+    <div class="modal" id="modal-nl">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img src="./assets/images/icon-close.svg" alt="icon-close" />
+              </button>
+              <h2 class="txt36-days">подпишитесь на нашу рассылку</h2>
+              <form class="form-nl" id="form-nl" novalidate>
+                <label class="form-label">
+                  <input
+                    id="email"
+                    class="form-input"
+                    type="email"
+                    placeholder="email"
+                    required
+                  />
+                  <span class="error-message" id="email-error"></span>
+                </label>
+                <button
+                  class="btn btn-blue btn-primary"
+                  type="submit"
+                  data-modal="modal-success"
+                >
+                  Подписаться
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <div class="header__block_left">
+            <p class="header__logo">PatentRum</p>
+            <a class="header__link" href="./blog-pg.html">
+              <p class="txt20 hide-mobile">Блог</p></a
+            >
+          </div>
+
+          <div class="header__block_right">
+            <div class="contact hide-mobile">
+              <img
+                src="./assets/images/icon-phone.svg"
+                class="contact-icon"
+                alt="icon-phone"
+              />
+              <span class="contact-text">+7 000 000 0000</span>
+            </div>
+
+            <div class="button-group">
+              <a class="btn btn-primary hide-mobile" href="./signin.html">
+                Войти
+              </a>
+
+              <button
+                class="btn btn-secondary header__btn"
+                data-modal="modal-menu"
+              >
+                <span class="hide-mobile">меню</span>
+                <div class="icon-set">
+                  <img
+                    class="icon-set-img"
+                    src="./assets/images/icon-menu.svg"
+                    alt="иконка-меню"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="signin signup">
+        <div class="container">
+          <div class="signin__content signup__content">
+            <div class="signin__left signup__left">
+              <div class="signin__left-top">
+                <h1>Регистрация</h1>
+                <nav class="signin__nav signup__nav">
+                  <a class="signin__nav-link" href="./signin.html"
+                    ><p class="txt18-days">вход</p></a
+                  >
+                  <a class="signin__nav-link active" href="#"
+                    ><p class="txt18-days active">Регистрация</p></a
+                  >
+                </nav>
+              </div>
+              <form
+                class="signin__form signup__form"
+                action=""
+                id="form-signup"
+                novalidate
+              >
+                <div class="signup__inputs">
+                  <label class="form-label">
+                    <input
+                      id="name"
+                      class="form-input"
+                      type="name"
+                      placeholder="Имя"
+                      required
+                    />
+                    <span class="error-message" id="name-error"></span>
+                  </label>
+                  <div class="form__email-tel">
+                    <label class="form-label">
+                      <input
+                        id="email"
+                        class="form-input"
+                        type="email"
+                        placeholder="email"
+                        required
+                      />
+                      <span class="error-message" id="email-error"></span>
+                    </label>
+                    <label class="form-label">
+                      <input
+                        id="phone"
+                        class="form-input"
+                        type="tel"
+                        placeholder="+7 (___) ___-__-__"
+                        required
+                      />
+                      <span class="error-message" id="phone-error"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form__btn-link">
+                  <button type="submit" class="btn btn-blue btn-primary">
+                    Зарегистрироваться
+                  </button>
+                  <a href="./signin.html" class="form-link txt22" href=""
+                    >Уже есть аккаунт?</a
+                  >
+                </div>
+              </form>
+            </div>
+            <div class="signin__right">
+              <img
+                src="./assets/images/sculpture-scales.png"
+                alt="sculpture-scales"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <div class="footer__content">
+        <div class="footer__left">
+          <div class="footer__logo-registr">
+            <p class="footer__logo">PatentRum</p>
+            <a class="footer__registr">Регистрация товарного знака онлайн</a>
+          </div>
+          <div class="footer__mobile-absolute">
+            <div class="footer__data-consen">
+              <a class="footer__data-consen_link" href="#"
+                >Политика конфиденциальности</a
+              >
+              <a class="footer__data-consen_link" href="#">Оферта</a>
+              <a class="footer__data-consen_link" href="#"
+                >Обработка персональных данных</a
+              >
+            </div>
+            <div class="footer__set-cards">
+              <img
+                class="footer__card"
+                src="./assets/images/world-card.svg"
+                alt="world-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/visa-card.svg"
+                alt="visa-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/master-card.svg"
+                alt="world-card"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__columns">
+          <div class="footer__column">
+            <p class="footer__column_title">Защитить сейчас</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Товарный знак</a>
+              <a class="footer__item" href="#">Программа для ЭВМ</a>
+              <a class="footer__item" href="#">Изобретение</a>
+              <a class="footer__item" href="#">Дизайн изделия</a>
+              <a class="footer__item" href="#">База данных</a>
+              <a class="footer__item" href="#">Полезная модель</a>
+            </div>
+          </div>
+
+          <div class="footer__column">
+            <p class="footer__column_title">Узнать больше</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Услуги и цены</a>
+              <a class="footer__item" href="#">О нас</a>
+              <a class="footer__item" href="#">Блог</a>
+              <a class="footer__item" href="#">Контакты</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <div class="contact">
+            <img
+              src="./assets/images/icon-phone.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >+7 000 000 0000</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/sms.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >forexample@mail.ru</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/icon-location.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >г. Москва, Рязанский проспект 75 кор.4 этаж 12
+            </span>
+          </div>
+
+          <div class="footer__social">
+            <a href="#"
+              ><img src="./assets/images/icon-vk.svg" alt="icon-vk"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-telegram.svg" alt="icon-telegram"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-v.svg" alt="icon-v"
+            /></a>
+          </div>
+          <button class="btn btn-blue btn-primary" data-modal="modal-nl">
+            Подписаться на рассылку
+          </button>
+        </div>
+        <div class="footer__right">
+          <a class="footer__right_link" href="#">
+            Написать нам в WhatsApp<img
+              class="footer__right_icon"
+              src="./assets/images/icon-whatsapp.svg"
+              alt="icon-whatsapp"
+          /></a>
+          <a class="footer__right_link" href="#">
+            Написать нам в Telegram<img
+              class="footer__right_icon"
+              src="./assets/images/icon-telegram-blue.svg"
+              alt="icon-whatsapp"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="./index.js" defer></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/validateForm.js" defer></script>
+  </body>
+</html>

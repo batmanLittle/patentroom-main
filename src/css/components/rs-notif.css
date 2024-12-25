@@ -1,0 +1,45 @@
+.rs-notif {
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px solid #4ebdf5;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 4.8rem;
+    border: 0px;
+  }
+}
+
+.rs-notif-right {
+  display: flex;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+}
+
+.rs-notif-icon img {
+  width: 5.4rem;
+  height: 5.4rem;
+  @media (max-width: 48rem) {
+    width: 10.8rem;
+    height: 10.8rem;
+  }
+}
+
+.rs-notif-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  max-width: 130rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    gap: 3.2rem;
+  }
+}
+
+.rs-notif .btn {
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}

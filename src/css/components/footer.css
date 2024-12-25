@@ -1,0 +1,246 @@
+.footer {
+  margin-top: 18rem;
+  @media (max-wid0th: 48rem) {
+    margin-top: 20rem;
+  }
+}
+
+.footer__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 31.8rem;
+  margin-bottom: 50px;
+  @media (max-width: 48rem) {
+    height: auto;
+    flex-direction: column;
+    gap: 6.4rem;
+    position: relative;
+    padding-bottom: 40rem;
+  }
+}
+
+.footer-btm {
+  margin-bottom: 0rem;
+  margin-top: auto;
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  color: #fff;
+}
+
+.footer__logo-registr {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @media (max-width: 48rem) {
+    gap: 4rem;
+  }
+}
+
+.footer__logo {
+  font-family: "Days One";
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  @media (max-width: 48rem) {
+    font-size: 4.8rem;
+  }
+}
+
+.footer__registr {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 140%;
+  max-width: 23.3rem;
+  @media (max-width: 48rem) {
+    font-size: 2.8rem;
+    max-width: 46.6rem;
+  }
+}
+
+.footer__data-consen {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: max-content;
+  @media (max-width: 48rem) {
+    gap: 2.4rem;
+    width: 100%;
+  }
+}
+
+.footer__data-consen_link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+  opacity: 40%;
+  @media (max-width: 48rem) {
+    font-size: 3.2rem;
+  }
+}
+
+.footer__columns {
+  display: flex;
+  gap: 10.95rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  color: #fff;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+  }
+}
+
+.footer__column_title {
+  width: max-content;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 136.364%;
+  color: #fff;
+  @media (max-width: 48rem) {
+    font-size: 3.2rem;
+    line-height: normal;
+  }
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  @media (max-width: 48rem) {
+    gap: 3.2rem;
+  }
+}
+
+.footer__item {
+  opacity: 40%;
+  font-size: 2rem;
+  font-weight: 400;
+  width: max-content;
+  @media (max-width: 48rem) {
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+}
+
+.footer__contact-text {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: start;
+  width: 32.9rem;
+  @media (max-width: 48rem) {
+    font-size: 3.2rem;
+    width: 100%;
+  }
+}
+
+.footer__social {
+  display: flex;
+  gap: 1.1rem;
+  @media (max-width: 48rem) {
+    gap: 4rem;
+  }
+}
+.footer__social img {
+  width: 3.2em;
+  height: 3.2rem;
+}
+
+@media (max-width: 48rem) {
+  .footer__social img {
+    width: 8.8rem;
+    height: 8.8rem;
+  }
+}
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.footer__right_link {
+  width: 21.5rem;
+  display: flex;
+  align-items: center;
+  padding: 1.6rem;
+  position: relative;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 140%;
+  border: 2px solid #4ebdf5;
+  border-radius: 16px;
+  @media (max-width: 48rem) {
+    width: 34.2rem;
+    padding: 2.4rem 8rem 2.4rem 2.4rem;
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .footer__right_link:hover {
+    background-color: white;
+    color: #15161a;
+    transition: background-color 1s ease;
+  }
+}
+
+.footer__right_icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  @media (max-width: 48rem) {
+    width: 6.4rem;
+    height: 6.4rem;
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+}
+
+.footer__set-cards {
+  display: flex;
+  gap: 2.4rem;
+  height: 3.8rem;
+  width: 23.3rem;
+  @media (max-width: 48rem) {
+    width: 50.6rem;
+    height: 7.6rem;
+  }
+}
+
+.footer__card {
+  width: 30%;
+}
+
+.footer__mobile-absolute {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,148 @@
+.rs-sign-app {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+}
+
+.rs-sign-app__opts {
+  @media (max-width: 48rem) {
+    height: 8.8rem;
+  }
+}
+
+.rs-sign-app__opts-box {
+  display: flex;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    overflow: auto;
+    gap: 3.2rem;
+    position: absolute;
+    width: calc(100% - 2.8rem);
+    scrollbar-width: none;
+  }
+}
+
+.reg-stage__list::-webkit-scrollbar {
+  display: none;
+}
+
+.rs-sign-app__opt {
+  height: 4.4rem;
+  padding: 0rem 1.8rem;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  border: 2px solid rgba(155, 233, 49, 0.4);
+  @media (max-width: 48rem) {
+    height: 8.8rem;
+    padding: 0rem 3.6rem;
+  }
+}
+
+.rs-sign-app__opt.active {
+  background-color: #9be931;
+}
+
+.rs-sign-app__opt p {
+  width: max-content;
+}
+
+.rs-sign-app__form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+}
+
+.rs-sign-app__form-box {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 6.4rem;
+  }
+}
+
+.rs-sign-app__form-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14rem;
+  height: 14rem;
+  background-color: #111111;
+  border-radius: 1.6rem;
+  @media (max-width: 48rem) {
+    width: 28rem;
+    height: 28rem;
+    border-radius: 3.2rem;
+  }
+}
+
+.rs-sign-app__form-list {
+  width: 85.2rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}
+
+.rs-sign-app__form-list .form-input {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.rs-sign-app__form-list .form-input::placeholder {
+  color: #15161a;
+}
+
+.rs-sign-app__btm {
+  border-radius: 3.2rem;
+  border: 2px solid rgba(21, 22, 26, 0.4);
+  display: flex;
+  justify-content: space-between;
+  gap: 2.8rem ;
+  padding: 2.4rem;
+  background-image: url(../../assets/images/rs-serv-wh-back.png);
+  background-repeat: no-repeat;
+  background-size: 102% 102%;
+  background-position: center;
+  @media (max-width: 48rem) {
+    background-image: url(../../assets/images/rs-serv-wh-mob-back.png);
+    flex-direction: column;
+    padding: 2.8rem;
+    border-radius: 3.2rem;
+    gap: 4.8rem;
+  }
+}
+
+.rs-sign-app__btm-left {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: start;
+  }
+}
+
+.rs-sign-app__btm-img {
+  width: 5.4rem;
+  height: 5.4rem;
+  @media (max-width: 48rem) {
+    width: 10.8rem;
+    height: 10.8rem;
+  }
+}
+
+.rs-sign-app__btm-left .txt18 {
+  opacity: 60%;
+  max-width: 70.6rem;
+  color: #15161a;
+}

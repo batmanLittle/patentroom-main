@@ -1,0 +1,137 @@
+.rs-classes {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+    position: relative;
+    padding-bottom: 14.4rem;
+  }
+}
+
+.rs-classes-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rs-classes__btns {
+  display: flex;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.rs-classes__btns .btn {
+  @media (max-width: 48rem) {
+    width: 29.5rem;
+  }
+}
+
+.rs-classes__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+  }
+}
+
+.rs-classes__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  @media (max-width: 48rem) {
+    gap: 2.2rem;
+  }
+}
+
+.rs-classes__item-visible {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  @media (max-width: 48rem) {
+    align-items: start;
+    position: relative;
+  }
+}
+
+.rs-classes__item-left {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 4.8rem;
+    align-items: start;
+  }
+}
+
+.rs-classes__item-num {
+  height: 5.6rem;
+  border-radius: 100px;
+  border: 2px solid rgba(21, 22, 26, 0.4);
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 48rem) {
+    height: 9.2rem;
+    width: 22.8rem;
+  }
+}
+
+.rs-classes__item-left p {
+  color: #15161a;
+}
+
+.rs-classes__item-btn {
+  border-radius: 50%;
+
+  width: 4.8rem;
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.2rem solid #4ebdf5;
+  @media (max-width: 48rem) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 9.6rem;
+    height: 9.6rem;
+    border: 0.4rem solid #4ebdf5;
+  }
+}
+
+.rs-classes__item-btn.active {
+  background-color: #4ebdf5;
+}
+
+.rs-classes__item-btn svg {
+  width: 2.8rem;
+  height: 2.8rem;
+  @media (max-width: 48rem) {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+}
+
+.rs-classes__item-hidden p {
+  color: #15161a;
+}
+
+.rs-classes__item-hidden {
+  max-width: 66.7rem;
+  margin-left: 23rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    margin-left: 0rem;
+  }
+}

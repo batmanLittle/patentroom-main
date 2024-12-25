@@ -1,0 +1,30 @@
+.pagination-controls {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.acc-search-result__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+
+.acc-search-result__page-numbers .page-number {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.page-numbers {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.page-number {
+  cursor: pointer;
+}
+
+.page-number.active {
+  color: #4ebdf5;
+  text-decoration: underline;
+}

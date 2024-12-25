@@ -1,0 +1,7 @@
+.navigate {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #333333;
+}

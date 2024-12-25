@@ -1,0 +1,62 @@
+.modal-acc {
+  position: absolute;
+  right: 1.8rem;
+  top: 82%;
+  z-index: 20;
+  display: none;
+  @media (max-width: 48rem) {
+    width: 100%;
+    right: 0rem;
+    top: 146%;
+  }
+}
+
+.modal-acc.active {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inline;
+}
+
+.modal-acc__block {
+  padding: 2.8rem;
+  border-radius: 2.4rem;
+  background-color: white;
+  width: max-content;
+  border: 2px solid #4ebdf5;
+  @media (max-width: 48rem) {
+    width: 100%;
+    border-radius: 3.2rem;
+    padding: 2.8rem;
+  }
+}
+
+.modal-acc__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+  }
+}
+
+.modal-acc__list .txt18-days {
+  color: #15161a;
+}
+
+.modal-acc__list li:hover .txt18-days {
+  color: #4ebdf5;
+}
+
+.modal-acc__link {
+  @media (max-width: 48rem) {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+}

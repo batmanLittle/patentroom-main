@@ -1,0 +1,119 @@
+.rs-pp-classes {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+    position: relative;
+    padding-bottom: 14.4rem;
+  }
+}
+
+.rs-pp-classes__top .btn {
+  @media (max-width: 48rem) {
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+  }
+}
+
+.rs-pp-classes__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rs-pp-classes__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+  }
+}
+
+.rs-pp-classes__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @media (max-width: 48rem) {
+    gap: 2.4rem;
+    position: relative;
+  }
+}
+
+.rs-pp-classes__item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 48rem) {
+    align-items: start;
+  }
+}
+
+.rs-pp-classes__item-left {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 4.8rem;
+    align-items: start;
+  }
+}
+
+.rs-pp-classes__item-num {
+  height: 5.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  border-radius: 100px;
+  border: 1px solid rgba(21, 22, 26, 0.4);
+  @media (max-width: 48rem) {
+    height: 9.2rem;
+    width: 22.8rem;
+  }
+}
+
+.rs-pp-classes__item-left .txt18-days {
+  color: #15161a;
+}
+
+.rs-pp-classes__item-icon {
+  width: 4.8rem;
+  height: 4.8rem;
+  @media (max-width: 48rem) {
+    max-width: 9.6rem;
+    height: 9.6rem;
+    width: 100%;
+  }
+}
+
+.rs-pp-classes__item-desc {
+  max-width: 96.4rem;
+  margin-left: 21.6rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    margin-left: 0rem;
+  }
+}
+
+.rs-pp-classes__item-desc .txt18 {
+  color: #15161a;
+}
+
+.rs-pp-classes__item-span {
+  color: #4ebdf5;
+  font-weight: 700;
+}
+
+.r2s-pp .rs-classes__item-hidden {
+  max-width: 96.4rem;
+}
+
+.r2s-pp .btn {
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}

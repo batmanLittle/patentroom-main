@@ -1,0 +1,19 @@
+.acc-partner__dtl {
+  background-image: url(../../assets/images/back1-acc-data.png);
+  @media (max-width: 48rem) {
+    background-image: url(../../assets/images/acc-form-back-mob.png);
+  }
+}
+
+.account__form-individ .account__form-btns_box {
+  @media (max-width: 48rem) {
+    height: 18.4rem;
+  }
+}
+
+.account__form-individ .form__data-consent {
+  @media (max-width: 48rem) {
+    margin-bottom: 0rem;
+    margin-top: auto;
+  }
+}

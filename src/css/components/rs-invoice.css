@@ -1,0 +1,76 @@
+.rs-invoice {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+}
+
+.rs-invoice-opts {
+  display: flex;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+}
+
+.rs-invoice-opt {
+  height: 4.3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: 2px solid rgba(155, 233, 49, 0.4);
+  cursor: pointer;
+  @media (max-width: 48rem) {
+    height: 8.8rem;
+  }
+}
+
+.rs-invoice-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  @media (max-width: 48rem) {
+    gap: 1.6rem;
+  }
+}
+
+.rs-invoice-info .txt18 {
+  color: #15161a;
+}
+
+.rs-invoice-btm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 1.6rem;
+    justify-content: center;
+  }
+}
+
+.rs-invoice-btm .txt24-days {
+  color: #4ebdf5;
+  width: max-content;
+}
+
+.rs-invoice-opt.active {
+  background-color: #9be931;
+}
+.rs-invoice-btm .btn {
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}
+
+.rs-invoice-top {
+  width: max-content;
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}

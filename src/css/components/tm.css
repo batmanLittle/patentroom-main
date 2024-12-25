@@ -1,0 +1,122 @@
+.tm-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 3rem 3rem 3rem 8rem;
+  background-color: white;
+  border-radius: 6rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 6.4rem;
+    padding: 2.8rem;
+    border-radius: 4.8rem;
+    position: relative;
+  }
+}
+
+.tm-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.tm-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    gap: 3.2rem;
+  }
+}
+
+.tm-search-btn {
+  display: flex;
+  gap: 3.2rem;
+  width: 66.5rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+  }
+}
+
+.tm-search {
+  height: 5.6rem;
+  gap: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #4ebdf5;
+  border-radius: 100px;
+  width: 35.6rem;
+  padding-left: 2.8rem;
+  align-items: center;
+  @media (max-width: 48rem) {
+    height: 9.6rem;
+    gap: 3.2rem;
+    width: 100%;
+    padding-left: 4rem;
+  }
+}
+
+.tm-input {
+  width: 100%;
+  color: #15161a;
+  font-family: "Gilory";
+  font-size: 1.8rem;
+  font-weight: 400;
+  @media (max-width: 48rem) {
+    font-size: 2.8rem;
+  }
+}
+
+.tm-input::placeholder {
+  color: #15161a;
+}
+
+.tm-list {
+  display: flex;
+  gap: 2.8rem;
+  height: 100%;
+  @media (max-width: 48rem) {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: absolute;
+    width: calc(100% - 2.8rem);
+  }
+}
+
+.tm-list::-webkit-scrollbar {
+  display: none; /* Скрыть скроллбар */
+}
+
+.tm-right {
+  position: relative;
+  @media (max-width: 48rem) {
+    width: 100%;
+    height: 55.4rem;
+  }
+}
+
+.tm-rating {
+  position: absolute;
+  width: 30rem;
+  height: 11.7rem;
+  @media (max-width: 48rem) {
+    width: 55.4rem;
+    height: 18.8rem;
+    bottom: -7rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.tm-right-img {
+  height: 100%;
+}
+
+.tm-btns {
+  display: flex;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 3.2rem;
+  }
+}

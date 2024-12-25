@@ -1,0 +1,97 @@
+.acc-partner__ref {
+  background-image: none;
+  padding: 0rem;
+  @media (max-width: 48rem) {
+    background-color: transparent;
+  }
+}
+
+.acc-partner__ref-table {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.acc-partner__block-empty {
+  height: 15.3rem;
+  @media (max-width: 48rem) {
+    height: auto;
+  }
+}
+
+.acc-partner__empty {
+  grid-column: 1 / -1; /* Занимает все пять столбцов */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 48rem) {
+    background-color: white;
+    border-radius: 100px;
+    height: 10rem;
+  }
+}
+
+.acc-partner__ref-table li {
+  padding: 2.4rem;
+}
+
+.acc-partner__ref-table li:nth-child(-n + 5) {
+  border-bottom: 2px solid var(--Blue, #4ebdf5);
+}
+
+.acc-partner__ref-table li:nth-child(n + 6):not(:nth-last-child(-n + 5)) {
+  border-bottom: 2px solid rgba(29, 29, 29, 0.2);
+}
+
+.hide-mobile {
+  @media (max-width: 48rem) {
+    display: none;
+  }
+}
+
+.acc-partner__ref-table_mob {
+  @media (max-width: 48rem) {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+}
+
+.acc-partner__ref-table_mob-item {
+  @media (max-width: 48rem) {
+    background-color: white;
+    border-radius: 4.8rem;
+    padding: 2.8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+  }
+}
+
+.acc-partner__ref-table_mob-top {
+  @media (max-width: 48rem) {
+    position: relative;
+    display: flex;
+    gap: 3.2rem;
+    padding-bottom: 2.8rem;
+  }
+}
+
+.acc-partner__ref-table_mob-info {
+  @media (max-width: 48rem) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
+
+.acc-partner__ref-table_bord {
+  @media (max-width: 48rem) {
+    position: absolute;
+    left: -2.8rem;
+    bottom: 0;
+    border: 1px solid #4ebdf5;
+    width: calc(100% + 5.6rem);
+  }
+}

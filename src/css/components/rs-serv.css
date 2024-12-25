@@ -1,0 +1,108 @@
+.rs-serv {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+}
+
+.rs-serv-top {
+}
+
+.rs-serv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 3.2rem;
+  }
+}
+
+.rs-serv-item {
+  height: 8.2rem;
+  padding: 0rem 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 3.2rem;
+  position: relative;
+  background-image: url(../../assets/images/rs-serv-wh-back.png);
+  background-repeat: no-repeat;
+  background-size: 102% 102%;
+  background-position: center;
+  border: 2px solid rgba(21, 22, 26, 0.4);
+  @media (max-width: 48rem) {
+    height: max-content;
+    padding: 2.8rem;
+    border-radius: 3.2rem;
+    flex-direction: column;
+    gap: 4.3rem;
+    align-items: start;
+    background-image: url(../../assets/images/rs-serv-wh-mob-back.png);
+  }
+}
+
+.rs-serv-item-dark {
+  background-image: url(../../assets/images/rs-serv-item-back.png);
+  border: 2px solid transparent;
+  @media (max-width: 48rem) {
+    background-image: url(../../assets/images/rs-serv-mob-back.png);
+  }
+}
+
+.rs-serv-item_left {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.rs-serv-item_info {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  @media (max-width: 48rem) {
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+
+.rs-serv-item .txt18-days {
+  color: rgba(21, 22, 26, 1);
+}
+
+.rs-serv-item_right .txt24-days {
+  @media (max-width: 48rem) {
+    margin-bottom: 2.3rem;
+  }
+}
+
+.rs-serv-item_info img {
+  width: 2.4rem;
+  height: 2.4rem;
+  @media (max-width: 48rem) {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+}
+
+.rs-serv-item-dark .txt18-days {
+  color: white;
+}
+.rs-serv-item-dark .txt24-days {
+  color: white;
+}
+
+.rs-serv-item_icon {
+  width: 4.8rem;
+  height: 4.8rem;
+  @media (max-width: 48rem) {
+    width: 9.6rem;
+    height: 9.6rem;
+    position: absolute;
+    bottom: 2.8rem;
+    right: 2.8rem;
+  }
+}

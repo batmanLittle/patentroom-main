@@ -1,0 +1,225 @@
+.acc-partner {
+  margin-top: 4rem;
+  @media (max-width: 48rem) {
+    margin-top: 0rem;
+    position: relative;
+  }
+}
+
+.acc-partner__block {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 6.4rem;
+  }
+}
+
+.acc-partner__block .txt18 {
+  line-height: 144.444%;
+  color: #15161a;
+  @media (max-width: 48rem) {
+    line-height: 140%;
+  }
+}
+
+.acc-partner__left {
+  width: 38.9rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    height: 9.8rem;
+  }
+}
+
+.acc-partner__left-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    gap: 6.4rem;
+  }
+}
+
+.acc-partner__left-box .txt16_bold {
+  color: #4ebdf5;
+  text-decoration: underline;
+}
+
+.acc-partner__left-box a {
+  @media (max-width: 48rem) {
+    order: -1;
+  }
+}
+.acc-partner__cl {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    gap: 3.2rem;
+  }
+}
+
+.acc-partner__cl-btns {
+  @media (max-width: 48rem) {
+    flex-direction: row;
+    gap: 3.2rem;
+    overflow: auto;
+    position: absolute;
+    width: calc(100% - 2.8rem);
+    scrollbar-width: none;
+  }
+}
+
+.acc-partner__cl-btns::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.acc-partner__cl-btns {
+  -ms-overflow-style: none;
+}
+
+.acc-partner__btn {
+  width: 100%;
+  border-radius: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  height: 5.7rem;
+  display: flex;
+  align-items: center;
+  padding: 0rem 2.8rem;
+  @media (max-width: 48rem) {
+    height: 9.8rem;
+    padding: 0rem 4.8rem;
+    flex: 0 0 max-content;
+  }
+}
+
+.acc-partner__btn.active {
+  background-color: white;
+}
+
+.acc-partner__btn.active .txt22_bold {
+  color: #15161a;
+}
+
+.acc-partner__btn .txt22_bold {
+  color: white;
+}
+
+.acc-partner__right {
+  background-image: url(../../assets/images/back3-acc-data.png);
+  border-radius: 3.2rem;
+  width: 122.3rem;
+  background-color: white;
+  padding: 3.2rem;
+  display: none;
+  background-repeat: no-repeat;
+  background-size: 102% 102%;
+  background-position: center;
+  @media (max-width: 48rem) {
+    background-image: url(../../assets/images/acc-form-back-mob.png);
+    border-radius: 3.2rem;
+    width: 100%;
+    padding: 2.8rem;
+  }
+}
+
+.acc-partner__cond-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+  }
+}
+
+.acc-partner__cond-top {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+}
+
+.acc-partner__cond-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 27rem;
+  width: 58.7rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    height: auto;
+    gap: 4.8rem;
+  }
+}
+
+.txt-blue {
+  color: #4ebdf5;
+}
+
+.acc-partner__cond-info .txt18 {
+  line-height: 140%;
+  color: #15161a;
+}
+
+.acc-partner__cond-cl {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 51.2rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    gap: 3.2rem;
+  }
+}
+
+.acc-partner__cond-box {
+  border-radius: 100px;
+  border: 2px solid rgba(78, 189, 245, 0.4);
+  width: 100%;
+  height: 5.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 2.8rem;
+  @media (max-width: 48rem) {
+    height: 7.2rem;
+    padding: 0rem 3.2rem;
+  }
+}
+
+.acc-partner__box {
+  background-color: white;
+  border-radius: 1.6rem;
+  border: 2px solid rgba(78, 189, 245, 0.4);
+  width: 100%;
+  padding: 1.4rem 2.8rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @media (max-width: 48rem) {
+    border-radius: 3.2rem;
+    padding: 3.2rem;
+    gap: 6.4rem;
+  }
+}
+
+.acc-partner__box-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  @media (max-width: 48rem) {
+    gap: 2.4rem;
+  }
+}
+
+.acc-partner__cond-btm {
+  display: flex;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+}

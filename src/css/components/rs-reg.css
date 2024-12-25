@@ -1,0 +1,34 @@
+.rs-reg {
+  background-image: url(../../assets/images/back-rs-reg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  border: 2px solid #4ebdf5;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    background-image: url(../../assets/images/back-rs-reg-mob.png);
+    gap: 4.8rem;
+    padding: 6.4rem;
+  }
+}
+
+.rs-reg-info {
+  display: flex;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 5.6rem;
+  }
+}
+
+.rs-reg-info .txt22 {
+  max-width: 74.1rem;
+}
+
+.rs-reg-info .btn {
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}

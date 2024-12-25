@@ -1,0 +1,14 @@
+.srvcs-prices .cat-pricing__sub-item {
+  margin-top: 0rem;
+  @media (max-width: 48rem) {
+    margin-top: 0rem;
+  }
+}
+
+.srvcs-prices .cat-pricing__sub-list {
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    margin-top: 0rem;
+    gap: 3.2rem;
+  }
+}

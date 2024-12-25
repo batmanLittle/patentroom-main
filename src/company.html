@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./index.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js " defer></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <title>О компании</title>
+  </head>
+  <body class="company-back">
+    <!-- модалка меню -->
+    <div class="modal modal-2 modal-menu" id="modal-menu">
+      <div class="modal-2-container">
+        <header class="header">
+          <div class="header__container">
+            <div class="header__block_left">
+              <p class="header__logo">PatentRum</p>
+              <a class="header__link" href="./blog-pg.html">
+                <p class="txt20 hide-mobile">Блог</p></a
+              >
+            </div>
+
+            <div class="header__block_right">
+              <div class="contact hide-mobile">
+                <img
+                  src="./assets/images/icon-phone.svg"
+                  class="contact-icon"
+                  alt="icon-phone"
+                />
+                <span class="contact-text">+7 000 000 0000</span>
+              </div>
+
+              <div class="button-group">
+                <a href="./signin.html" class="btn btn-primary hide-mobile"
+                  >Войти</a
+                >
+                <button class="btn btn-secondary header__btn modal-close-menu">
+                  <span class="hide-mobile">меню</span>
+                  <div class="icon-set">
+                    <img
+                      class="icon-close-menu"
+                      src="./assets/images/icon-close-wh.svg"
+                      alt="icon-close"
+                    />
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="modal-menu-wrapper">
+          <div class="modal-menu__left">
+            <div class="modal-menu__left-list">
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Регистрация товарного знака</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Проверка знака</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Регистрация лицензионного договора</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Регистрация договора отчуждения</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Регистрация лицензионного договора</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+              <a href="#" class="modal-menu__left-item">
+                <p class="txt22_bold">Подбор классов МКТУ</p>
+                <img
+                  class="modal-menu__left-item_img"
+                  src="./assets/images/back-modal-menu.png"
+                  alt="background"
+                />
+                <div class="modal-menu__btn">
+                  <img
+                    class="arrow-img"
+                    src="./assets/images/icon-arrow.svg"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="modal-menu__right">
+            <div class="footer__columns">
+              <div class="footer__column">
+                <p class="footer__column_title">Защитить сейчас</p>
+                <div class="footer__list">
+                  <a class="footer__item" href="#">Товарный знак</a>
+                  <a class="footer__item" href="#">Программа для ЭВМ</a>
+                  <a class="footer__item" href="#">Изобретение</a>
+                  <a class="footer__item" href="#">Дизайн изделия</a>
+                  <a class="footer__item" href="#">База данных</a>
+                  <a class="footer__item" href="#">Полезная модель</a>
+                </div>
+              </div>
+
+              <div class="footer__column">
+                <p class="footer__column_title">Узнать больше</p>
+                <div class="footer__list">
+                  <a class="footer__item" href="#">Услуги и цены</a>
+                  <a class="footer__item" href="#">О нас</a>
+                  <a class="footer__item" href="#">Блог</a>
+                  <a class="footer__item" href="#">Контакты</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="contact">
+                <img
+                  src="./assets/images/icon-phone.svg"
+                  class="contact-icon"
+                  alt="icon-phone"
+                />
+                <span class="contact-text text-white footer__contact-text"
+                  >+7 000 000 0000</span
+                >
+              </div>
+
+              <div class="contact">
+                <img
+                  src="./assets/images/sms.svg"
+                  class="contact-icon"
+                  alt="icon-phone"
+                />
+                <span class="contact-text text-white footer__contact-text"
+                  >forexample@mail.ru</span
+                >
+              </div>
+
+              <div class="contact">
+                <img
+                  src="./assets/images/icon-location.svg"
+                  class="contact-icon"
+                  alt="icon-phone"
+                />
+                <span class="contact-text text-white footer__contact-text"
+                  >г. Москва, Рязанский проспект 75 кор.4 этаж 12
+                </span>
+              </div>
+
+              <div class="footer__social">
+                <a href="#"
+                  ><img src="./assets/images/icon-vk.svg" alt="icon-vk"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="./assets/images/icon-telegram.svg"
+                    alt="icon-telegram"
+                /></a>
+                <a href="#"
+                  ><img src="./assets/images/icon-v.svg" alt="icon-v"
+                /></a>
+              </div>
+            </div>
+            <div class="footer__right">
+              <a class="footer__right_link" href="#">
+                Написать нам в WhatsApp<img
+                  class="footer__right_icon"
+                  src="./assets/images/icon-whatsapp.svg"
+                  alt="icon-whatsapp"
+              /></a>
+              <a class="footer__right_link" href="#">
+                Написать нам в Telegram<img
+                  class="footer__right_icon"
+                  src="./assets/images/icon-telegram-blue.svg"
+                  alt="icon-whatsapp"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка "спасибо за подписку"-->
+    <div class="modal" id="modal-success">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img
+                  class="modal-close-icon"
+                  src="./assets/images/icon-close.svg"
+                  alt="icon-close"
+                />
+              </button>
+              <h2 class="txt36-days">спасибо за подписку!</h2>
+              <a class="btn btn-blue btn-primary" href="./main.html">
+                на главную</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка "подписки на рассылку "(Newsletter)-->
+    <div class="modal" id="modal-nl">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img src="./assets/images/icon-close.svg" alt="icon-close" />
+              </button>
+              <h2 class="txt36-days">подпишитесь на нашу рассылку</h2>
+              <form class="form-nl" id="form-nl" novalidate>
+                <label class="form-label">
+                  <input
+                    id="email"
+                    class="form-input"
+                    type="email"
+                    placeholder="email"
+                    required
+                  />
+                  <span class="error-message" id="email-error"></span>
+                </label>
+                <button
+                  class="btn btn-blue btn-primary"
+                  type="submit"
+                  data-modal="modal-success"
+                >
+                  Подписаться
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <div class="header__block_left">
+            <p class="header__logo">PatentRum</p>
+            <a class="header__link" href="./blog-pg.html">
+              <p class="txt20 hide-mobile">Блог</p></a
+            >
+          </div>
+
+          <div class="header__block_right">
+            <div class="contact hide-mobile">
+              <img
+                src="./assets/images/icon-phone.svg"
+                class="contact-icon"
+                alt="icon-phone"
+              />
+              <span class="contact-text">+7 000 000 0000</span>
+            </div>
+
+            <div class="button-group">
+              <a class="btn btn-primary hide-mobile" href="./signin.html">
+                Войти
+              </a>
+
+              <button
+                class="btn btn-secondary header__btn"
+                data-modal="modal-menu"
+              >
+                <span class="hide-mobile">меню</span>
+                <div class="icon-set">
+                  <img
+                    class="icon-set-img"
+                    src="./assets/images/icon-menu.svg"
+                    alt="иконка-меню"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="company">
+      <section class="tm">
+        <div class="container">
+          <div class="tm-content">
+            <div class="tm-left company-tm-left">
+              <nav class="nav-container company-nav">
+                <div class="nav-list">
+                  <a class="nav-link txt18" href="./main.html">Главная</a>
+                  <div class="nav-dot"></div>
+                  <a class="nav-link active txt18" href="#">О нас</a>
+                </div>
+              </nav>
+              <div class="tm-info company-tm-info">
+                <h1>PATENTRUM</h1>
+                <p class="txt22">
+                  Мы предоставляем полный спектр услуг, начиная от консультаций
+                  по выбору оптимального способа защиты, до непосредственной
+                  подачи заявки на регистрацию патентного знака.
+                </p>
+              </div>
+              <div class="tm-search-btn">
+                <a href="./signup.html" class="btn btn-blue btn-primary">
+                  Зарегистрировать
+                </a>
+                <div class="tm-search">
+                  <input
+                    class="tm-input"
+                    type="text"
+                    placeholder="Поиск по товарным знакам"
+                  />
+                  <img
+                    class="icon-set"
+                    src="./assets/images/icon-search.svg"
+                    alt="icon-search"
+                  />
+                </div>
+              </div>
+
+              <div class="company-tm-box">
+                <ul class="tm-list">
+                  <li class="company-tm-item">
+                    <p class="txt40-days">10</p>
+                    <p class="txt18">лет опыта работы</p>
+                  </li>
+                  <li class="company-tm-item">
+                    <p class="txt40-days">24</p>
+                    <p class="txt18">специалиста</p>
+                  </li>
+                  <li class="company-tm-item">
+                    <p class="txt40-days text-green">1000+</p>
+                    <p class="txt18">довольных клиентов</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tm-right company-tm-right">
+              <img
+                class="tm-right-img"
+                src="./assets/images/trademark-main-img.png"
+                alt="sculpture"
+              />
+              <img
+                class="tm-rating company-tm-rating"
+                src="./assets/images/trademark-yandex.png"
+                alt="rating"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-us container company-about-us">
+        <div class="about-us__content">
+          <div class="about-us__right">
+            <h1 class="text-white">О нас</h1>
+            <div class="about-us__text-box">
+              <p class="about-us__text">
+                Компания PatentRum занимается регистрацией патентных знаков
+                онлайн, предлагая удобный и быстрый способ защиты
+                интеллектуальной собственности. Мы предоставляем полный спектр
+                услуг, начиная от консультаций по выбору оптимального способа
+                защиты, до непосредственной подачи заявки на регистрацию
+                патентного знака.
+              </p>
+              <p class="about-us__text">
+                Специалисты нашей компании имеют богатый опыт работы в области
+                интеллектуальной собственности и помогут вам грамотно оформить
+                все необходимые документы.
+              </p>
+              <p class="about-us__text">
+                Кроме того, компания гарантирует конфиденциальность всех
+                предоставляемых данных и оперативное реагирование на любые
+                возникшие вопросы.
+              </p>
+            </div>
+          </div>
+          <div class="about-us__left">
+            <img
+              class="about-us__img"
+              src="./assets/images/image-about-us.png"
+              alt="sculpture"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="srvcs">
+        <div class="container">
+          <div class="srvcs-content">
+            <div class="srvcs-top">
+              <h1 class="text-white">наши основные услуги</h1>
+            </div>
+            <div class="srvcs-block">
+              <div class="srvcs-list">
+                <a class="srvcs-item company-srvcs-item">
+                  <img
+                    class="srvcs-item-back hide-mobile"
+                    src="./assets/images/back-basic-srvcs.png"
+                    alt="background"
+                  />
+                  <div class="srvcs-bl-txt">
+                    <p class="txt22_bold">Регистрация товарного знака</p>
+                    <p class="txt18 company-srvcs-txt">
+                      Компания предложила широкий диапазон услуг, начиная от
+                      предварительного поиска похожих товарных знаков до полного
+                      юридического сопровождения на всех этапах процесса
+                      регистрации.
+                    </p>
+                  </div>
+                  <div class="srvcs-item-btm">
+                    <p class="item-price hide-desktop">от 9000 ₽</p>
+                    <div class="srvcs-arrow-img">
+                      <img
+                        class="arrow-img"
+                        src="./assets/images/icon-arrow.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                  </div>
+                </a>
+
+                <a class="srvcs-item company-srvcs-item">
+                  <img
+                    class="srvcs-item-back hide-mobile"
+                    src="./assets/images/back-basic-srvcs.png"
+                    alt="background"
+                  />
+                  <div class="srvcs-bl-txt">
+                    <p class="txt22_bold">Регистрация товарного знака</p>
+                    <p class="txt18 company-srvcs-txt">
+                      Компания предложила широкий диапазон услуг, начиная от
+                      предварительного поиска похожих товарных знаков до полного
+                      юридического сопровождения на всех этапах процесса
+                      регистрации.
+                    </p>
+                  </div>
+                  <div class="srvcs-item-btm">
+                    <p class="item-price hide-desktop">от 9000 ₽</p>
+                    <div class="srvcs-arrow-img">
+                      <img
+                        class="arrow-img"
+                        src="./assets/images/icon-arrow.svg"
+                        alt="arrow"
+                      />
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="srvcs-block-btm">
+                <div class="srvcs-list srvcs-list-btm">
+                  <a class="srvcs-item company-srvcs-item">
+                    <img
+                      class="srvcs-item-back hide-mobile"
+                      src="./assets/images/back-modal-menu.png"
+                      alt="background"
+                    />
+                    <div class="srvcs-bl-txt">
+                      <p class="txt22_bold">Регистрация товарного знака</p>
+                      <p class="txt18 company-srvcs-txt">
+                        Компания предложила широкий диапазон услуг, начиная от
+                        предварительного поиска похожих товарных знаков до
+                        полного юридического сопровождения на всех этапах
+                        процесса регистрации.
+                      </p>
+                    </div>
+                    <div class="srvcs-item-btm">
+                      <p class="item-price hide-desktop">от 9000 ₽</p>
+                      <div class="srvcs-arrow-img">
+                        <img
+                          class="arrow-img"
+                          src="./assets/images/icon-arrow.svg"
+                          alt="arrow"
+                        />
+                      </div>
+                    </div>
+                  </a>
+
+                  <a class="srvcs-item company-srvcs-item">
+                    <img
+                      class="srvcs-item-back hide-mobile"
+                      src="./assets/images/back-modal-menu.png"
+                      alt="background"
+                    />
+                    <div class="srvcs-bl-txt">
+                      <p class="txt22_bold">Регистрация товарного знака</p>
+                      <p class="txt18 company-srvcs-txt">
+                        Компания предложила широкий диапазон услуг, начиная от
+                        предварительного поиска похожих товарных знаков до
+                        полного юридического сопровождения на всех этапах
+                        процесса регистрации.
+                      </p>
+                    </div>
+                    <div class="srvcs-item-btm">
+                      <p class="item-price hide-desktop">от 9000 ₽</p>
+                      <div class="srvcs-arrow-img">
+                        <img
+                          class="arrow-img"
+                          src="./assets/images/icon-arrow.svg"
+                          alt="arrow"
+                        />
+                      </div>
+                    </div>
+                  </a>
+
+                  <a class="srvcs-item company-srvcs-item">
+                    <img
+                      class="srvcs-item-back hide-mobile"
+                      src="./assets/images/back-modal-menu.png"
+                      alt="background"
+                    />
+                    <div class="srvcs-bl-txt">
+                      <p class="txt22_bold">Регистрация товарного знака</p>
+                      <p class="txt18 company-srvcs-txt">
+                        Компания предложила широкий диапазон услуг, начиная от
+                        предварительного поиска похожих товарных знаков до
+                        полного юридического сопровождения на всех этапах
+                        процесса регистрации.
+                      </p>
+                    </div>
+                    <div class="srvcs-item-btm">
+                      <p class="item-price hide-desktop">от 9000 ₽</p>
+                      <div class="srvcs-arrow-img">
+                        <img
+                          class="arrow-img"
+                          src="./assets/images/icon-arrow.svg"
+                          alt="arrow"
+                        />
+                      </div>
+                    </div>
+                  </a>
+
+                  <a class="srvcs-item company-srvcs-item">
+                    <img
+                      class="srvcs-item-back hide-mobile"
+                      src="./assets/images/back-modal-menu.png"
+                      alt="background"
+                    />
+                    <div class="srvcs-bl-txt">
+                      <p class="txt22_bold">Регистрация товарного знака</p>
+                      <p class="txt18 company-srvcs-txt">
+                        Компания предложила широкий диапазон услуг, начиная от
+                        предварительного поиска похожих товарных знаков до
+                        полного юридического сопровождения на всех этапах
+                        процесса регистрации.
+                      </p>
+                    </div>
+                    <div class="srvcs-item-btm">
+                      <p class="item-price hide-desktop">от 9000 ₽</p>
+                      <div class="srvcs-arrow-img">
+                        <img
+                          class="arrow-img"
+                          src="./assets/images/icon-arrow.svg"
+                          alt="arrow"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tm-reg container">
+        <div class="tm-reg__content">
+          <div class="tm-reg__box-img">
+            <img src="./assets/images/tm-reg-img.png" alt="sculpture" />
+          </div>
+          <div class="tm-reg__right">
+            <div class="tm-reg__right-top">
+              <p class="txt36-days">Регистрация товарного знака под ключ</p>
+              <div class="tm-reg__right-box">
+                <p class="txt22">
+                  Патентный поверенный персонально сопроводит вас до получения
+                  решения Роспатента
+                </p>
+                <a
+                  href="./signup.html"
+                  class="btn btn-blue btn-primary hide-mobile"
+                >
+                  Зарегистрироваться
+                </a>
+              </div>
+            </div>
+            <div class="tm-reg__right-btm">
+              <ul class="tm-reg__list">
+                <li class="tm-reg__item tm-reg__item-end">
+                  <div class="tm-reg__item-txt">
+                    <p class="txt24-days">Удобно</p>
+                    <p class="txt18">
+                      Не нужно приезжать в офис, всё оформление онлайн
+                    </p>
+                  </div>
+                  <div class="tm-reg__item-icon">
+                    <img src="./assets/images/icon-tv.svg" alt="icon-tv" />
+                  </div>
+                </li>
+                <li class="tm-reg__item tm-reg__item-end">
+                  <div class="tm-reg__item-txt">
+                    <p class="txt24-days">Качественно</p>
+                    <p class="txt18">
+                      Квалифицированная поддержка специалистов
+                    </p>
+                  </div>
+                  <div class="tm-reg__item-icon">
+                    <img
+                      src="./assets/images/icon-shield.png"
+                      alt="icon-shield"
+                    />
+                  </div>
+                </li>
+                <li class="tm-reg__item">
+                  <div class="tm-reg__item-txt">
+                    <p class="txt24-days">24 990 ₽</p>
+                    <p class="txt18">Цена за полный пакет услуг</p>
+                  </div>
+                  <div class="tm-reg__item-icon">
+                    <img
+                      src="./assets/images/icon-shield.png"
+                      alt="icon-shield"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="workflow-box">
+        <section class="our-benefits container">
+          <div class="our-benefits__content">
+            <div class="our-benefits__left">
+              <div class="our-benefits__left-top">
+                <h1>Преимущества работы с нами</h1>
+                <p class="txt18">
+                  Мы предлагаем консультации с опытными юристами и специалистами
+                  по вопросам интеллектуальной собственности. Это позволяет
+                  получить квалифицированную помощь и ответы на возникающие
+                  вопросы.
+                </p>
+              </div>
+              <div class="our-benefits__img">
+                <img
+                  src="./assets/images/our-benefits-img.png"
+                  alt="monument"
+                />
+              </div>
+            </div>
+            <div class="our-benefits__right">
+              <ul class="our-benefits__list">
+                <li class="our-benefits__item">
+                  <div class="our-benefits__item-number">
+                    <p class="txt36-days">01</p>
+                  </div>
+                  <div class="our-benefits__info">
+                    <p class="txt24-days">Удобство использования</p>
+                    <p class="txt18">
+                      Онлайн сервис предоставляет возможность подать заявку на
+                      патент прямо из дома или офиса, без необходимости личного
+                      визита в патентное бюро. Это экономит время и усилия
+                      заявителя.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="our-benefits__item">
+                  <div class="our-benefits__item-number">
+                    <p class="txt36-days">02</p>
+                  </div>
+                  <div class="our-benefits__info">
+                    <p class="txt24-days">Быстрота обработки заявок</p>
+                    <p class="txt18">
+                      Благодаря автоматизации процессов, онлайн сервис
+                      обрабатывает заявки быстрее, чем традиционные методы. Это
+                      сокращает сроки рассмотрения и ускоряет процесс получения
+                      патента.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="our-benefits__item">
+                  <div class="our-benefits__item-number">
+                    <p class="txt36-days">03</p>
+                  </div>
+                  <div class="our-benefits__info">
+                    <p class="txt24-days">Экономия средств</p>
+                    <p class="txt18">
+                      Использование нашего сервиса стоит дешевле, чем обращение
+                      к специалистам или патентным поверенным. Это делает
+                      процесс регистрации патента более доступным для малого
+                      бизнеса и индивидуальных предпринимателей.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="our-benefits__item">
+                  <div class="our-benefits__item-number">
+                    <p class="txt36-days">04</p>
+                  </div>
+                  <div class="our-benefits__info">
+                    <p class="txt24-days">Конфиденциальность данных</p>
+                    <p class="txt18">
+                      PatentRum гарантируют конфиденциальность предоставленной
+                      информации. Это особенно важно для тех, кто хочет
+                      сохранить свои идеи и разработки в тайне до момента их
+                      официальной публикации.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="reviews container">
+          <div class="slider reviews__content">
+            <div class="slider__top reviews__top">
+              <h1>Отзывы</h1>
+              <div class="slider-buttons">
+                <button id="reviews-prev" class="slider-button">
+                  <img
+                    class="prev"
+                    src="./assets/images/prev.svg"
+                    alt="back-button"
+                  />
+                  <img
+                    class="prev-hover"
+                    src="./assets/images/prev-hover.svg"
+                    alt="back-button"
+                  />
+                  <img
+                    class="prev-inactive"
+                    src="./assets/images/prev-inactive.svg"
+                    alt="back-button"
+                  />
+                </button>
+                <button id="reviews-next" class="slider-button">
+                  <img
+                    class="next"
+                    src="./assets/images/next.svg"
+                    alt="forward-button"
+                  />
+                  <img
+                    class="next-hover"
+                    src="./assets/images/next-hover.svg"
+                    alt="back-button"
+                  />
+                  <img
+                    class="next-inactive"
+                    src="./assets/images/next-inactive.svg"
+                    alt="back-button"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="slider__container reviews__slider swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide reviews__slide">
+                  <div class="reviews__slide-box">
+                    <div class="reviews__slide-top">
+                      <div class="reviews__slide-icons">
+                        <img
+                          class="icon-rating"
+                          src="./assets/images/rating.svg"
+                          alt="icon-rating"
+                        />
+                        <img
+                          class="icon-rating-hover"
+                          src="./assets/images/rating-hover.svg"
+                          alt="icon-rating"
+                        />
+                        <img
+                          class="icon-yandex-logo"
+                          src="./assets/images/yandex-logo.svg"
+                          alt="yandex-logo"
+                        />
+                      </div>
+                      <p class="reviews__text">
+                        Я недавно воспользовался услугами компании “Patentrum” и
+                        остался впечатлён их профессионализмом. Рекомендую эту
+                        компанию всем, кто хочет защитить свой бренд без лишних
+                        хлопот.Я недавно воспользовался услугами компании
+                        “Patentrum” и остался впечатлён их профессионализмом.
+                        Рекомендую эту компанию всем, кто хочет защитить свой
+                        бренд без лишних хлопот.
+                      </p>
+                    </div>
+                    <div class="reviews__slide-bottom">
+                      <img
+                        class="reviews__user-avatar"
+                        src="./assets/images/user-avatar1.svg"
+                        alt="user-avatar"
+                      />
+                      <p class="reviews__text reviews__user-name">
+                        Андрей Некрасов
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide reviews__slide">
+                  <div class="reviews__slide-box">
+                    <div class="reviews__slide-top">
+                      <div class="reviews__slide-icons">
+                        <img
+                          class="icon-rating"
+                          src="./assets/images/rating.svg"
+                          alt="icon-rating"
+                        />
+                        <img
+                          class="icon-rating-hover"
+                          src="./assets/images/rating-hover.svg"
+                          alt="icon-rating"
+                        />
+                        <img
+                          class="icon-yandex-logo"
+                          src="./assets/images/yandex-logo.svg"
+                          alt="yandex-logo"
+                        />
+                      </div>
+                      <p class="reviews__text">
+                        Компания предложила широкий диапазон услуг, начиная от
+                        предварительного поиска похожих товарных знаков до
+                        полного юридического сопровождения на всех этапах
+                        процесса регистрации. Особенно порадовало, что поддержка
+                        была доступна в любое время.
+                      </p>
+                    </div>
+                    <div class="reviews__slide-bottom">
+                      <img
+                        class="reviews__user-avatar"
+                        src="./assets/images/user-avatar2.svg"
+                        alt="user-avatar"
+                      />
+                      <p class="reviews__text reviews__user-name">
+                        Андрей Некрасов
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide reviews__slide">
+                  <div class="reviews__slide-box">
+                    <div class="reviews__slide-top">
+                      <div class="reviews__slide-icons">
+                        <img
+                          class="icon-rating"
+                          src="./assets/images/rating.svg"
+                          alt="icon-rating"
+                        />
+                        <img
+                          class="icon-rating-hover"
+                          src="./assets/images/rating-hover.svg"
+                          alt="icon-rating"
+                        />
+                        <img
+                          class="icon-yandex-logo"
+                          src="./assets/images/yandex-logo.svg"
+                          alt="yandex-logo"
+                        />
+                      </div>
+                      <p class="reviews__text">
+                        Команда “Patentrum” действительно знает своё дело, а
+                        нацеленность на клиента делает сотрудничество приятным и
+                        результативным. Благодарен за профессиональный подход и
+                        высокое качество услуг!
+                      </p>
+                    </div>
+                    <div class="reviews__slide-bottom">
+                      <img
+                        class="reviews__user-avatar"
+                        src="./assets/images/user-avatar3.svg"
+                        alt="user-avatar"
+                      />
+                      <p class="reviews__text reviews__user-name">
+                        Андрей Некрасов
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide reviews__slide">
+                  <div class="reviews__slide-box">
+                    <div class="reviews__slide-top">
+                      <div class="reviews__slide-icons">
+                        <img
+                          class="icon-rating"
+                          src="./assets/images/rating.svg"
+                          alt="icon-rating"
+                        />
+                        <img
+                          class="icon-rating-hover"
+                          src="./assets/images/rating-hover.svg"
+                          alt="icon-rating"
+                        />
+                        <img
+                          class="icon-yandex-logo"
+                          src="./assets/images/yandex-logo.svg"
+                          alt="yandex-logo"
+                        />
+                      </div>
+                      <p class="reviews__text">
+                        Я недавно воспользовался услугами компании “Patentrum” и
+                        остался впечатлён их профессионализмом. Рекомендую эту
+                        компанию всем, кто хочет защитить свой бренд без лишних
+                        хлопот.
+                      </p>
+                    </div>
+                    <div class="reviews__slide-bottom">
+                      <img
+                        class="reviews__user-avatar"
+                        src="./assets/images/user-avatar1.svg"
+                        alt="user-avatar"
+                      />
+                      <p class="reviews__text reviews__user-name">
+                        Андрей Некрасов
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="team container">
+        <div class="slider team__content">
+          <div class="slider__top team__top">
+            <h1 class="text-white">Наша команда</h1>
+            <div class="slider-buttons">
+              <button id="team-prev" class="slider-button">
+                <img
+                  class="prev"
+                  src="./assets/images/prev.svg"
+                  alt="back-button"
+                />
+                <img
+                  class="prev-hover"
+                  src="./assets/images/prev-hover.svg"
+                  alt="back-button"
+                />
+                <img
+                  class="prev-inactive"
+                  src="./assets/images/prev-inactive.svg"
+                  alt="back-button"
+                />
+              </button>
+              <button id="team-next" class="slider-button">
+                <img
+                  class="next"
+                  src="./assets/images/next.svg"
+                  alt="forward-button"
+                />
+                <img
+                  class="next-hover"
+                  src="./assets/images/next-hover.svg"
+                  alt="back-button"
+                />
+                <img
+                  class="next-inactive"
+                  src="./assets/images/next-inactive.svg"
+                  alt="back-button"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="slider__container team__slider swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide team__slide slide">
+                <img
+                  src="./assets/images/team-photo.png"
+                  alt="photo"
+                  class="slide-img team__slide-img"
+                />
+                <div class="team__slide_content">
+                  <p class="team__slide_title">IT developer</p>
+                  <button class="team__slide_name">Елена Крицкая</button>
+                </div>
+
+                <ul class="team__slide-info">
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">Елена Крицкая</p>
+                    <p class="txt18">
+                      Патентный проверенный,<br />
+                      дополнительный текст с описанием.<br />
+                      Можно написать в чем силен и что<br />
+                      умеет.<br />
+                      Полный текст описания может<br />
+                      занимать до 6 строк.
+                    </p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">1234</p>
+                    <p class="txt18">Номер статуса проверенного</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">10 лет</p>
+                    <p class="txt18">Стаж</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">200</p>
+                    <p class="txt18">Знаков зарегистрировал</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="swiper-slide team__slide">
+                <img
+                  src="./assets/images/team-photo.png"
+                  alt="photo"
+                  class="slide-img team__slide-img"
+                />
+                <div class="team__slide_content">
+                  <p class="team__slide_title">IT developer</p>
+                  <button class="team__slide_name">Елена Крицкая</button>
+                </div>
+                <ul class="team__slide-info">
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">Елена Крицкая</p>
+                    <p class="txt18">
+                      Патентный проверенный,<br />
+                      дополнительный текст с описанием.<br />
+                      Можно написать в чем силен и что<br />
+                      умеет.<br />
+                      Полный текст описания может<br />
+                      занимать до 6 строк.
+                    </p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">1234</p>
+                    <p class="txt18">Номер статуса проверенного</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">10 лет</p>
+                    <p class="txt18">Стаж</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">200</p>
+                    <p class="txt18">Знаков зарегистрировал</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="swiper-slide team__slide">
+                <img
+                  src="./assets/images/team-photo.png"
+                  alt="photo"
+                  class="slide-img team__slide-img"
+                />
+                <div class="team__slide_content">
+                  <p class="team__slide_title">IT developer</p>
+                  <button class="team__slide_name">Елена Крицкая</button>
+                </div>
+                <ul class="team__slide-info">
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">Елена Крицкая</p>
+                    <p class="txt18">
+                      Патентный проверенный,<br />
+                      дополнительный текст с описанием.<br />
+                      Можно написать в чем силен и что<br />
+                      умеет.<br />
+                      Полный текст описания может<br />
+                      занимать до 6 строк.
+                    </p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">1234</p>
+                    <p class="txt18">Номер статуса проверенного</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">10 лет</p>
+                    <p class="txt18">Стаж</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">200</p>
+                    <p class="txt18">Знаков зарегистрировал</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="swiper-slide team__slide">
+                <img
+                  src="./assets/images/team-photo.png"
+                  alt="photo"
+                  class="slide-img team__slide-img"
+                />
+                <div class="team__slide_content">
+                  <p class="team__slide_title">IT developer</p>
+                  <button class="team__slide_name">Елена Крицкая</button>
+                </div>
+                <ul class="team__slide-info">
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">Елена Крицкая</p>
+                    <p class="txt18">
+                      Патентный проверенный,<br />
+                      дополнительный текст с описанием.<br />
+                      Можно написать в чем силен и что<br />
+                      умеет.<br />
+                      Полный текст описания может<br />
+                      занимать до 6 строк.
+                    </p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">1234</p>
+                    <p class="txt18">Номер статуса проверенного</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">10 лет</p>
+                    <p class="txt18">Стаж</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">200</p>
+                    <p class="txt18">Знаков зарегистрировал</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="swiper-slide team__slide">
+                <img
+                  src="./assets/images/team-photo.png"
+                  alt="photo"
+                  class="slide-img team__slide-img"
+                />
+                <div class="team__slide_content">
+                  <p class="team__slide_title">IT developer</p>
+                  <button class="team__slide_name">Елена Крицкая</button>
+                </div>
+                <ul class="team__slide-info">
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">Елена Крицкая</p>
+                    <p class="txt18">
+                      Патентный проверенный,<br />
+                      дополнительный текст с описанием.<br />
+                      Можно написать в чем силен и что<br />
+                      умеет.<br />
+                      Полный текст описания может<br />
+                      занимать до 6 строк.
+                    </p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">1234</p>
+                    <p class="txt18">Номер статуса проверенного</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">10 лет</p>
+                    <p class="txt18">Стаж</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">200</p>
+                    <p class="txt18">Знаков зарегистрировал</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="swiper-slide team__slide">
+                <img
+                  src="./assets/images/team-photo.png"
+                  alt="photo"
+                  class="slide-img team__slide-img"
+                />
+                <div class="team__slide_content">
+                  <p class="team__slide_title">IT developer</p>
+                  <button class="team__slide_name">Елена Крицкая</button>
+                </div>
+                <ul class="team__slide-info">
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">Елена Крицкая</p>
+                    <p class="txt18">
+                      Патентный проверенный,<br />
+                      дополнительный текст с описанием.<br />
+                      Можно написать в чем силен и что<br />
+                      умеет.<br />
+                      Полный текст описания может<br />
+                      занимать до 6 строк.
+                    </p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">1234</p>
+                    <p class="txt18">Номер статуса проверенного</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">10 лет</p>
+                    <p class="txt18">Стаж</p>
+                  </li>
+
+                  <li class="team__slide-info_item">
+                    <p class="txt20_bold">200</p>
+                    <p class="txt18">Знаков зарегистрировал</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <div class="footer__content">
+        <div class="footer__left">
+          <div class="footer__logo-registr">
+            <p class="footer__logo">PatentRum</p>
+            <a class="footer__registr">Регистрация товарного знака онлайн</a>
+          </div>
+          <div class="footer__mobile-absolute">
+            <div class="footer__data-consen">
+              <a class="footer__data-consen_link" href="#"
+                >Политика конфиденциальности</a
+              >
+              <a class="footer__data-consen_link" href="#">Оферта</a>
+              <a class="footer__data-consen_link" href="#"
+                >Обработка персональных данных</a
+              >
+            </div>
+            <div class="footer__set-cards">
+              <img
+                class="footer__card"
+                src="./assets/images/world-card.svg"
+                alt="world-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/visa-card.svg"
+                alt="visa-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/master-card.svg"
+                alt="world-card"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__columns">
+          <div class="footer__column">
+            <p class="footer__column_title">Защитить сейчас</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Товарный знак</a>
+              <a class="footer__item" href="#">Программа для ЭВМ</a>
+              <a class="footer__item" href="#">Изобретение</a>
+              <a class="footer__item" href="#">Дизайн изделия</a>
+              <a class="footer__item" href="#">База данных</a>
+              <a class="footer__item" href="#">Полезная модель</a>
+            </div>
+          </div>
+
+          <div class="footer__column">
+            <p class="footer__column_title">Узнать больше</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Услуги и цены</a>
+              <a class="footer__item" href="#">О нас</a>
+              <a class="footer__item" href="#">Блог</a>
+              <a class="footer__item" href="#">Контакты</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <div class="contact">
+            <img
+              src="./assets/images/icon-phone.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >+7 000 000 0000</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/sms.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >forexample@mail.ru</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/icon-location.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >г. Москва, Рязанский проспект 75 кор.4 этаж 12
+            </span>
+          </div>
+
+          <div class="footer__social">
+            <a href="#"
+              ><img src="./assets/images/icon-vk.svg" alt="icon-vk"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-telegram.svg" alt="icon-telegram"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-v.svg" alt="icon-v"
+            /></a>
+          </div>
+          <button class="btn btn-blue btn-primary" data-modal="modal-nl">
+            Подписаться на рассылку
+          </button>
+        </div>
+        <div class="footer__right">
+          <a class="footer__right_link" href="#">
+            Написать нам в WhatsApp<img
+              class="footer__right_icon"
+              src="./assets/images/icon-whatsapp.svg"
+              alt="icon-whatsapp"
+          /></a>
+          <a class="footer__right_link" href="#">
+            Написать нам в Telegram<img
+              class="footer__right_icon"
+              src="./assets/images/icon-telegram-blue.svg"
+              alt="icon-whatsapp"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/modal.js" defer></script>
+    <script src="./index.js" defer></script>
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="./js/validateForm.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="./js/slider.js" defer></script>
+
+    <script src="./js/marquee.js" defer></script>
+    <script src="./js/blog.js" defer></script>
+    <script src="./js/workflow.js" defer></script>
+  </body>
+</html>

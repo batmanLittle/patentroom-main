@@ -1,0 +1,110 @@
+.company-back {
+  background-image: url(../../assets/images/company-back.png);
+}
+
+.company-nav .nav-link {
+  color: #15161a;
+}
+
+.company-nav .nav-dot {
+  background-color: #15161a;
+}
+
+.company-tm-info {
+  margin-top: 7rem;
+  margin-bottom: 6.8rem;
+  @media (max-width: 48rem) {
+    margin-top: 3.2rem;
+    margin-bottom: 4.8rem;
+  }
+}
+.company-tm-info .txt22 {
+  width: 63.3rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}
+
+.company-tm-left {
+  width: 78rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}
+
+.company-tm-box {
+  width: 100%;
+  height: 14.2rem;
+  margin-top: 7.7rem;
+  @media (max-width: 48rem) {
+    margin-top: 4.8rem;
+    height: 16.6rem;
+  }
+}
+
+.company-tm-box .tm-list {
+  @media (max-width: 48rem) {
+    gap: 3.2rem;
+    height: 16.6rem;
+  }
+}
+
+.company-tm-item {
+  border-radius: 2rem;
+  border: 2px solid #4ebdf5;
+  padding: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24.2rem;
+  gap: 0.4rem;
+  @media (max-width: 48rem) {
+    flex: 0 0 38.4rem;
+    padding: 2.8rem;
+    border-radius: 2.8rem;
+    gap: 0.8rem;
+  }
+}
+
+.company-tm-item .txt18 {
+  line-height: 144.444%;
+  width: max-content;
+  color: #15161a;
+  @media (max-width: 48rem) {
+    line-height: 140%;
+  }
+}
+
+.company-tm-right {
+  width: 65.6rem;
+  height: 66rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    height: 55.4rem;
+  }
+}
+
+.company-tm-rating {
+  bottom: 25.5rem;
+  left: -12rem;
+  @media (max-width: 48rem) {
+    bottom: -7rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.company-about-us .about-us__content {
+  flex-direction: row-reverse;
+  width: 150.1rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.company-about-us .about-us__img {
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}

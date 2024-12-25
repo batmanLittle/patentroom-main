@@ -1,0 +1,29 @@
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee__list {
+  will-change: transform;
+  display: flex;
+  gap: 2.4rem;
+  @media (max-width: 48em) {
+    gap: 3.2rem;
+  }
+}
+
+.marquee__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marquee__item img {
+  width: 24rem;
+  height: 12rem;
+  @media (max-width: 48em) {
+    width: 24.8rem;
+    height: 12.4rem;
+  }
+}

@@ -1,0 +1,28 @@
+.modal-inv-wrapper {
+  width: 56rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}
+
+.modal-inv-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+  }
+}
+
+.modal-inv-content .rs-invoice-top {
+  width: 70%;
+}
+
+.modal-inv-content .modal-close {
+  top: 3.2rem;
+  right: 3.2rem;
+  @media (max-width: 48rem) {
+    top: 2.8rem;
+    right: 2.8rem;
+  }
+}

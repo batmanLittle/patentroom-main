@@ -1,0 +1,7 @@
+.req-no-result .account__content {
+  gap: 8rem;
+}
+
+.req-no-result .no-result__btm-right {
+  order: 5;
+}

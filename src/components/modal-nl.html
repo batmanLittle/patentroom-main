@@ -1,0 +1,37 @@
+<!-- модалка "подписки на рассылку "(Newsletter)-->
+<div class="modal" id="modal-nl">
+  <div class="modal-container">
+    <div class="modal-wrapper">
+      <div class="modal-content">
+        <div class="modal__left-img">
+          <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+        </div>
+        <div class="modal__right">
+          <button class="modal-close">
+            <img src="./assets/images/icon-close.svg" alt="icon-close" />
+          </button>
+          <h2 class="txt36-days">подпишитесь на нашу рассылку</h2>
+          <form class="form-nl" id="form" novalidate>
+            <label class="form-label">
+              <input
+                id="email"
+                class="form-input"
+                type="email"
+                placeholder="email"
+                required
+              />
+              <span class="error-message" id="email-error"></span>
+            </label>
+            <button
+              class="btn btn-blue btn-primary"
+              type="submit"
+              data-modal="modal-success"
+            >
+              Подписаться
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

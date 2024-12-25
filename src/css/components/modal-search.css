@@ -1,0 +1,137 @@
+.modal-search-wrapper {
+  padding: 8rem;
+  position: relative;
+  border-radius: 6rem;
+  background-color: white;
+  width: 100.8rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  @media (max-width: 48rem) {
+    padding: 9.6rem 2.8rem 2.8rem 2.8rem;
+    width: 100%;
+    flex-direction: column;
+    border-radius: 3rem;
+  }
+}
+.modal-search-wrapper .modal-close {
+  top: 3.4rem;
+  right: 3.4rem;
+  @media (max-width: 48rem) {
+    top: 2.8rem;
+    right: 2.8rem;
+  }
+}
+
+.modal-search__left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @media (max-width: 48rem) {
+    gap: 4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.modal-search__left-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+    width: 29.4rem;
+  }
+}
+
+.modal-search__left .search-result__item-right {
+  @media (max-width: 48rem) {
+    width: 30.8rem;
+  }
+}
+
+.modal-search-wrapper .txt18,
+.txt16_bold {
+  color: #15161a;
+}
+
+.modal-search__left-v {
+  width: 10rem;
+  height: 3.1rem;
+  background-color: #9be931;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 48rem) {
+    height: 5.8rem;
+    width: 17.8rem;
+    order: 1;
+  }
+}
+
+.modal-search__left .btn {
+  width: 100%;
+}
+
+.modal-search__right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @media (max-width: 48rem) {
+    gap: 4rem;
+  }
+}
+
+.modal-search__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  @media (max-width: 48rem) {
+    gap: 1.6rem;
+  }
+}
+
+.modal-search__info-user {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.modal-search__info-add {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  @media (max-width: 48rem) {
+    -webkit-line-clamp: 2;
+  }
+}
+
+.modal-search__info-cl {
+  display: flex;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.modal-search__info-cl .modal-search__info {
+  width: 29.1rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
+}
+
+.modal-search__class {
+}
+
+.txt-btn {
+  color: #4ebdf5;
+  text-decoration: underline;
+}

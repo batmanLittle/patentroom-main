@@ -1,0 +1,66 @@
+.modal-discuss-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @media (max-width: 48rem) {
+    gap: 4.8rem;
+  }
+}
+
+.modal-discuss-box {
+  display: flex;
+  gap: 2.8rem;
+  @media (max-width: 48rem) {
+    gap: 1.6rem;
+  }
+}
+
+.modal-discuss__email-ph {
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+}
+
+.modal-discuss-link {
+  display: flex;
+  width: 23.4rem;
+  height: 8.2rem;
+  position: relative;
+  align-items: center;
+  padding-left: 1.6rem;
+  border-radius: 1.6rem;
+  border: 2px solid var(--Blue, #4ebdf5);
+  @media (max-width: 48rem) {
+    width: 31.6rem;
+    height: 12.8rem;
+    padding-left: 2.4rem;
+    border-radius: 3.2rem;
+  }
+}
+
+.modal-discuss-link img {
+  width: 3.2rem;
+  height: 3.2rem;
+  position: absolute;
+  top: 0.8rem;
+  right: 2.7rem;
+  @media (max-width: 48rem) {
+    width: 6.4rem;
+    height: 6.4rem;
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+}
+
+.modal-discuss-link .txt18 {
+  max-width: 14rem;
+  opacity: 100%;
+  @media (max-width: 48rem) {
+    max-width: 21rem;
+  }
+}
+
+.contact p {
+  width: max-content;
+}

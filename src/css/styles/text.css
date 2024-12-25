@@ -1,0 +1,177 @@
+.txt20_bold {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  @media (max-width: 48rem) {
+    font-size: 3.2rem;
+  }
+}
+
+.txt18 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 133.333%;
+  color: white;
+  @media (max-width: 48rem) {
+    font-size: 2.8rem;
+    line-height: 140%;
+  }
+}
+
+.txt18_600 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  @media (max-width: 48rem) {
+    font-size: 3.2rem;
+  }
+}
+
+.txt18_bold {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144.444%;
+  @media (max-width: 48rem) {
+    font-size: 2.8rem;
+    line-height: 140%;
+  }
+}
+
+.txt22 {
+  z-index: 1;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 136.364%;
+  @media (max-width: 48rem) {
+    font-size: 3.2rem;
+    line-height: 140%;
+  }
+}
+
+.txt36-days {
+  color: var(--Black, #15161a);
+  font-family: "Days One";
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+  @media (max-width: 48rem) {
+    font-size: 4.4rem;
+    line-height: 140%;
+  }
+}
+
+.txt16 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  opacity: 80%;
+  @media (max-width: 48rem) {
+    font-size: 2.8rem;
+  }
+}
+
+.txt16_bold {
+  font-size: 1.6rem;
+  font-weight: 700;
+  @media (max-width: 48rem) {
+    font-size: 2.8rem;
+    line-height: 140%;
+  }
+}
+
+.txt18-days {
+  color: #fff;
+  font-family: "Days One";
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+  @media (max-width: 48rem) {
+    font-size: 3.2rem;
+  }
+}
+.txt18-gilory {
+  font-family: "Gilory";
+  font-size: 1.8rem;
+  font-weight: 400;
+  @media (max-width: 48rem) {
+    font-size: 2.8rem;
+    line-height: normal;
+  }
+}
+
+.txt24-days {
+  font-family: "Days One";
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+  @media (max-width: 48rem) {
+    font-size: 3.6rem;
+  }
+}
+
+.txt22_bold {
+  z-index: 1;
+  font-size: 2.2rem;
+  font-weight: 600;
+  @media (max-width: 48rem) {
+    font-size: 3.2rem;
+  }
+}
+
+.txt20 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.txt32_bold {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 93.75%;
+  @media (max-width: 48rem) {
+    font-size: 4rem;
+
+    line-height: 150%;
+  }
+}
+
+.txt40-days {
+  font-family: "Days One";
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+  @media (max-width: 48rem) {
+    font-size: 4.4rem;
+  }
+}
+
+.txt16-days {
+  font-family: "Days One";
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  @media (max-width: 48rem) {
+    font-size: 2.4rem;
+  }
+}
+
+.txt14 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  @media (max-width: 48rem) {
+    font-size: 2.4rem;
+  }
+}
+
+.txt14_bold {
+  font-size: 1.4rem;
+
+  font-weight: 700;
+  line-height: 140%;
+  @media (max-width: 48rem) {
+    font-size: 2.8rem;
+  }
+}

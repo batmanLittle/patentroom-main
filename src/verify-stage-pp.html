@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet" />
+    <title>ЛК-ПП (подача заявки на регистрацию товаврного знака)</title>
+  </head>
+  <body class="account-back">
+    <!-- модалка "спасибо за подписку"-->
+    <div class="modal" id="modal-success">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img
+                  class="modal-close-icon"
+                  src="./assets/images/icon-close.svg"
+                  alt="icon-close"
+                />
+              </button>
+              <h2 class="txt36-days">спасибо за подписку!</h2>
+              <a class="btn btn-blue btn-primary" href="./main.html">
+                на главную</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- модалка "подписки на рассылку "(Newsletter)-->
+    <div class="modal" id="modal-nl">
+      <div class="modal-container">
+        <div class="modal-wrapper">
+          <div class="modal-content">
+            <div class="modal__left-img">
+              <img src="./assets/images/modalNl-image.png" alt="sculpture" />
+            </div>
+            <div class="modal__right">
+              <button class="modal-close">
+                <img src="./assets/images/icon-close.svg" alt="icon-close" />
+              </button>
+              <h2 class="txt36-days">подпишитесь на нашу рассылку</h2>
+              <form class="form-nl" id="form-nl" novalidate>
+                <label class="form-label">
+                  <input
+                    id="email"
+                    class="form-input"
+                    type="email"
+                    placeholder="email"
+                    required
+                  />
+                  <span class="error-message" id="email-error"></span>
+                </label>
+                <button
+                  class="btn btn-blue btn-primary"
+                  type="submit"
+                  data-modal="modal-success"
+                >
+                  Подписаться
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <!-- модалка аккаунт-меню -->
+          <div class="modal-acc" id="modal-acc">
+            <div class="modal-acc__block">
+              <ul class="modal-acc__list">
+                <li class="hide-desktop">
+                  <a class="modal-acc__link" href=""
+                    ><p class="txt18-days">Заявки на регистрацию</p>
+                    <button class="header__app-icon"><p>1</p></button></a
+                  >
+                </li>
+                <li class="hide-desktop">
+                  <a class="modal-acc__link" href=""
+                    ><p class="txt18-days">Заявки на проверку</p>
+                    <button class="header__app-icon"><p>1</p></button></a
+                  >
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days active">Мои данные</p></a>
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days">Договор</p></a>
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days">Партнерская программа</p></a>
+                </li>
+                <li>
+                  <a href=""><p class="txt18-days">Выйти из профиля</p></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__block_left">
+            <p class="header__logo">PatentRum</p>
+            <div class="header__links">
+              <a class="header__link" href="#">
+                <p class="txt20 hide-mobile">Заявки на регистрацию</p>
+                <button class="header__app-icon"><p>1</p></button></a
+              >
+              <a class="header__link" href="#">
+                <p class="txt20 hide-mobile">Заявки на проверку</p>
+                <button class="header__app-icon"><p>2</p></button></a
+              >
+            </div>
+          </div>
+
+          <div class="header__block_right">
+            <div class="button-group">
+              <button
+                class="btn btn-secondary header__btn hide-mobile"
+                data-modal="modal-acc"
+              >
+                <span class="hide-mobile">Иван Иванов</span>
+                <div class="icon-set">
+                  <img
+                    class="icon-set-img"
+                    src="./assets/images/user.svg"
+                    alt="иконка-меню"
+                  />
+                </div>
+              </button>
+
+              <button
+                class="btn btn-secondary header__btn hide-desktop"
+                data-modal="modal-acc"
+              >
+                <span class="hide-mobile">меню</span>
+                <div class="icon-set">
+                  <img
+                    id="menu-acc"
+                    class="icon-set-img visible"
+                    src="./assets/images/icon-menu.svg"
+                    alt="иконка-меню"
+                  />
+
+                  <img
+                    id="close-acc"
+                    class="icon-close-menu hidden"
+                    src="./assets/images/icon-close-wh.svg"
+                    alt="icon-close"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="account reg-stage verify-stage-pp">
+        <div class="container">
+          <div class="account__content">
+            <div class="account__top">
+              <h1 class="text-white">Заявка №1234565</h1>
+            </div>
+            <div class="reg-stage__block">
+              <div class="reg-stage__top">
+                <ul class="reg-stage__list">
+                  <li class="reg-stage__item active" data-modal="v1s-pp">
+                    <p class="txt40-days">01</p>
+                    <p class="txt16_bold">Поиск возможных препятствий</p>
+
+                    <div class="blur-effect active"></div>
+                  </li>
+                  <li class="reg-stage__item" data-modal="v2s-pp">
+                    <p class="txt40-days">02</p>
+                    <p class="txt16_bold">Результаты проверки</p>
+                    <div class="blur-effect"></div>
+                  </li>
+
+                  <li class="reg-stage__br-mobile hide-desktop"></li>
+                </ul>
+              </div>
+              <div class="rs-pp__block v1s-pp" id="v1s-pp">
+                <div class="rs-pp__box">
+                  <div class="rs-pp-app">
+                    <div class="rs-pp-app__left">
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Название компании</p>
+                        <p class="txt22">Request Design</p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Номер телефона</p>
+                          <p class="txt22">+7 (000)-000-00-00</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Почта</p>
+                          <p class="txt22">forexample@mail.ru</p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Товары и услуги</p>
+                        <p class="txt22">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Описание</p>
+                        <p class="txt22 rs-pp-app__info-desc">
+                          Продукты косметические и туалетные немедицинские;
+                          средства для чистки зубов немедицинские; продукты
+                          парфюмерные, масла эфирные; препараты для отбеливания
+                          и вещества прочие для стирки; препараты для чистки,
+                          полирования, обезжиривания и абразивной обработки.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="rs-pp-app__right">
+                      <div class="rs-pp-app__right-top">
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__right-btm">
+                        <div class="rs-pp-app__right-clue">
+                          <img
+                            src="./assets/images/icon-clue.svg"
+                            alt="icon-clue"
+                          />
+                        </div>
+                        <p class="txt16">
+                          У клиента оплачена услуга ”Ускоренная подача заявки
+                          (за 24 часа)”
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" novalidate="">
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">Результаты проверки</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Отправить документ заявителю
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__doc">
+                        <label class="btn btn-secondary">
+                          <span>загрузить</span>
+                          <div class="icon-set">
+                            <img
+                              class="icon-set-img"
+                              src="./assets/images/icon-clip.svg"
+                              alt="иконка-меню"
+                            />
+                          </div>
+                          <input
+                            type="file"
+                            id="fileUpload"
+                            class="file-input"
+                            style="display: none"
+                          />
+                          <span class="error-message" id=""></span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" id="form-recomm" novalidate="">
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">Рекомендации</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Отправить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <label class="form-label">
+                        <textarea
+                          id="recomm"
+                          class="form-input r1s-form-text"
+                          placeholder="Напишите рекомендации к регистрации"
+                          required=""
+                        ></textarea>
+                        <span class="error-message" id="recomm-error"></span>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="rs-pp__block v2s-pp" id="v2s-pp">
+                <div class="rs-pp__box">
+                  <div class="rs-pp-app">
+                    <div class="rs-pp-app__left">
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Название компании</p>
+                        <p class="txt22">Request Design</p>
+                      </div>
+                      <div class="rs-pp-app__row">
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Номер телефона</p>
+                          <p class="txt22">+7 (000)-000-00-00</p>
+                        </div>
+                        <div class="rs-pp-app__info">
+                          <p class="txt24-days">Почта</p>
+                          <p class="txt22">forexample@mail.ru</p>
+                        </div>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Товары и услуги</p>
+                        <p class="txt22">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__info">
+                        <p class="txt24-days">Описание</p>
+                        <p class="txt22 rs-pp-app__info-desc">
+                          Продукты косметические и туалетные немедицинские;
+                          средства для чистки зубов немедицинские; продукты
+                          парфюмерные, масла эфирные; препараты для отбеливания
+                          и вещества прочие для стирки; препараты для чистки,
+                          полирования, обезжиривания и абразивной обработки.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="rs-pp-app__right">
+                      <div class="rs-pp-app__right-top">
+                        <p class="txt18">Ковер</p>
+                      </div>
+                      <div class="rs-pp-app__right-btm">
+                        <div class="rs-pp-app__right-clue">
+                          <img
+                            src="./assets/images/icon-clue.svg"
+                            alt="icon-clue"
+                          />
+                        </div>
+                        <p class="txt16">
+                          У клиента оплачена услуга ”Ускоренная подача заявки
+                          (за 24 часа)”
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" novalidate="">
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">Результаты проверки</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          перенести в завершенные
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <div class="rs-pp-form__notif">
+                        <div class="rs-pp-form__notif-info">
+                          <div class="rs-pp-form__notif-box">
+                            <p class="txt22_bold">Результаты проверки.pdf</p>
+                            <p class="txt18 txt-grey">12МБ</p>
+                          </div>
+                          <p class="txt22_bold txt-grey">16.10.024</p>
+                        </div>
+                        <button type="button" class="block-edit edit-btn">
+                          <img
+                            src="./assets/images/icon-delete-blue.svg"
+                            alt="icon-edit"
+                          />
+                          <p class="txt16-days">удалить</p>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="rs-pp__box">
+                  <form class="rs-pp-form" id="form-recomm2" novalidate="">
+                    <div class="rs-pp-form__top">
+                      <p class="txt24-days">Рекомендации</p>
+                      <div class="rs-pp-form__opts">
+                        <button class="btn btn-blue btn-primary" type="submit">
+                          Отправить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="rs-pp-form__block">
+                      <label class="form-label">
+                        <textarea
+                          id="recomm"
+                          class="form-input r1s-form-text"
+                          placeholder="Напишите рекомендации к регистрации"
+                          required=""
+                        ></textarea>
+                        <span class="error-message" id="recomm-error"></span>
+                      </label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <div class="footer__content">
+        <div class="footer__left">
+          <div class="footer__logo-registr">
+            <p class="footer__logo">PatentRum</p>
+            <a class="footer__registr">Регистрация товарного знака онлайн</a>
+          </div>
+          <div class="footer__mobile-absolute">
+            <div class="footer__data-consen">
+              <a class="footer__data-consen_link" href="#"
+                >Политика конфиденциальности</a
+              >
+              <a class="footer__data-consen_link" href="#">Оферта</a>
+              <a class="footer__data-consen_link" href="#"
+                >Обработка персональных данных</a
+              >
+            </div>
+            <div class="footer__set-cards">
+              <img
+                class="footer__card"
+                src="./assets/images/world-card.svg"
+                alt="world-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/visa-card.svg"
+                alt="visa-card"
+              />
+              <img
+                class="footer__card"
+                src="./assets/images/master-card.svg"
+                alt="world-card"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__columns">
+          <div class="footer__column">
+            <p class="footer__column_title">Защитить сейчас</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Товарный знак</a>
+              <a class="footer__item" href="#">Программа для ЭВМ</a>
+              <a class="footer__item" href="#">Изобретение</a>
+              <a class="footer__item" href="#">Дизайн изделия</a>
+              <a class="footer__item" href="#">База данных</a>
+              <a class="footer__item" href="#">Полезная модель</a>
+            </div>
+          </div>
+
+          <div class="footer__column">
+            <p class="footer__column_title">Узнать больше</p>
+            <div class="footer__list">
+              <a class="footer__item" href="#">Услуги и цены</a>
+              <a class="footer__item" href="#">О нас</a>
+              <a class="footer__item" href="#">Блог</a>
+              <a class="footer__item" href="#">Контакты</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <div class="contact">
+            <img
+              src="./assets/images/icon-phone.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >+7 000 000 0000</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/sms.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >forexample@mail.ru</span
+            >
+          </div>
+
+          <div class="contact">
+            <img
+              src="./assets/images/icon-location.svg"
+              class="contact-icon"
+              alt="icon-phone"
+            />
+            <span class="contact-text text-white footer__contact-text"
+              >г. Москва, Рязанский проспект 75 кор.4 этаж 12
+            </span>
+          </div>
+
+          <div class="footer__social">
+            <a href="#"
+              ><img src="./assets/images/icon-vk.svg" alt="icon-vk"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-telegram.svg" alt="icon-telegram"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/icon-v.svg" alt="icon-v"
+            /></a>
+          </div>
+          <button class="btn btn-blue btn-primary" data-modal="modal-nl">
+            Подписаться на рассылку
+          </button>
+        </div>
+        <div class="footer__right">
+          <a class="footer__right_link" href="#">
+            Написать нам в WhatsApp<img
+              class="footer__right_icon"
+              src="./assets/images/icon-whatsapp.svg"
+              alt="icon-whatsapp"
+          /></a>
+          <a class="footer__right_link" href="#">
+            Написать нам в Telegram<img
+              class="footer__right_icon"
+              src="./assets/images/icon-telegram-blue.svg"
+              alt="icon-whatsapp"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="./js/reg-stage.js" defer></script>
+    <script src="./js/reg-stage-pp.js" defer></script>
+    <script src="./index.js" defer></script>
+
+    <script src="./js/modal.js" defer></script>
+    <script src="./js/validateForm.js" defer></script>
+  </body>
+</html>

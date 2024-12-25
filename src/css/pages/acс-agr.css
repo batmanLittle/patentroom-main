@@ -1,0 +1,6 @@
+.acc-agr__content {
+  margin-top: 4rem;
+  @media (max-width: 48rem) {
+    margin-top: 0rem;
+  }
+}
